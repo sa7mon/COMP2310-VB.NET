@@ -28,12 +28,14 @@ Partial Class Form1
         Me.lblCity = New System.Windows.Forms.Label()
         Me.lblState = New System.Windows.Forms.Label()
         Me.lblZip = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.txtFirst = New System.Windows.Forms.TextBox()
+        Me.txtLast = New System.Windows.Forms.TextBox()
+        Me.txtAddress = New System.Windows.Forms.TextBox()
+        Me.txtCity = New System.Windows.Forms.TextBox()
+        Me.txtState = New System.Windows.Forms.TextBox()
+        Me.txtZip = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.lblResult = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lblFirst
@@ -90,59 +92,78 @@ Partial Class Form1
         Me.lblZip.TabIndex = 5
         Me.lblZip.Text = "Zip Code"
         '
-        'TextBox1
+        'txtFirst
         '
-        Me.TextBox1.Location = New System.Drawing.Point(21, 42)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 6
+        Me.txtFirst.Location = New System.Drawing.Point(21, 42)
+        Me.txtFirst.Name = "txtFirst"
+        Me.txtFirst.Size = New System.Drawing.Size(100, 20)
+        Me.txtFirst.TabIndex = 6
         '
-        'TextBox2
+        'txtLast
         '
-        Me.TextBox2.Location = New System.Drawing.Point(143, 42)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 7
+        Me.txtLast.Location = New System.Drawing.Point(143, 42)
+        Me.txtLast.Name = "txtLast"
+        Me.txtLast.Size = New System.Drawing.Size(100, 20)
+        Me.txtLast.TabIndex = 7
         '
-        'TextBox3
+        'txtAddress
         '
-        Me.TextBox3.Location = New System.Drawing.Point(25, 95)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 8
+        Me.txtAddress.Location = New System.Drawing.Point(25, 95)
+        Me.txtAddress.Name = "txtAddress"
+        Me.txtAddress.Size = New System.Drawing.Size(100, 20)
+        Me.txtAddress.TabIndex = 8
         '
-        'TextBox4
+        'txtCity
         '
-        Me.TextBox4.Location = New System.Drawing.Point(25, 159)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 9
+        Me.txtCity.Location = New System.Drawing.Point(25, 159)
+        Me.txtCity.Name = "txtCity"
+        Me.txtCity.Size = New System.Drawing.Size(100, 20)
+        Me.txtCity.TabIndex = 9
         '
-        'TextBox5
+        'txtState
         '
-        Me.TextBox5.Location = New System.Drawing.Point(143, 159)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 10
+        Me.txtState.Location = New System.Drawing.Point(143, 159)
+        Me.txtState.Name = "txtState"
+        Me.txtState.Size = New System.Drawing.Size(100, 20)
+        Me.txtState.TabIndex = 10
         '
-        'TextBox6
+        'txtZip
         '
-        Me.TextBox6.Location = New System.Drawing.Point(249, 159)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox6.TabIndex = 11
+        Me.txtZip.Location = New System.Drawing.Point(249, 159)
+        Me.txtZip.Name = "txtZip"
+        Me.txtZip.Size = New System.Drawing.Size(100, 20)
+        Me.txtZip.TabIndex = 11
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(166, 207)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "&Save"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'lblResult
+        '
+        Me.lblResult.AutoSize = True
+        Me.lblResult.Location = New System.Drawing.Point(21, 207)
+        Me.lblResult.Name = "lblResult"
+        Me.lblResult.Size = New System.Drawing.Size(0, 13)
+        Me.lblResult.TabIndex = 13
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(393, 260)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.lblResult)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.txtZip)
+        Me.Controls.Add(Me.txtState)
+        Me.Controls.Add(Me.txtCity)
+        Me.Controls.Add(Me.txtAddress)
+        Me.Controls.Add(Me.txtLast)
+        Me.Controls.Add(Me.txtFirst)
         Me.Controls.Add(Me.lblZip)
         Me.Controls.Add(Me.lblState)
         Me.Controls.Add(Me.lblCity)
@@ -161,11 +182,13 @@ Partial Class Form1
     Friend WithEvents lblCity As System.Windows.Forms.Label
     Friend WithEvents lblState As System.Windows.Forms.Label
     Friend WithEvents lblZip As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
+    Friend WithEvents txtFirst As System.Windows.Forms.TextBox
+    Friend WithEvents txtLast As System.Windows.Forms.TextBox
+    Friend WithEvents txtAddress As System.Windows.Forms.TextBox
+    Friend WithEvents txtCity As System.Windows.Forms.TextBox
+    Friend WithEvents txtState As System.Windows.Forms.TextBox
+    Friend WithEvents txtZip As System.Windows.Forms.TextBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents lblResult As System.Windows.Forms.Label
 
 End Class
