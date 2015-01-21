@@ -1,4 +1,5 @@
-﻿Public Class frmTextHandling
+﻿Imports System.IO.Path
+Public Class frmTextHandling
 
 
     Private Sub cmbxListItems_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbxListItems.SelectedIndexChanged
@@ -9,6 +10,8 @@
         'Set the first item as the default selected item.
         cmbxListItems.SelectedIndex = 0
         'Rich Text file resides 2 levels up from the debug directory.
-        rtbInput.LoadFile(System.IO.Path.GetFullPath("..\..\rtfExample.rtf"))
+        rtbInput.LoadFile(GetFullPath("..\..\rtfExample.rtf"))
+        'Navigate the Web Browser to a local .html file.
+        webInput.Navigate(GetFullPath("..\..\htmlExample.html"))
     End Sub
 End Class
