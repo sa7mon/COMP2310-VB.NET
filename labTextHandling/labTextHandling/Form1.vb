@@ -1,3 +1,4 @@
-﻿Public Class Form1
+﻿Public Class frm1
+
 
 End Class
