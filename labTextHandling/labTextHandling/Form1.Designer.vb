@@ -102,6 +102,7 @@ Partial Class frm1
         'cmbxListItems
         '
         Me.cmbxListItems.FormattingEnabled = True
+        Me.cmbxListItems.Items.AddRange(New Object() {"Item 1", "Item 2", "Item 3", "Item 4"})
         Me.cmbxListItems.Location = New System.Drawing.Point(41, 49)
         Me.cmbxListItems.Name = "cmbxListItems"
         Me.cmbxListItems.Size = New System.Drawing.Size(339, 21)
