@@ -34,9 +34,15 @@ Partial Class frm1
         Me.lblSelection = New System.Windows.Forms.Label()
         Me.rtbInput = New System.Windows.Forms.RichTextBox()
         Me.lblRichText = New System.Windows.Forms.Label()
+        Me.webInput = New System.Windows.Forms.WebBrowser()
+        Me.lblHTML = New System.Windows.Forms.Label()
+        Me.txtWebEdit = New System.Windows.Forms.TextBox()
+        Me.btnSave = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -115,6 +121,7 @@ Partial Class frm1
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.webInput)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Size = New System.Drawing.Size(594, 393)
@@ -124,6 +131,9 @@ Partial Class frm1
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.btnSave)
+        Me.TabPage4.Controls.Add(Me.txtWebEdit)
+        Me.TabPage4.Controls.Add(Me.lblHTML)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Size = New System.Drawing.Size(594, 393)
@@ -157,6 +167,42 @@ Partial Class frm1
         Me.lblRichText.TabIndex = 1
         Me.lblRichText.Text = "Type in text for rich text"
         '
+        'webInput
+        '
+        Me.webInput.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.webInput.Location = New System.Drawing.Point(0, 0)
+        Me.webInput.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.webInput.Name = "webInput"
+        Me.webInput.Size = New System.Drawing.Size(594, 393)
+        Me.webInput.TabIndex = 0
+        '
+        'lblHTML
+        '
+        Me.lblHTML.AutoSize = True
+        Me.lblHTML.Location = New System.Drawing.Point(22, 17)
+        Me.lblHTML.Name = "lblHTML"
+        Me.lblHTML.Size = New System.Drawing.Size(328, 13)
+        Me.lblHTML.TabIndex = 0
+        Me.lblHTML.Text = "Type in the HTML code you want to appear in the Web Browser tab"
+        '
+        'txtWebEdit
+        '
+        Me.txtWebEdit.Location = New System.Drawing.Point(25, 45)
+        Me.txtWebEdit.Multiline = True
+        Me.txtWebEdit.Name = "txtWebEdit"
+        Me.txtWebEdit.Size = New System.Drawing.Size(540, 272)
+        Me.txtWebEdit.TabIndex = 1
+        Me.txtWebEdit.Text = "<h1>Heading</h1><h2>Subhead</h2><p>This is a test of the html window</p>"
+        '
+        'btnSave
+        '
+        Me.btnSave.Location = New System.Drawing.Point(445, 344)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(75, 23)
+        Me.btnSave.TabIndex = 2
+        Me.btnSave.Text = "&Save"
+        Me.btnSave.UseVisualStyleBackColor = True
+        '
         'frm1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -170,6 +216,9 @@ Partial Class frm1
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -185,5 +234,9 @@ Partial Class frm1
     Friend WithEvents lblSelection As System.Windows.Forms.Label
     Friend WithEvents lblRichText As System.Windows.Forms.Label
     Friend WithEvents rtbInput As System.Windows.Forms.RichTextBox
+    Friend WithEvents webInput As System.Windows.Forms.WebBrowser
+    Friend WithEvents btnSave As System.Windows.Forms.Button
+    Friend WithEvents txtWebEdit As System.Windows.Forms.TextBox
+    Friend WithEvents lblHTML As System.Windows.Forms.Label
 
 End Class
