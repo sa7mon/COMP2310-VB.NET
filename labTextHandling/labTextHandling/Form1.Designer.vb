@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frm1
+Partial Class frmTextHandling
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,20 +24,20 @@ Partial Class frm1
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.lblSelection = New System.Windows.Forms.Label()
         Me.txtInput = New System.Windows.Forms.TextBox()
         Me.lblStandard = New System.Windows.Forms.Label()
         Me.lblSelectItem = New System.Windows.Forms.Label()
         Me.cmbxListItems = New System.Windows.Forms.ComboBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.lblSelection = New System.Windows.Forms.Label()
-        Me.rtbInput = New System.Windows.Forms.RichTextBox()
         Me.lblRichText = New System.Windows.Forms.Label()
+        Me.rtbInput = New System.Windows.Forms.RichTextBox()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.webInput = New System.Windows.Forms.WebBrowser()
-        Me.lblHTML = New System.Windows.Forms.Label()
-        Me.txtWebEdit = New System.Windows.Forms.TextBox()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.btnSave = New System.Windows.Forms.Button()
+        Me.txtWebEdit = New System.Windows.Forms.TextBox()
+        Me.lblHTML = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -71,6 +71,15 @@ Partial Class frm1
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "TextBox & ComboBox"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'lblSelection
+        '
+        Me.lblSelection.AutoSize = True
+        Me.lblSelection.Location = New System.Drawing.Point(41, 244)
+        Me.lblSelection.Name = "lblSelection"
+        Me.lblSelection.Size = New System.Drawing.Size(22, 13)
+        Me.lblSelection.TabIndex = 4
+        Me.lblSelection.Text = "     "
         '
         'txtInput
         '
@@ -120,6 +129,23 @@ Partial Class frm1
         Me.TabPage2.Text = "Rich TextBox"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'lblRichText
+        '
+        Me.lblRichText.AutoSize = True
+        Me.lblRichText.Location = New System.Drawing.Point(17, 12)
+        Me.lblRichText.Name = "lblRichText"
+        Me.lblRichText.Size = New System.Drawing.Size(117, 13)
+        Me.lblRichText.TabIndex = 1
+        Me.lblRichText.Text = "Type in text for rich text"
+        '
+        'rtbInput
+        '
+        Me.rtbInput.Location = New System.Drawing.Point(20, 38)
+        Me.rtbInput.Name = "rtbInput"
+        Me.rtbInput.Size = New System.Drawing.Size(565, 345)
+        Me.rtbInput.TabIndex = 0
+        Me.rtbInput.Text = "This will hold .rtf files."
+        '
         'TabPage3
         '
         Me.TabPage3.Controls.Add(Me.webInput)
@@ -129,6 +155,15 @@ Partial Class frm1
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Web Browser"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'webInput
+        '
+        Me.webInput.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.webInput.Location = New System.Drawing.Point(0, 0)
+        Me.webInput.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.webInput.Name = "webInput"
+        Me.webInput.Size = New System.Drawing.Size(594, 393)
+        Me.webInput.TabIndex = 0
         '
         'TabPage4
         '
@@ -142,49 +177,14 @@ Partial Class frm1
         Me.TabPage4.Text = "Edit"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'lblSelection
+        'btnSave
         '
-        Me.lblSelection.AutoSize = True
-        Me.lblSelection.Location = New System.Drawing.Point(41, 244)
-        Me.lblSelection.Name = "lblSelection"
-        Me.lblSelection.Size = New System.Drawing.Size(22, 13)
-        Me.lblSelection.TabIndex = 4
-        Me.lblSelection.Text = "     "
-        '
-        'rtbInput
-        '
-        Me.rtbInput.Location = New System.Drawing.Point(20, 38)
-        Me.rtbInput.Name = "rtbInput"
-        Me.rtbInput.Size = New System.Drawing.Size(565, 345)
-        Me.rtbInput.TabIndex = 0
-        Me.rtbInput.Text = "This will hold .rtf files."
-        '
-        'lblRichText
-        '
-        Me.lblRichText.AutoSize = True
-        Me.lblRichText.Location = New System.Drawing.Point(17, 12)
-        Me.lblRichText.Name = "lblRichText"
-        Me.lblRichText.Size = New System.Drawing.Size(117, 13)
-        Me.lblRichText.TabIndex = 1
-        Me.lblRichText.Text = "Type in text for rich text"
-        '
-        'webInput
-        '
-        Me.webInput.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.webInput.Location = New System.Drawing.Point(0, 0)
-        Me.webInput.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.webInput.Name = "webInput"
-        Me.webInput.Size = New System.Drawing.Size(594, 393)
-        Me.webInput.TabIndex = 0
-        '
-        'lblHTML
-        '
-        Me.lblHTML.AutoSize = True
-        Me.lblHTML.Location = New System.Drawing.Point(22, 17)
-        Me.lblHTML.Name = "lblHTML"
-        Me.lblHTML.Size = New System.Drawing.Size(328, 13)
-        Me.lblHTML.TabIndex = 0
-        Me.lblHTML.Text = "Type in the HTML code you want to appear in the Web Browser tab"
+        Me.btnSave.Location = New System.Drawing.Point(445, 344)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(75, 23)
+        Me.btnSave.TabIndex = 2
+        Me.btnSave.Text = "&Save"
+        Me.btnSave.UseVisualStyleBackColor = True
         '
         'txtWebEdit
         '
@@ -195,22 +195,22 @@ Partial Class frm1
         Me.txtWebEdit.TabIndex = 1
         Me.txtWebEdit.Text = "<h1>Heading</h1><h2>Subhead</h2><p>This is a test of the html window</p>"
         '
-        'btnSave
+        'lblHTML
         '
-        Me.btnSave.Location = New System.Drawing.Point(445, 344)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(75, 23)
-        Me.btnSave.TabIndex = 2
-        Me.btnSave.Text = "&Save"
-        Me.btnSave.UseVisualStyleBackColor = True
+        Me.lblHTML.AutoSize = True
+        Me.lblHTML.Location = New System.Drawing.Point(22, 17)
+        Me.lblHTML.Name = "lblHTML"
+        Me.lblHTML.Size = New System.Drawing.Size(328, 13)
+        Me.lblHTML.TabIndex = 0
+        Me.lblHTML.Text = "Type in the HTML code you want to appear in the Web Browser tab"
         '
-        'frm1
+        'frmTextHandling
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(601, 419)
         Me.Controls.Add(Me.TabControl1)
-        Me.Name = "frm1"
+        Me.Name = "frmTextHandling"
         Me.Text = "Lab: Text Handling"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
