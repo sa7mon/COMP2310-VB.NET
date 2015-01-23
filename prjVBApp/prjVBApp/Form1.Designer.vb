@@ -33,10 +33,15 @@ Partial Class Form1
         Me.tabInst = New System.Windows.Forms.TabPage()
         Me.tabComments = New System.Windows.Forms.TabPage()
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.btnSubmitComment = New System.Windows.Forms.Button()
+        Me.cmbSteps = New System.Windows.Forms.ComboBox()
+        Me.lblSelectStep = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.tabPart.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabInst.SuspendLayout()
+        Me.tabComments.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -122,6 +127,8 @@ Partial Class Form1
         '
         'tabInst
         '
+        Me.tabInst.Controls.Add(Me.lblSelectStep)
+        Me.tabInst.Controls.Add(Me.cmbSteps)
         Me.tabInst.Controls.Add(Me.WebBrowser1)
         Me.tabInst.Location = New System.Drawing.Point(4, 22)
         Me.tabInst.Name = "tabInst"
@@ -133,6 +140,8 @@ Partial Class Form1
         '
         'tabComments
         '
+        Me.tabComments.Controls.Add(Me.btnSubmitComment)
+        Me.tabComments.Controls.Add(Me.TextBox1)
         Me.tabComments.Location = New System.Drawing.Point(4, 22)
         Me.tabComments.Name = "tabComments"
         Me.tabComments.Size = New System.Drawing.Size(895, 469)
@@ -142,11 +151,47 @@ Partial Class Form1
         '
         'WebBrowser1
         '
-        Me.WebBrowser1.Location = New System.Drawing.Point(-4, 47)
+        Me.WebBrowser1.Location = New System.Drawing.Point(-4, 70)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(899, 422)
+        Me.WebBrowser1.Size = New System.Drawing.Size(899, 399)
         Me.WebBrowser1.TabIndex = 0
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(161, 15)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(591, 348)
+        Me.TextBox1.TabIndex = 0
+        '
+        'btnSubmitComment
+        '
+        Me.btnSubmitComment.Location = New System.Drawing.Point(413, 369)
+        Me.btnSubmitComment.Name = "btnSubmitComment"
+        Me.btnSubmitComment.Size = New System.Drawing.Size(93, 23)
+        Me.btnSubmitComment.TabIndex = 1
+        Me.btnSubmitComment.Text = "Send Comment"
+        Me.btnSubmitComment.UseVisualStyleBackColor = True
+        '
+        'cmbSteps
+        '
+        Me.cmbSteps.FormattingEnabled = True
+        Me.cmbSteps.Items.AddRange(New Object() {"1", "2", "3"})
+        Me.cmbSteps.Location = New System.Drawing.Point(383, 43)
+        Me.cmbSteps.Name = "cmbSteps"
+        Me.cmbSteps.Size = New System.Drawing.Size(121, 21)
+        Me.cmbSteps.TabIndex = 1
+        '
+        'lblSelectStep
+        '
+        Me.lblSelectStep.AutoSize = True
+        Me.lblSelectStep.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSelectStep.Location = New System.Drawing.Point(247, 41)
+        Me.lblSelectStep.Name = "lblSelectStep"
+        Me.lblSelectStep.Size = New System.Drawing.Size(118, 20)
+        Me.lblSelectStep.TabIndex = 2
+        Me.lblSelectStep.Text = "Select a Step"
         '
         'Form1
         '
@@ -161,6 +206,9 @@ Partial Class Form1
         Me.tabPart.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabInst.ResumeLayout(False)
+        Me.tabInst.PerformLayout()
+        Me.tabComments.ResumeLayout(False)
+        Me.tabComments.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -175,5 +223,9 @@ Partial Class Form1
     Friend WithEvents txtPartNo As System.Windows.Forms.TextBox
     Friend WithEvents lblPartPicture As System.Windows.Forms.Label
     Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
+    Friend WithEvents lblSelectStep As System.Windows.Forms.Label
+    Friend WithEvents cmbSteps As System.Windows.Forms.ComboBox
+    Friend WithEvents btnSubmitComment As System.Windows.Forms.Button
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 
 End Class
