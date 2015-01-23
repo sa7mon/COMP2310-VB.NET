@@ -29,14 +29,14 @@ Partial Class Form1
         Me.lblDesc = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblPartNo = New System.Windows.Forms.Label()
-        Me.txtPartNo = New System.Windows.Forms.TextBox()
         Me.tabInst = New System.Windows.Forms.TabPage()
-        Me.tabComments = New System.Windows.Forms.TabPage()
-        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.btnSubmitComment = New System.Windows.Forms.Button()
-        Me.cmbSteps = New System.Windows.Forms.ComboBox()
         Me.lblSelectStep = New System.Windows.Forms.Label()
+        Me.cmbSteps = New System.Windows.Forms.ComboBox()
+        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
+        Me.tabComments = New System.Windows.Forms.TabPage()
+        Me.btnSubmitComment = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.cmbPartNo = New System.Windows.Forms.ComboBox()
         Me.TabControl1.SuspendLayout()
         Me.tabPart.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,12 +58,12 @@ Partial Class Form1
         '
         'tabPart
         '
+        Me.tabPart.Controls.Add(Me.cmbPartNo)
         Me.tabPart.Controls.Add(Me.lblPartPicture)
         Me.tabPart.Controls.Add(Me.RichTextBox1)
         Me.tabPart.Controls.Add(Me.lblDesc)
         Me.tabPart.Controls.Add(Me.PictureBox1)
         Me.tabPart.Controls.Add(Me.lblPartNo)
-        Me.tabPart.Controls.Add(Me.txtPartNo)
         Me.tabPart.Location = New System.Drawing.Point(4, 22)
         Me.tabPart.Name = "tabPart"
         Me.tabPart.Padding = New System.Windows.Forms.Padding(3)
@@ -114,16 +114,9 @@ Partial Class Form1
         Me.lblPartNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPartNo.Location = New System.Drawing.Point(28, 26)
         Me.lblPartNo.Name = "lblPartNo"
-        Me.lblPartNo.Size = New System.Drawing.Size(123, 20)
+        Me.lblPartNo.Size = New System.Drawing.Size(130, 20)
         Me.lblPartNo.TabIndex = 1
-        Me.lblPartNo.Text = "Enter Part No."
-        '
-        'txtPartNo
-        '
-        Me.txtPartNo.Location = New System.Drawing.Point(157, 28)
-        Me.txtPartNo.Name = "txtPartNo"
-        Me.txtPartNo.Size = New System.Drawing.Size(116, 20)
-        Me.txtPartNo.TabIndex = 0
+        Me.lblPartNo.Text = "Select Part No."
         '
         'tabInst
         '
@@ -138,6 +131,33 @@ Partial Class Form1
         Me.tabInst.Text = "Instructions"
         Me.tabInst.UseVisualStyleBackColor = True
         '
+        'lblSelectStep
+        '
+        Me.lblSelectStep.AutoSize = True
+        Me.lblSelectStep.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSelectStep.Location = New System.Drawing.Point(247, 41)
+        Me.lblSelectStep.Name = "lblSelectStep"
+        Me.lblSelectStep.Size = New System.Drawing.Size(118, 20)
+        Me.lblSelectStep.TabIndex = 2
+        Me.lblSelectStep.Text = "Select a Step"
+        '
+        'cmbSteps
+        '
+        Me.cmbSteps.FormattingEnabled = True
+        Me.cmbSteps.Items.AddRange(New Object() {"Select a Part First", "1", "2", "3"})
+        Me.cmbSteps.Location = New System.Drawing.Point(383, 43)
+        Me.cmbSteps.Name = "cmbSteps"
+        Me.cmbSteps.Size = New System.Drawing.Size(121, 21)
+        Me.cmbSteps.TabIndex = 1
+        '
+        'WebBrowser1
+        '
+        Me.WebBrowser1.Location = New System.Drawing.Point(-4, 70)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.Size = New System.Drawing.Size(899, 399)
+        Me.WebBrowser1.TabIndex = 0
+        '
         'tabComments
         '
         Me.tabComments.Controls.Add(Me.btnSubmitComment)
@@ -149,22 +169,6 @@ Partial Class Form1
         Me.tabComments.Text = "Comments"
         Me.tabComments.UseVisualStyleBackColor = True
         '
-        'WebBrowser1
-        '
-        Me.WebBrowser1.Location = New System.Drawing.Point(-4, 70)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(899, 399)
-        Me.WebBrowser1.TabIndex = 0
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(161, 15)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(591, 348)
-        Me.TextBox1.TabIndex = 0
-        '
         'btnSubmitComment
         '
         Me.btnSubmitComment.Location = New System.Drawing.Point(413, 369)
@@ -174,24 +178,22 @@ Partial Class Form1
         Me.btnSubmitComment.Text = "Send Comment"
         Me.btnSubmitComment.UseVisualStyleBackColor = True
         '
-        'cmbSteps
+        'TextBox1
         '
-        Me.cmbSteps.FormattingEnabled = True
-        Me.cmbSteps.Items.AddRange(New Object() {"1", "2", "3"})
-        Me.cmbSteps.Location = New System.Drawing.Point(383, 43)
-        Me.cmbSteps.Name = "cmbSteps"
-        Me.cmbSteps.Size = New System.Drawing.Size(121, 21)
-        Me.cmbSteps.TabIndex = 1
+        Me.TextBox1.Location = New System.Drawing.Point(161, 15)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(591, 348)
+        Me.TextBox1.TabIndex = 0
         '
-        'lblSelectStep
+        'cmbPartNo
         '
-        Me.lblSelectStep.AutoSize = True
-        Me.lblSelectStep.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSelectStep.Location = New System.Drawing.Point(247, 41)
-        Me.lblSelectStep.Name = "lblSelectStep"
-        Me.lblSelectStep.Size = New System.Drawing.Size(118, 20)
-        Me.lblSelectStep.TabIndex = 2
-        Me.lblSelectStep.Text = "Select a Step"
+        Me.cmbPartNo.FormattingEnabled = True
+        Me.cmbPartNo.Items.AddRange(New Object() {"Pick a Part No.", "12345", "23456", "34567"})
+        Me.cmbPartNo.Location = New System.Drawing.Point(165, 24)
+        Me.cmbPartNo.Name = "cmbPartNo"
+        Me.cmbPartNo.Size = New System.Drawing.Size(121, 21)
+        Me.cmbPartNo.TabIndex = 6
         '
         'Form1
         '
@@ -220,12 +222,12 @@ Partial Class Form1
     Friend WithEvents lblDesc As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents lblPartNo As System.Windows.Forms.Label
-    Friend WithEvents txtPartNo As System.Windows.Forms.TextBox
     Friend WithEvents lblPartPicture As System.Windows.Forms.Label
     Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
     Friend WithEvents lblSelectStep As System.Windows.Forms.Label
     Friend WithEvents cmbSteps As System.Windows.Forms.ComboBox
     Friend WithEvents btnSubmitComment As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents cmbPartNo As System.Windows.Forms.ComboBox
 
 End Class
