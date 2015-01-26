@@ -23,58 +23,58 @@ Partial Class frmCallStackDemo
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCallStackDemo))
-        Me.txtTop = New System.Windows.Forms.TextBox()
-        Me.txtBottom = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtInfo = New System.Windows.Forms.TextBox()
+        Me.txtMsg = New System.Windows.Forms.TextBox()
+        Me.btnDo = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'txtTop
+        'txtInfo
         '
-        Me.txtTop.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtTop.Location = New System.Drawing.Point(12, 12)
-        Me.txtTop.Multiline = True
-        Me.txtTop.Name = "txtTop"
-        Me.txtTop.ReadOnly = True
-        Me.txtTop.Size = New System.Drawing.Size(363, 142)
-        Me.txtTop.TabIndex = 0
-        Me.txtTop.Text = resources.GetString("txtTop.Text")
+        Me.txtInfo.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtInfo.Location = New System.Drawing.Point(12, 12)
+        Me.txtInfo.Multiline = True
+        Me.txtInfo.Name = "txtInfo"
+        Me.txtInfo.ReadOnly = True
+        Me.txtInfo.Size = New System.Drawing.Size(363, 142)
+        Me.txtInfo.TabIndex = 0
+        Me.txtInfo.Text = resources.GetString("txtInfo.Text")
         '
-        'txtBottom
+        'txtMsg
         '
-        Me.txtBottom.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBottom.Location = New System.Drawing.Point(12, 217)
-        Me.txtBottom.Multiline = True
-        Me.txtBottom.Name = "txtBottom"
-        Me.txtBottom.ReadOnly = True
-        Me.txtBottom.Size = New System.Drawing.Size(363, 249)
-        Me.txtBottom.TabIndex = 1
-        Me.txtBottom.Text = resources.GetString("txtBottom.Text")
+        Me.txtMsg.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtMsg.Location = New System.Drawing.Point(12, 217)
+        Me.txtMsg.Multiline = True
+        Me.txtMsg.Name = "txtMsg"
+        Me.txtMsg.ReadOnly = True
+        Me.txtMsg.Size = New System.Drawing.Size(363, 249)
+        Me.txtMsg.TabIndex = 1
+        Me.txtMsg.Text = resources.GetString("txtMsg.Text")
         '
-        'Button1
+        'btnDo
         '
-        Me.Button1.Location = New System.Drawing.Point(149, 174)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnDo.Location = New System.Drawing.Point(149, 174)
+        Me.btnDo.Name = "btnDo"
+        Me.btnDo.Size = New System.Drawing.Size(75, 23)
+        Me.btnDo.TabIndex = 2
+        Me.btnDo.Text = "Do"
+        Me.btnDo.UseVisualStyleBackColor = True
         '
         'frmCallStackDemo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(387, 478)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.txtBottom)
-        Me.Controls.Add(Me.txtTop)
+        Me.Controls.Add(Me.btnDo)
+        Me.Controls.Add(Me.txtMsg)
+        Me.Controls.Add(Me.txtInfo)
         Me.Name = "frmCallStackDemo"
         Me.Text = "callStackDemo"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents txtTop As System.Windows.Forms.TextBox
-    Friend WithEvents txtBottom As System.Windows.Forms.TextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents txtInfo As System.Windows.Forms.TextBox
+    Friend WithEvents txtMsg As System.Windows.Forms.TextBox
+    Friend WithEvents btnDo As System.Windows.Forms.Button
 
 End Class
