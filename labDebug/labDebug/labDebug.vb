@@ -9,11 +9,11 @@
 
     Private Sub btnCalc_Click(sender As Object, e As EventArgs) _
                 Handles btnCalc.Click
-        Dim intNum1
-        Dim intNum2
-        Dim intResult
-        intNum1 = txtNum1.Text
-        intNum2 = txtNum2.Text
+        Dim intNum1 As Integer
+        Dim intNum2 As Integer
+        Dim intResult As Integer
+        intNum1 = CInt(txtNum1.Text)
+        intNum2 = CInt(txtNum2.Text)
         intResult = intNum1 + intNum2
         lblResult.Text = intResult
     End Sub
