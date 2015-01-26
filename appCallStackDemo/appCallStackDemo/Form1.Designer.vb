@@ -48,7 +48,6 @@ Partial Class frmCallStackDemo
         Me.txtMsg.ReadOnly = True
         Me.txtMsg.Size = New System.Drawing.Size(363, 249)
         Me.txtMsg.TabIndex = 1
-        Me.txtMsg.Text = resources.GetString("txtMsg.Text")
         '
         'btnDo
         '

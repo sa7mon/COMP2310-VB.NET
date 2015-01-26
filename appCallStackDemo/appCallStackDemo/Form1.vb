@@ -14,14 +14,15 @@
         subroutineTwo()
     End Sub
     Private Sub subroutineTwo()
-        txtMsg.Text = "In subroutineTwo()" & vbCrLf
+        txtMsg.Text &= "In subroutineTwo()" & vbCrLf
         subroutineThree()
     End Sub
     Private Sub subroutineThree()
-        txtMsg.Text = "In subroutineThree()" & vbCrLf
+        txtMsg.Text &= "In subroutineThree()" & vbCrLf
     End Sub
 
     Private Sub btnDo_Click(sender As Object, e As EventArgs) Handles btnDo.Click
-
+        ' Call the first subroutine
+        subroutineOne()
     End Sub
 End Class
