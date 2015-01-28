@@ -21,6 +21,8 @@ Public Class Form1
     Private Sub picboxParts_Click(sender As Object, e As EventArgs) Handles picboxParts.Click
         'Toggle information when the user clicks on a picture box
 
+        'Show the "Picture Viewer" window
+        frmPictureLarge.Show()
     End Sub
 
     Private Sub cmbPartNo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbPartNo.SelectedIndexChanged
@@ -29,6 +31,7 @@ Public Class Form1
             lblPartName.Text = ""
         End If
         If cmbPartNo.SelectedItem.ToString = "12345" Then
+            'Change label text to name of part.
             lblPartName.Text = "Bearing Assembly #1"
         End If
         If cmbPartNo.SelectedItem.ToString = "23456" Then
