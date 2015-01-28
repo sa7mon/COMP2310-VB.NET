@@ -15,7 +15,6 @@ Public Class frmMain
         cmbPartNo.SelectedIndex = 0
     End Sub
     Private Sub picboxParts_Click(sender As Object, e As EventArgs) Handles picboxParts.Click
-        'Toggle information when the user clicks on a picture box
 
         'Change the picture on the form we can't see yet
         Dim comboBoxText As String = cmbPartNo.SelectedItem.ToString
@@ -29,10 +28,12 @@ Public Class frmMain
             Case Else
                 frmPictureLarge.picboxViewer.Image = Nothing
         End Select
+
         'Show the "Picture Viewer" window
         frmPictureLarge.Show()
     End Sub
     Private Sub cmbPartNo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbPartNo.SelectedIndexChanged
+        'Get current value of combobox
         Dim comboBoxChangedText As String = cmbPartNo.SelectedItem.ToString
         'Populate labels when the selection in the combo box changes
         Select comboBoxChangedText
