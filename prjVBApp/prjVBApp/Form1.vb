@@ -9,7 +9,7 @@
 'Part 34567: http://horstengineering.com/wp-content/uploads/2010/08/2010_Parts_Aerospace_Bolt_01.jpg
 
 Imports System.IO.Path
-Public Class Form1
+Public Class frmMain
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Select a drop-down item and launch everything.
         cmbPartNo.SelectedIndex = 0
@@ -79,5 +79,10 @@ Public Class Form1
             'Load Rich Text File
             rtbDesc.LoadFile(GetFullPath("..\..\rtfPart34567.rtf"))
         End If
+    End Sub
+
+    Private Sub btnSubmitComment_Click(sender As Object, e As EventArgs) Handles btnSubmitComment.Click
+        textComment.Text = ""
+        MsgBox("Comment submitted. Thank you!", MsgBoxStyle.OkOnly, "Sent Comment")
     End Sub
 End Class

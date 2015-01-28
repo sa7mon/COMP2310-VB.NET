@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class frmMain
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.tabsMain = New System.Windows.Forms.TabControl()
         Me.tabPart = New System.Windows.Forms.TabPage()
         Me.lblPartName = New System.Windows.Forms.Label()
         Me.cmbPartNo = New System.Windows.Forms.ComboBox()
@@ -35,25 +35,25 @@ Partial Class Form1
         Me.wbInst = New System.Windows.Forms.WebBrowser()
         Me.tabComments = New System.Windows.Forms.TabPage()
         Me.btnSubmitComment = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TabControl1.SuspendLayout()
+        Me.textComment = New System.Windows.Forms.TextBox()
+        Me.tabsMain.SuspendLayout()
         Me.tabPart.SuspendLayout()
         CType(Me.picboxParts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabInst.SuspendLayout()
         Me.tabComments.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TabControl1
+        'tabsMain
         '
-        Me.TabControl1.Controls.Add(Me.tabPart)
-        Me.TabControl1.Controls.Add(Me.tabInst)
-        Me.TabControl1.Controls.Add(Me.tabComments)
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(903, 495)
-        Me.TabControl1.TabIndex = 0
+        Me.tabsMain.Controls.Add(Me.tabPart)
+        Me.tabsMain.Controls.Add(Me.tabInst)
+        Me.tabsMain.Controls.Add(Me.tabComments)
+        Me.tabsMain.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tabsMain.Location = New System.Drawing.Point(0, 0)
+        Me.tabsMain.Name = "tabsMain"
+        Me.tabsMain.SelectedIndex = 0
+        Me.tabsMain.Size = New System.Drawing.Size(903, 495)
+        Me.tabsMain.TabIndex = 0
         '
         'tabPart
         '
@@ -167,7 +167,7 @@ Partial Class Form1
         'tabComments
         '
         Me.tabComments.Controls.Add(Me.btnSubmitComment)
-        Me.tabComments.Controls.Add(Me.TextBox1)
+        Me.tabComments.Controls.Add(Me.textComment)
         Me.tabComments.Location = New System.Drawing.Point(4, 22)
         Me.tabComments.Name = "tabComments"
         Me.tabComments.Size = New System.Drawing.Size(895, 469)
@@ -184,23 +184,23 @@ Partial Class Form1
         Me.btnSubmitComment.Text = "Send Comment"
         Me.btnSubmitComment.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'textComment
         '
-        Me.TextBox1.Location = New System.Drawing.Point(161, 15)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(591, 348)
-        Me.TextBox1.TabIndex = 0
+        Me.textComment.Location = New System.Drawing.Point(161, 15)
+        Me.textComment.Multiline = True
+        Me.textComment.Name = "textComment"
+        Me.textComment.Size = New System.Drawing.Size(591, 348)
+        Me.textComment.TabIndex = 0
         '
-        'Form1
+        'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(903, 495)
-        Me.Controls.Add(Me.TabControl1)
-        Me.Name = "Form1"
+        Me.Controls.Add(Me.tabsMain)
+        Me.Name = "frmMain"
         Me.Text = "Part Painter"
-        Me.TabControl1.ResumeLayout(False)
+        Me.tabsMain.ResumeLayout(False)
         Me.tabPart.ResumeLayout(False)
         Me.tabPart.PerformLayout()
         CType(Me.picboxParts, System.ComponentModel.ISupportInitialize).EndInit()
@@ -210,7 +210,7 @@ Partial Class Form1
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents tabsMain As System.Windows.Forms.TabControl
     Friend WithEvents tabPart As System.Windows.Forms.TabPage
     Friend WithEvents tabInst As System.Windows.Forms.TabPage
     Friend WithEvents tabComments As System.Windows.Forms.TabPage
@@ -221,7 +221,7 @@ Partial Class Form1
     Friend WithEvents lblPartPicture As System.Windows.Forms.Label
     Friend WithEvents wbInst As System.Windows.Forms.WebBrowser
     Friend WithEvents btnSubmitComment As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents textComment As System.Windows.Forms.TextBox
     Friend WithEvents cmbPartNo As System.Windows.Forms.ComboBox
     Friend WithEvents lblPartName As System.Windows.Forms.Label
 
