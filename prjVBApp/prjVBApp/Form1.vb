@@ -59,15 +59,15 @@ Public Class Form1
         End If
         If cmbPartNo.SelectedItem.ToString = "34567" Then
             'Change labels
-            lblPartName.Text = "Part 34567: Left Assembly Gear"
-            lblPartDesc.Text = "Part 23456 Description"
+            lblPartName.Text = "Part 34567: Center-threaded hollow bolt"
+            lblPartDesc.Text = "Part 34567 Description"
             lblPartPicture.Text = "Part 23456 Picture"
             'Change image of picturebox in this form
             picboxParts.Image = Image.FromFile("..\..\imgPart_34567.png")
             'Change image of picturebox in "Picture Viewer" form
             frmPictureLarge.picboxViewer.Image = Image.FromFile("..\..\imgPart_34567.png")
             'Navigate WebBrowser
-            wbInst.Navigate(GetFullPath("..\..\pagePart23456.html"))
+            wbInst.Navigate(GetFullPath("..\..\pagePart34567.html"))
             'Load Rich Text File
             rtbDesc.LoadFile(GetFullPath("..\..\rtfPart23456.rtf"))
         End If
