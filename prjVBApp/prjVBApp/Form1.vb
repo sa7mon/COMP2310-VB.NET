@@ -6,10 +6,6 @@
 
 'Part 1: http://offset.gobizkorea.com/att/cat/akbgks/tp_html/img/akbgks_cat_755148_small_img_2.gif
 
-''Rich Text file resides 2 levels up from the debug directory.
-'   rtbInput.LoadFile(GetFullPath("..\..\rtfExample.rtf"))
-'Navigate the Web Browser to a local .html file.
-'   webInput.Navigate(GetFullPath("..\..\htmlExample.html"))
 Imports System.IO.Path
 Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -36,6 +32,7 @@ Public Class Form1
             lblPartName.Text = ""
             picboxParts.Image = Nothing
             WebBrowser1.Navigate(GetFullPath("..\..\pageSelectPart.html"))
+            'rtbInput.LoadFile(GetFullPath("..\..\rtfExample.rtf"))
         End If
         If cmbPartNo.SelectedItem.ToString = "12345" Then
             'Change label text to name of part.
