@@ -3,7 +3,7 @@
 ' Created on: 1/25/15
 ' Updated on: 1/28/15
 
-
+' Image Credits
 'Part 12345: http://offset.gobizkorea.com/att/cat/akbgks/tp_html/img/akbgks_cat_755148_small_img_2.gif
 'Part 23456: http://www.globalspec.com/ImageRepository/LearnMore/20121/spur-gears9c6eaaa7c5d640c6b2bf74c77c566edf.png
 'Part 34567: http://horstengineering.com/wp-content/uploads/2010/08/2010_Parts_Aerospace_Bolt_01.jpg
@@ -33,52 +33,56 @@ Public Class frmMain
         frmPictureLarge.Show()
     End Sub
     Private Sub cmbPartNo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbPartNo.SelectedIndexChanged
+        Dim comboBoxChangedText As String = cmbPartNo.SelectedItem.ToString
         'Populate labels when the selection in the combo box changes
-        If cmbPartNo.SelectedItem.ToString = "Pick a Part No." Then
-            lblPartName.Text = ""
-            lblPartPicture.Text = "Part Picture"
-            lblPartDesc.Text = "Part Description"
-            picboxParts.Image = Nothing
-            wbInst.Navigate(GetFullPath("..\..\pageSelectPart.html"))
-            rtbDesc.LoadFile(GetFullPath("..\..\rtfSelectPart.rtf"))
-        End If
-        If cmbPartNo.SelectedItem.ToString = "12345" Then
-            'Change labels
-            lblPartName.Text = "Part 12345: Bearing Assembly #1"
-            lblPartDesc.Text = "Part 12345 Description"
-            lblPartPicture.Text = "Part 12345 Picture"
-            'Change image of picturebox in this form
-            picboxParts.Image = Image.FromFile("..\..\imgPart_12345.png")
-            'Navigate WebBrowser
-            wbInst.Navigate(GetFullPath("..\..\pagePart12345.html"))
-            'Load Rich Text File
-            rtbDesc.LoadFile(GetFullPath("..\..\rtfPart12345.rtf"))
-        End If
-        If cmbPartNo.SelectedItem.ToString = "23456" Then
-            'Change labels
-            lblPartName.Text = "Part 23456: Left Assembly Gear"
-            lblPartDesc.Text = "Part 23456 Description"
-            lblPartPicture.Text = "Part 23456 Picture"
-            'Change image of picturebox in this form
-            picboxParts.Image = Image.FromFile("..\..\imgPart_23456.png")
-            'Change image of picturebox in "Picture Viewer" form
-            'Navigate WebBrowser
-            wbInst.Navigate(GetFullPath("..\..\pagePart23456.html"))
-            'Load Rich Text File
-            rtbDesc.LoadFile(GetFullPath("..\..\rtfPart23456.rtf"))
-        End If
-        If cmbPartNo.SelectedItem.ToString = "34567" Then
-            'Change labels
-            lblPartName.Text = "Part 34567: Center-threaded hollow bolt"
-            lblPartDesc.Text = "Part 34567 Description"
-            lblPartPicture.Text = "Part 34567 Picture"
-            'Change image of picturebox in this form
-            picboxParts.Image = Image.FromFile("..\..\imgPart_34567.png")
-            'Navigate WebBrowser
-            wbInst.Navigate(GetFullPath("..\..\pagePart34567.html"))
-            'Load Rich Text File
-            rtbDesc.LoadFile(GetFullPath("..\..\rtfPart34567.rtf"))
-        End If
+        Select comboBoxChangedText
+            Case "Pick a Part No."
+                lblPartName.Text = ""
+                lblPartPicture.Text = "Part Picture"
+                lblPartDesc.Text = "Part Description"
+                picboxParts.Image = Nothing
+                wbInst.Navigate(GetFullPath("..\..\pageSelectPart.html"))
+                rtbDesc.LoadFile(GetFullPath("..\..\rtfSelectPart.rtf"))
+
+            Case "12345"
+                'Change labels
+                lblPartName.Text = "Part 12345: Bearing Assembly #1"
+                lblPartDesc.Text = "Part 12345 Description"
+                lblPartPicture.Text = "Part 12345 Picture"
+                'Change image of picturebox in this form
+                picboxParts.Image = Image.FromFile("..\..\imgPart_12345.png")
+                'Navigate WebBrowser
+                wbInst.Navigate(GetFullPath("..\..\pagePart12345.html"))
+                'Load Rich Text File
+                rtbDesc.LoadFile(GetFullPath("..\..\rtfPart12345.rtf"))
+
+            Case "23456"
+                'Change labels
+                lblPartName.Text = "Part 23456: Left Assembly Gear"
+                lblPartDesc.Text = "Part 23456 Description"
+                lblPartPicture.Text = "Part 23456 Picture"
+                'Change image of picturebox in this form
+                picboxParts.Image = Image.FromFile("..\..\imgPart_23456.png")
+                'Change image of picturebox in "Picture Viewer" form
+                'Navigate WebBrowser
+                wbInst.Navigate(GetFullPath("..\..\pagePart23456.html"))
+                'Load Rich Text File
+                rtbDesc.LoadFile(GetFullPath("..\..\rtfPart23456.rtf"))
+
+            Case "34567"
+                'Change labels
+                lblPartName.Text = "Part 34567: Center-threaded hollow bolt"
+                lblPartDesc.Text = "Part 34567 Description"
+                lblPartPicture.Text = "Part 34567 Picture"
+                'Change image of picturebox in this form
+                picboxParts.Image = Image.FromFile("..\..\imgPart_34567.png")
+                'Navigate WebBrowser
+                wbInst.Navigate(GetFullPath("..\..\pagePart34567.html"))
+                'Load Rich Text File
+                rtbDesc.LoadFile(GetFullPath("..\..\rtfPart34567.rtf"))
+            Case Else
+                MsgBox("Error: Invalid part number", MsgBoxStyle.Critical)
+        End Select
     End Sub
 
     Private Sub btnSubmitComment_Click(sender As Object, e As EventArgs) Handles btnSubmitComment.Click
