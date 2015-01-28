@@ -28,11 +28,11 @@ Partial Class Form1
         Me.cmbPartNo = New System.Windows.Forms.ComboBox()
         Me.lblPartPicture = New System.Windows.Forms.Label()
         Me.rtbDesc = New System.Windows.Forms.RichTextBox()
-        Me.lblDesc = New System.Windows.Forms.Label()
+        Me.lblPartDesc = New System.Windows.Forms.Label()
         Me.picboxParts = New System.Windows.Forms.PictureBox()
         Me.lblPartNo = New System.Windows.Forms.Label()
         Me.tabInst = New System.Windows.Forms.TabPage()
-        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
+        Me.wbInst = New System.Windows.Forms.WebBrowser()
         Me.tabComments = New System.Windows.Forms.TabPage()
         Me.btnSubmitComment = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -61,7 +61,7 @@ Partial Class Form1
         Me.tabPart.Controls.Add(Me.cmbPartNo)
         Me.tabPart.Controls.Add(Me.lblPartPicture)
         Me.tabPart.Controls.Add(Me.rtbDesc)
-        Me.tabPart.Controls.Add(Me.lblDesc)
+        Me.tabPart.Controls.Add(Me.lblPartDesc)
         Me.tabPart.Controls.Add(Me.picboxParts)
         Me.tabPart.Controls.Add(Me.lblPartNo)
         Me.tabPart.Cursor = System.Windows.Forms.Cursors.Arrow
@@ -112,15 +112,15 @@ Partial Class Form1
         Me.rtbDesc.TabIndex = 4
         Me.rtbDesc.Text = ""
         '
-        'lblDesc
+        'lblPartDesc
         '
-        Me.lblDesc.AutoSize = True
-        Me.lblDesc.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDesc.Location = New System.Drawing.Point(571, 71)
-        Me.lblDesc.Name = "lblDesc"
-        Me.lblDesc.Size = New System.Drawing.Size(193, 20)
-        Me.lblDesc.TabIndex = 3
-        Me.lblDesc.Text = "Part ##### Description"
+        Me.lblPartDesc.AutoSize = True
+        Me.lblPartDesc.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPartDesc.Location = New System.Drawing.Point(571, 71)
+        Me.lblPartDesc.Name = "lblPartDesc"
+        Me.lblPartDesc.Size = New System.Drawing.Size(193, 20)
+        Me.lblPartDesc.TabIndex = 3
+        Me.lblPartDesc.Text = "Part ##### Description"
         '
         'picboxParts
         '
@@ -144,7 +144,7 @@ Partial Class Form1
         '
         'tabInst
         '
-        Me.tabInst.Controls.Add(Me.WebBrowser1)
+        Me.tabInst.Controls.Add(Me.wbInst)
         Me.tabInst.Location = New System.Drawing.Point(4, 22)
         Me.tabInst.Name = "tabInst"
         Me.tabInst.Padding = New System.Windows.Forms.Padding(3)
@@ -153,14 +153,15 @@ Partial Class Form1
         Me.tabInst.Text = "Instructions"
         Me.tabInst.UseVisualStyleBackColor = True
         '
-        'WebBrowser1
+        'wbInst
         '
-        Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.WebBrowser1.Location = New System.Drawing.Point(3, 3)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(889, 463)
-        Me.WebBrowser1.TabIndex = 0
+        Me.wbInst.AccessibleRole = System.Windows.Forms.AccessibleRole.Border
+        Me.wbInst.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.wbInst.Location = New System.Drawing.Point(3, 3)
+        Me.wbInst.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.wbInst.Name = "wbInst"
+        Me.wbInst.Size = New System.Drawing.Size(889, 463)
+        Me.wbInst.TabIndex = 0
         '
         'tabComments
         '
@@ -213,11 +214,11 @@ Partial Class Form1
     Friend WithEvents tabInst As System.Windows.Forms.TabPage
     Friend WithEvents tabComments As System.Windows.Forms.TabPage
     Friend WithEvents rtbDesc As System.Windows.Forms.RichTextBox
-    Friend WithEvents lblDesc As System.Windows.Forms.Label
+    Friend WithEvents lblPartDesc As System.Windows.Forms.Label
     Friend WithEvents picboxParts As System.Windows.Forms.PictureBox
     Friend WithEvents lblPartNo As System.Windows.Forms.Label
     Friend WithEvents lblPartPicture As System.Windows.Forms.Label
-    Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
+    Friend WithEvents wbInst As System.Windows.Forms.WebBrowser
     Friend WithEvents btnSubmitComment As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents cmbPartNo As System.Windows.Forms.ComboBox
