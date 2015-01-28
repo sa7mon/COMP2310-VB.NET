@@ -37,9 +37,9 @@ Public Class Form1
             'Change image of picturebox in "Picture Viewer" form
             frmPictureLarge.picboxViewer.Image = Image.FromFile("..\..\part_12345.png")
             'Navigate WebBrowser
-            wbInst.Navigate(GetFullPath("..\..\pageSelectPart.html"))
+            wbInst.Navigate(GetFullPath("..\..\pagePart12345.html"))
             'Load Rich Text File
-            rtbDesc.LoadFile(GetFullPath("..\..\rtfSelectPart.rtf"))
+            rtbDesc.LoadFile(GetFullPath("..\..\rtfPart12345.rtf"))
         End If
         If cmbPartNo.SelectedItem.ToString = "23456" Then
             lblPartName.Text = "Part #2"
