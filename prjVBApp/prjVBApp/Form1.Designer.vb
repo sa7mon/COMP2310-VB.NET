@@ -27,7 +27,7 @@ Partial Class Form1
         Me.lblPartName = New System.Windows.Forms.Label()
         Me.cmbPartNo = New System.Windows.Forms.ComboBox()
         Me.lblPartPicture = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.rtbDesc = New System.Windows.Forms.RichTextBox()
         Me.lblDesc = New System.Windows.Forms.Label()
         Me.picboxParts = New System.Windows.Forms.PictureBox()
         Me.lblPartNo = New System.Windows.Forms.Label()
@@ -60,7 +60,7 @@ Partial Class Form1
         Me.tabPart.Controls.Add(Me.lblPartName)
         Me.tabPart.Controls.Add(Me.cmbPartNo)
         Me.tabPart.Controls.Add(Me.lblPartPicture)
-        Me.tabPart.Controls.Add(Me.RichTextBox1)
+        Me.tabPart.Controls.Add(Me.rtbDesc)
         Me.tabPart.Controls.Add(Me.lblDesc)
         Me.tabPart.Controls.Add(Me.picboxParts)
         Me.tabPart.Controls.Add(Me.lblPartNo)
@@ -102,13 +102,15 @@ Partial Class Form1
         Me.lblPartPicture.TabIndex = 5
         Me.lblPartPicture.Text = "Part ##### Picture"
         '
-        'RichTextBox1
+        'rtbDesc
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(455, 94)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(414, 336)
-        Me.RichTextBox1.TabIndex = 4
-        Me.RichTextBox1.Text = ""
+        Me.rtbDesc.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.rtbDesc.Location = New System.Drawing.Point(455, 94)
+        Me.rtbDesc.Name = "rtbDesc"
+        Me.rtbDesc.ReadOnly = True
+        Me.rtbDesc.Size = New System.Drawing.Size(414, 336)
+        Me.rtbDesc.TabIndex = 4
+        Me.rtbDesc.Text = ""
         '
         'lblDesc
         '
@@ -210,7 +212,7 @@ Partial Class Form1
     Friend WithEvents tabPart As System.Windows.Forms.TabPage
     Friend WithEvents tabInst As System.Windows.Forms.TabPage
     Friend WithEvents tabComments As System.Windows.Forms.TabPage
-    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
+    Friend WithEvents rtbDesc As System.Windows.Forms.RichTextBox
     Friend WithEvents lblDesc As System.Windows.Forms.Label
     Friend WithEvents picboxParts As System.Windows.Forms.PictureBox
     Friend WithEvents lblPartNo As System.Windows.Forms.Label

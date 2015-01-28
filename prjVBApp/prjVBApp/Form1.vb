@@ -32,7 +32,7 @@ Public Class Form1
             lblPartName.Text = ""
             picboxParts.Image = Nothing
             WebBrowser1.Navigate(GetFullPath("..\..\pageSelectPart.html"))
-            'rtbInput.LoadFile(GetFullPath("..\..\rtfExample.rtf"))
+            rtbDesc.LoadFile(GetFullPath("..\..\rtfSelectPart.rtf"))
         End If
         If cmbPartNo.SelectedItem.ToString = "12345" Then
             'Change label text to name of part.
