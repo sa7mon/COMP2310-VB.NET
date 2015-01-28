@@ -85,6 +85,7 @@ Partial Class Form1
         '
         'cmbPartNo
         '
+        Me.cmbPartNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbPartNo.FormattingEnabled = True
         Me.cmbPartNo.Items.AddRange(New Object() {"Pick a Part No.", "12345", "23456", "34567"})
         Me.cmbPartNo.Location = New System.Drawing.Point(165, 24)
