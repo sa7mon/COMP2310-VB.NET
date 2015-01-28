@@ -66,7 +66,7 @@ Partial Class Form1
         Me.tabPart.Controls.Add(Me.lblDesc)
         Me.tabPart.Controls.Add(Me.picboxParts)
         Me.tabPart.Controls.Add(Me.lblPartNo)
-        Me.tabPart.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.tabPart.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.tabPart.Location = New System.Drawing.Point(4, 22)
         Me.tabPart.Name = "tabPart"
         Me.tabPart.Padding = New System.Windows.Forms.Padding(3)
@@ -124,6 +124,7 @@ Partial Class Form1
         '
         'picboxParts
         '
+        Me.picboxParts.Cursor = System.Windows.Forms.Cursors.Hand
         Me.picboxParts.Location = New System.Drawing.Point(8, 94)
         Me.picboxParts.Name = "picboxParts"
         Me.picboxParts.Size = New System.Drawing.Size(398, 336)
