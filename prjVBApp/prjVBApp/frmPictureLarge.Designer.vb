@@ -42,7 +42,7 @@ Partial Class frmPictureLarge
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(679, 453)
         Me.Controls.Add(Me.picboxViewer)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
         Me.Name = "frmPictureLarge"
         Me.Text = "Picture Viewer"
         CType(Me.picboxViewer, System.ComponentModel.ISupportInitialize).EndInit()

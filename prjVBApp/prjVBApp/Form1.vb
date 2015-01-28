@@ -1,4 +1,4 @@
-﻿' Project: VB Application [GitHub link here]
+﻿' Project: VB Application [https://github.com/sa7mon/COMP2310-VB.NET/tree/master/prjVBApp]
 ' Created by: Dan Salmon [https://danthesalmon.com]
 ' Created on: 1/25/15
 ' Updated on: 1/28/15
@@ -16,6 +16,19 @@ Public Class Form1
     End Sub
     Private Sub picboxParts_Click(sender As Object, e As EventArgs) Handles picboxParts.Click
         'Toggle information when the user clicks on a picture box
+
+        'Change the picture on the form we can't see yet
+        Dim comboBoxText As String = cmbPartNo.SelectedItem.ToString
+        Select Case comboBoxText
+            Case "12345"
+                frmPictureLarge.picboxViewer.Image = Image.FromFile("..\..\imgPart_12345.png")
+            Case "23456"
+                frmPictureLarge.picboxViewer.Image = Image.FromFile("..\..\imgPart_23456.png")
+            Case "34567"
+                frmPictureLarge.picboxViewer.Image = Image.FromFile("..\..\imgPart_34567.png")
+            Case Else
+                frmPictureLarge.picboxViewer.Image = Nothing
+        End Select
         'Show the "Picture Viewer" window
         frmPictureLarge.Show()
     End Sub
@@ -36,8 +49,6 @@ Public Class Form1
             lblPartPicture.Text = "Part 12345 Picture"
             'Change image of picturebox in this form
             picboxParts.Image = Image.FromFile("..\..\imgPart_12345.png")
-            'Change image of picturebox in "Picture Viewer" form
-            frmPictureLarge.picboxViewer.Image = Image.FromFile("..\..\imgPart_12345.png")
             'Navigate WebBrowser
             wbInst.Navigate(GetFullPath("..\..\pagePart12345.html"))
             'Load Rich Text File
@@ -51,7 +62,6 @@ Public Class Form1
             'Change image of picturebox in this form
             picboxParts.Image = Image.FromFile("..\..\imgPart_23456.png")
             'Change image of picturebox in "Picture Viewer" form
-            frmPictureLarge.picboxViewer.Image = Image.FromFile("..\..\imgPart_23456.png")
             'Navigate WebBrowser
             wbInst.Navigate(GetFullPath("..\..\pagePart23456.html"))
             'Load Rich Text File
@@ -61,11 +71,9 @@ Public Class Form1
             'Change labels
             lblPartName.Text = "Part 34567: Center-threaded hollow bolt"
             lblPartDesc.Text = "Part 34567 Description"
-            lblPartPicture.Text = "Part 23456 Picture"
+            lblPartPicture.Text = "Part 34567 Picture"
             'Change image of picturebox in this form
             picboxParts.Image = Image.FromFile("..\..\imgPart_34567.png")
-            'Change image of picturebox in "Picture Viewer" form
-            frmPictureLarge.picboxViewer.Image = Image.FromFile("..\..\imgPart_34567.png")
             'Navigate WebBrowser
             wbInst.Navigate(GetFullPath("..\..\pagePart34567.html"))
             'Load Rich Text File
