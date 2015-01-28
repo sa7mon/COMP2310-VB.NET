@@ -4,7 +4,8 @@
 ' Updated on: 1/28/15
 
 
-'Part 1: http://offset.gobizkorea.com/att/cat/akbgks/tp_html/img/akbgks_cat_755148_small_img_2.gif
+'Part 12345: http://offset.gobizkorea.com/att/cat/akbgks/tp_html/img/akbgks_cat_755148_small_img_2.gif
+'Part 23456: http://www.globalspec.com/ImageRepository/LearnMore/20121/spur-gears9c6eaaa7c5d640c6b2bf74c77c566edf.png
 
 Imports System.IO.Path
 Public Class Form1
@@ -29,7 +30,7 @@ Public Class Form1
         End If
         If cmbPartNo.SelectedItem.ToString = "12345" Then
             'Change labels
-            lblPartName.Text = "Bearing Assembly #1"
+            lblPartName.Text = "Part 12345: Bearing Assembly #1"
             lblPartDesc.Text = "Part 12345 Description"
             lblPartPicture.Text = "Part 12345 Picture"
             'Change image of picturebox in this form
