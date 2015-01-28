@@ -6,6 +6,7 @@
 
 'Part 12345: http://offset.gobizkorea.com/att/cat/akbgks/tp_html/img/akbgks_cat_755148_small_img_2.gif
 'Part 23456: http://www.globalspec.com/ImageRepository/LearnMore/20121/spur-gears9c6eaaa7c5d640c6b2bf74c77c566edf.png
+'Part 34567: http://horstengineering.com/wp-content/uploads/2010/08/2010_Parts_Aerospace_Bolt_01.jpg
 
 Imports System.IO.Path
 Public Class Form1
@@ -57,7 +58,18 @@ Public Class Form1
             rtbDesc.LoadFile(GetFullPath("..\..\rtfPart23456.rtf"))
         End If
         If cmbPartNo.SelectedItem.ToString = "34567" Then
-            lblPartName.Text = "Part #3"
+            'Change labels
+            lblPartName.Text = "Part 34567: Left Assembly Gear"
+            lblPartDesc.Text = "Part 23456 Description"
+            lblPartPicture.Text = "Part 23456 Picture"
+            'Change image of picturebox in this form
+            picboxParts.Image = Image.FromFile("..\..\imgPart_34567.png")
+            'Change image of picturebox in "Picture Viewer" form
+            frmPictureLarge.picboxViewer.Image = Image.FromFile("..\..\imgPart_34567.png")
+            'Navigate WebBrowser
+            wbInst.Navigate(GetFullPath("..\..\pagePart23456.html"))
+            'Load Rich Text File
+            rtbDesc.LoadFile(GetFullPath("..\..\rtfPart23456.rtf"))
         End If
     End Sub
 End Class
