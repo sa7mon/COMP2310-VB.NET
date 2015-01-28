@@ -6,6 +6,11 @@
 
 'Part 1: http://offset.gobizkorea.com/att/cat/akbgks/tp_html/img/akbgks_cat_755148_small_img_2.gif
 
+''Rich Text file resides 2 levels up from the debug directory.
+'   rtbInput.LoadFile(GetFullPath("..\..\rtfExample.rtf"))
+'Navigate the Web Browser to a local .html file.
+'   webInput.Navigate(GetFullPath("..\..\htmlExample.html"))
+Imports System.IO.Path
 Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' On form load: Select a drop-down item
@@ -29,6 +34,7 @@ Public Class Form1
         'Populate labels when the selection in the combo box changes
         If cmbPartNo.SelectedItem.ToString = "Pick a Part No." Then
             lblPartName.Text = ""
+            WebBrowser1.Navigate(GetFullPath("..\..\pageSelectPart.html"))
         End If
         If cmbPartNo.SelectedItem.ToString = "12345" Then
             'Change label text to name of part.
