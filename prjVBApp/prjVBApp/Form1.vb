@@ -33,9 +33,9 @@ Public Class Form1
             lblPartDesc.Text = "Part 12345 Description"
             lblPartPicture.Text = "Part 12345 Picture"
             'Change image of picturebox in this form
-            picboxParts.Image = Image.FromFile("..\..\part_12345.png")
+            picboxParts.Image = Image.FromFile("..\..\imgPart_12345.png")
             'Change image of picturebox in "Picture Viewer" form
-            frmPictureLarge.picboxViewer.Image = Image.FromFile("..\..\part_12345.png")
+            frmPictureLarge.picboxViewer.Image = Image.FromFile("..\..\imgPart_12345.png")
             'Navigate WebBrowser
             wbInst.Navigate(GetFullPath("..\..\pagePart12345.html"))
             'Load Rich Text File
