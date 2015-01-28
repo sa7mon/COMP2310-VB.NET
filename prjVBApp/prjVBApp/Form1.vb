@@ -69,7 +69,7 @@ Public Class Form1
             'Navigate WebBrowser
             wbInst.Navigate(GetFullPath("..\..\pagePart34567.html"))
             'Load Rich Text File
-            rtbDesc.LoadFile(GetFullPath("..\..\rtfPart23456.rtf"))
+            rtbDesc.LoadFile(GetFullPath("..\..\rtfPart34567.rtf"))
         End If
     End Sub
 End Class
