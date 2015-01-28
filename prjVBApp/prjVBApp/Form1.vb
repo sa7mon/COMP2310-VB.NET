@@ -34,6 +34,7 @@ Public Class Form1
         'Populate labels when the selection in the combo box changes
         If cmbPartNo.SelectedItem.ToString = "Pick a Part No." Then
             lblPartName.Text = ""
+            picboxParts.Image = Nothing
             WebBrowser1.Navigate(GetFullPath("..\..\pageSelectPart.html"))
         End If
         If cmbPartNo.SelectedItem.ToString = "12345" Then
