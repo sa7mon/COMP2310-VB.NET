@@ -43,7 +43,18 @@ Public Class Form1
             rtbDesc.LoadFile(GetFullPath("..\..\rtfPart12345.rtf"))
         End If
         If cmbPartNo.SelectedItem.ToString = "23456" Then
-            lblPartName.Text = "Part #2"
+            'Change labels
+            lblPartName.Text = "Part 23456: Left Assembly Gear"
+            lblPartDesc.Text = "Part 23456 Description"
+            lblPartPicture.Text = "Part 23456 Picture"
+            'Change image of picturebox in this form
+            picboxParts.Image = Image.FromFile("..\..\imgPart_23456.png")
+            'Change image of picturebox in "Picture Viewer" form
+            frmPictureLarge.picboxViewer.Image = Image.FromFile("..\..\imgPart_23456.png")
+            'Navigate WebBrowser
+            wbInst.Navigate(GetFullPath("..\..\pagePart23456.html"))
+            'Load Rich Text File
+            rtbDesc.LoadFile(GetFullPath("..\..\rtfPart23456.rtf"))
         End If
         If cmbPartNo.SelectedItem.ToString = "34567" Then
             lblPartName.Text = "Part #3"
