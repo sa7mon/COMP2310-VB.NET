@@ -32,8 +32,6 @@ Partial Class Form1
         Me.picboxParts = New System.Windows.Forms.PictureBox()
         Me.lblPartNo = New System.Windows.Forms.Label()
         Me.tabInst = New System.Windows.Forms.TabPage()
-        Me.lblSelectStep = New System.Windows.Forms.Label()
-        Me.cmbSteps = New System.Windows.Forms.ComboBox()
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.tabComments = New System.Windows.Forms.TabPage()
         Me.btnSubmitComment = New System.Windows.Forms.Button()
@@ -144,8 +142,6 @@ Partial Class Form1
         '
         'tabInst
         '
-        Me.tabInst.Controls.Add(Me.lblSelectStep)
-        Me.tabInst.Controls.Add(Me.cmbSteps)
         Me.tabInst.Controls.Add(Me.WebBrowser1)
         Me.tabInst.Location = New System.Drawing.Point(4, 22)
         Me.tabInst.Name = "tabInst"
@@ -155,31 +151,13 @@ Partial Class Form1
         Me.tabInst.Text = "Instructions"
         Me.tabInst.UseVisualStyleBackColor = True
         '
-        'lblSelectStep
-        '
-        Me.lblSelectStep.AutoSize = True
-        Me.lblSelectStep.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSelectStep.Location = New System.Drawing.Point(247, 41)
-        Me.lblSelectStep.Name = "lblSelectStep"
-        Me.lblSelectStep.Size = New System.Drawing.Size(118, 20)
-        Me.lblSelectStep.TabIndex = 2
-        Me.lblSelectStep.Text = "Select a Step"
-        '
-        'cmbSteps
-        '
-        Me.cmbSteps.FormattingEnabled = True
-        Me.cmbSteps.Items.AddRange(New Object() {"Select a Part First", "1", "2", "3"})
-        Me.cmbSteps.Location = New System.Drawing.Point(383, 43)
-        Me.cmbSteps.Name = "cmbSteps"
-        Me.cmbSteps.Size = New System.Drawing.Size(121, 21)
-        Me.cmbSteps.TabIndex = 1
-        '
         'WebBrowser1
         '
-        Me.WebBrowser1.Location = New System.Drawing.Point(-4, 70)
+        Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.WebBrowser1.Location = New System.Drawing.Point(3, 3)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(899, 399)
+        Me.WebBrowser1.Size = New System.Drawing.Size(889, 463)
         Me.WebBrowser1.TabIndex = 0
         '
         'tabComments
@@ -223,7 +201,6 @@ Partial Class Form1
         Me.tabPart.PerformLayout()
         CType(Me.picboxParts, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabInst.ResumeLayout(False)
-        Me.tabInst.PerformLayout()
         Me.tabComments.ResumeLayout(False)
         Me.tabComments.PerformLayout()
         Me.ResumeLayout(False)
@@ -239,8 +216,6 @@ Partial Class Form1
     Friend WithEvents lblPartNo As System.Windows.Forms.Label
     Friend WithEvents lblPartPicture As System.Windows.Forms.Label
     Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
-    Friend WithEvents lblSelectStep As System.Windows.Forms.Label
-    Friend WithEvents cmbSteps As System.Windows.Forms.ComboBox
     Friend WithEvents btnSubmitComment As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents cmbPartNo As System.Windows.Forms.ComboBox
