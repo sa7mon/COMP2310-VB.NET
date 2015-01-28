@@ -24,10 +24,11 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tabPart = New System.Windows.Forms.TabPage()
+        Me.cmbPartNo = New System.Windows.Forms.ComboBox()
         Me.lblPartPicture = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.lblDesc = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.picboxParts = New System.Windows.Forms.PictureBox()
         Me.lblPartNo = New System.Windows.Forms.Label()
         Me.tabInst = New System.Windows.Forms.TabPage()
         Me.lblSelectStep = New System.Windows.Forms.Label()
@@ -36,10 +37,10 @@ Partial Class Form1
         Me.tabComments = New System.Windows.Forms.TabPage()
         Me.btnSubmitComment = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.cmbPartNo = New System.Windows.Forms.ComboBox()
+        Me.lblPartName = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.tabPart.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picboxParts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabInst.SuspendLayout()
         Me.tabComments.SuspendLayout()
         Me.SuspendLayout()
@@ -58,11 +59,12 @@ Partial Class Form1
         '
         'tabPart
         '
+        Me.tabPart.Controls.Add(Me.lblPartName)
         Me.tabPart.Controls.Add(Me.cmbPartNo)
         Me.tabPart.Controls.Add(Me.lblPartPicture)
         Me.tabPart.Controls.Add(Me.RichTextBox1)
         Me.tabPart.Controls.Add(Me.lblDesc)
-        Me.tabPart.Controls.Add(Me.PictureBox1)
+        Me.tabPart.Controls.Add(Me.picboxParts)
         Me.tabPart.Controls.Add(Me.lblPartNo)
         Me.tabPart.Location = New System.Drawing.Point(4, 22)
         Me.tabPart.Name = "tabPart"
@@ -71,6 +73,15 @@ Partial Class Form1
         Me.tabPart.TabIndex = 0
         Me.tabPart.Text = "Part"
         Me.tabPart.UseVisualStyleBackColor = True
+        '
+        'cmbPartNo
+        '
+        Me.cmbPartNo.FormattingEnabled = True
+        Me.cmbPartNo.Items.AddRange(New Object() {"Pick a Part No.", "12345", "23456", "34567"})
+        Me.cmbPartNo.Location = New System.Drawing.Point(165, 24)
+        Me.cmbPartNo.Name = "cmbPartNo"
+        Me.cmbPartNo.Size = New System.Drawing.Size(121, 21)
+        Me.cmbPartNo.TabIndex = 6
         '
         'lblPartPicture
         '
@@ -100,13 +111,13 @@ Partial Class Form1
         Me.lblDesc.TabIndex = 3
         Me.lblDesc.Text = "Part ##### Description"
         '
-        'PictureBox1
+        'picboxParts
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(8, 94)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(398, 336)
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
+        Me.picboxParts.Location = New System.Drawing.Point(8, 94)
+        Me.picboxParts.Name = "picboxParts"
+        Me.picboxParts.Size = New System.Drawing.Size(398, 336)
+        Me.picboxParts.TabIndex = 2
+        Me.picboxParts.TabStop = False
         '
         'lblPartNo
         '
@@ -186,14 +197,15 @@ Partial Class Form1
         Me.TextBox1.Size = New System.Drawing.Size(591, 348)
         Me.TextBox1.TabIndex = 0
         '
-        'cmbPartNo
+        'lblPartName
         '
-        Me.cmbPartNo.FormattingEnabled = True
-        Me.cmbPartNo.Items.AddRange(New Object() {"Pick a Part No.", "12345", "23456", "34567"})
-        Me.cmbPartNo.Location = New System.Drawing.Point(165, 24)
-        Me.cmbPartNo.Name = "cmbPartNo"
-        Me.cmbPartNo.Size = New System.Drawing.Size(121, 21)
-        Me.cmbPartNo.TabIndex = 6
+        Me.lblPartName.AutoSize = True
+        Me.lblPartName.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPartName.Location = New System.Drawing.Point(451, 21)
+        Me.lblPartName.Name = "lblPartName"
+        Me.lblPartName.Size = New System.Drawing.Size(52, 24)
+        Me.lblPartName.TabIndex = 7
+        Me.lblPartName.Text = "       "
         '
         'Form1
         '
@@ -206,7 +218,7 @@ Partial Class Form1
         Me.TabControl1.ResumeLayout(False)
         Me.tabPart.ResumeLayout(False)
         Me.tabPart.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picboxParts, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabInst.ResumeLayout(False)
         Me.tabInst.PerformLayout()
         Me.tabComments.ResumeLayout(False)
@@ -220,7 +232,7 @@ Partial Class Form1
     Friend WithEvents tabComments As System.Windows.Forms.TabPage
     Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
     Friend WithEvents lblDesc As System.Windows.Forms.Label
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents picboxParts As System.Windows.Forms.PictureBox
     Friend WithEvents lblPartNo As System.Windows.Forms.Label
     Friend WithEvents lblPartPicture As System.Windows.Forms.Label
     Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
@@ -229,5 +241,6 @@ Partial Class Form1
     Friend WithEvents btnSubmitComment As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents cmbPartNo As System.Windows.Forms.ComboBox
+    Friend WithEvents lblPartName As System.Windows.Forms.Label
 
 End Class
