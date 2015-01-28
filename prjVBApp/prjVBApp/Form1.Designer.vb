@@ -24,6 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tabPart = New System.Windows.Forms.TabPage()
+        Me.lblPartName = New System.Windows.Forms.Label()
         Me.cmbPartNo = New System.Windows.Forms.ComboBox()
         Me.lblPartPicture = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
@@ -37,7 +38,6 @@ Partial Class Form1
         Me.tabComments = New System.Windows.Forms.TabPage()
         Me.btnSubmitComment = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.lblPartName = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.tabPart.SuspendLayout()
         CType(Me.picboxParts, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,6 +66,7 @@ Partial Class Form1
         Me.tabPart.Controls.Add(Me.lblDesc)
         Me.tabPart.Controls.Add(Me.picboxParts)
         Me.tabPart.Controls.Add(Me.lblPartNo)
+        Me.tabPart.Cursor = System.Windows.Forms.Cursors.Hand
         Me.tabPart.Location = New System.Drawing.Point(4, 22)
         Me.tabPart.Name = "tabPart"
         Me.tabPart.Padding = New System.Windows.Forms.Padding(3)
@@ -73,6 +74,16 @@ Partial Class Form1
         Me.tabPart.TabIndex = 0
         Me.tabPart.Text = "Part"
         Me.tabPart.UseVisualStyleBackColor = True
+        '
+        'lblPartName
+        '
+        Me.lblPartName.AutoSize = True
+        Me.lblPartName.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPartName.Location = New System.Drawing.Point(451, 21)
+        Me.lblPartName.Name = "lblPartName"
+        Me.lblPartName.Size = New System.Drawing.Size(52, 24)
+        Me.lblPartName.TabIndex = 7
+        Me.lblPartName.Text = "       "
         '
         'cmbPartNo
         '
@@ -116,6 +127,7 @@ Partial Class Form1
         Me.picboxParts.Location = New System.Drawing.Point(8, 94)
         Me.picboxParts.Name = "picboxParts"
         Me.picboxParts.Size = New System.Drawing.Size(398, 336)
+        Me.picboxParts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picboxParts.TabIndex = 2
         Me.picboxParts.TabStop = False
         '
@@ -196,16 +208,6 @@ Partial Class Form1
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(591, 348)
         Me.TextBox1.TabIndex = 0
-        '
-        'lblPartName
-        '
-        Me.lblPartName.AutoSize = True
-        Me.lblPartName.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPartName.Location = New System.Drawing.Point(451, 21)
-        Me.lblPartName.Name = "lblPartName"
-        Me.lblPartName.Size = New System.Drawing.Size(52, 24)
-        Me.lblPartName.TabIndex = 7
-        Me.lblPartName.Text = "       "
         '
         'Form1
         '
