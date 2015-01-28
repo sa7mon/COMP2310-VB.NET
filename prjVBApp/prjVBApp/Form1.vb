@@ -33,7 +33,12 @@ Public Class Form1
         If cmbPartNo.SelectedItem.ToString = "12345" Then
             'Change label text to name of part.
             lblPartName.Text = "Bearing Assembly #1"
+
+            'Change image of picturebox in this form
             picboxParts.Image = Image.FromFile("..\..\part_12345.png")
+
+            'Change image of picturebox in "Picture Viewer" form
+            frmPictureLarge.picboxViewer.Image = Image.FromFile("..\..\part_12345.png")
         End If
         If cmbPartNo.SelectedItem.ToString = "23456" Then
             lblPartName.Text = "Part #2"
