@@ -40,12 +40,26 @@ Public Class frmShowISBN
                 validISBN = validISBN.Insert(15, "-")
 
                 lblValid.Text = "Yes, " & validISBN
+                lblIndustry.Text = validISBN.Substring(0, 3)
+                lblGroupLanguage.Text = validISBN.Substring(4, 2)
+                lblPublisher.Text = validISBN.Substring(7, 4)
+                lblTitle.Text = validISBN.Substring(12, 3)
             Else
                 lblValid.Text = "No"
+                lblIndustry.Text = ""
+                lblGroupLanguage.Text = ""
+                lblPublisher.Text = ""
+                lblTitle.Text = ""
+
             End If
         Else
             'Not enough characters to be valid
             lblValid.Text = "No"
+            lblValid.Text = "No"
+            lblIndustry.Text = ""
+            lblGroupLanguage.Text = ""
+            lblPublisher.Text = ""
+            lblTitle.Text = ""
         End If
     End Sub
 End Class
