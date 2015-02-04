@@ -5,7 +5,7 @@
 
 Public Class frmShowISBN
 
-    Public Function cleanISBN(input)
+    Public Function cleanInput(input)
         Dim cleanedISBN As String = ""
 
         For Each c As Char In input
@@ -21,6 +21,25 @@ Public Class frmShowISBN
     End Function
 
     Private Sub txtISBN_TextChanged(sender As Object, e As EventArgs) Handles txtISBN.TextChanged
-        lblValid.Text = IIf(txtISBN.Text.Length > 12, cleanISBN(txtISBN.Text), "Not an ISBN")
+        Dim cleanedInput As String = ""
+        Dim validISBN As String = ""
+
+        If (txtISBN.Text.Length > 12) Then
+            'Enough characters to be valid
+
+            'First, clean the input
+            cleanedInput = cleanInput(txtISBN.Text)
+
+            If (cleanedInput.Length = 13) Then
+                'This is the right number of digits.
+                'Time to add dashes
+                'lblValid.Text = "Probably"
+            Else
+                lblValid.Text = "No"
+            End If
+        Else
+            'Not enough characters to be valid
+            lblValid.Text = "No"
+        End If
     End Sub
 End Class
