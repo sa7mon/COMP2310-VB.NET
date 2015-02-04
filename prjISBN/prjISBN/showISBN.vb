@@ -45,12 +45,12 @@ Public Class frmShowISBN
                 lblPublisher.Text = validISBN.Substring(7, 4)
                 lblTitle.Text = validISBN.Substring(12, 3)
             Else
+                'Not the right number of digits.
                 lblValid.Text = "No"
                 lblIndustry.Text = ""
                 lblGroupLanguage.Text = ""
                 lblPublisher.Text = ""
                 lblTitle.Text = ""
-
             End If
         Else
             'Not enough characters to be valid
