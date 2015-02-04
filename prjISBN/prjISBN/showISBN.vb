@@ -33,7 +33,13 @@ Public Class frmShowISBN
             If (cleanedInput.Length = 13) Then
                 'This is the right number of digits.
                 'Time to add dashes
-                'lblValid.Text = "Probably"
+                validISBN = cleanedInput
+                validISBN = validISBN.Insert(3, "-")
+                validISBN = validISBN.Insert(6, "-")
+                validISBN = validISBN.Insert(11, "-")
+                validISBN = validISBN.Insert(15, "-")
+
+                lblValid.Text = "Yes, " & validISBN
             Else
                 lblValid.Text = "No"
             End If
