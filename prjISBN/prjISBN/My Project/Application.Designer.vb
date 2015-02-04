@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.prjISBN.Form1
+            Me.MainForm = Global.prjISBN.showISBN
         End Sub
     End Class
 End Namespace
