@@ -30,15 +30,15 @@ Partial Class frmDecisionString
         Me.grpHours = New System.Windows.Forms.GroupBox()
         Me.lblHours = New System.Windows.Forms.Label()
         Me.grpNonProfit = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.grpInfo = New System.Windows.Forms.GroupBox()
-        Me.txtFirstName = New System.Windows.Forms.TextBox()
-        Me.txtLastName = New System.Windows.Forms.TextBox()
-        Me.lblFirstName = New System.Windows.Forms.Label()
-        Me.lblLastName = New System.Windows.Forms.Label()
-        Me.lblPhone = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.lblPhone = New System.Windows.Forms.Label()
+        Me.lblLastName = New System.Windows.Forms.Label()
+        Me.lblFirstName = New System.Windows.Forms.Label()
+        Me.txtLastName = New System.Windows.Forms.TextBox()
+        Me.txtFirstName = New System.Windows.Forms.TextBox()
         Me.btnCalculate = New System.Windows.Forms.Button()
         CType(Me.numHours, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpPackage.SuspendLayout()
@@ -58,6 +58,7 @@ Partial Class frmDecisionString
         'radioFast
         '
         Me.radioFast.AutoSize = True
+        Me.radioFast.Checked = True
         Me.radioFast.Location = New System.Drawing.Point(20, 19)
         Me.radioFast.Name = "radioFast"
         Me.radioFast.Size = New System.Drawing.Size(45, 17)
@@ -73,7 +74,6 @@ Partial Class frmDecisionString
         Me.radioFaster.Name = "radioFaster"
         Me.radioFaster.Size = New System.Drawing.Size(54, 17)
         Me.radioFaster.TabIndex = 2
-        Me.radioFaster.TabStop = True
         Me.radioFaster.Text = "Faster"
         Me.radioFaster.UseVisualStyleBackColor = True
         '
@@ -84,7 +84,6 @@ Partial Class frmDecisionString
         Me.radioFastest.Name = "radioFastest"
         Me.radioFastest.Size = New System.Drawing.Size(59, 17)
         Me.radioFastest.TabIndex = 3
-        Me.radioFastest.TabStop = True
         Me.radioFastest.Text = "Fastest"
         Me.radioFastest.UseVisualStyleBackColor = True
         '
@@ -93,7 +92,7 @@ Partial Class frmDecisionString
         Me.grpPackage.Controls.Add(Me.radioFast)
         Me.grpPackage.Controls.Add(Me.radioFastest)
         Me.grpPackage.Controls.Add(Me.radioFaster)
-        Me.grpPackage.Location = New System.Drawing.Point(12, 26)
+        Me.grpPackage.Location = New System.Drawing.Point(12, 11)
         Me.grpPackage.Name = "grpPackage"
         Me.grpPackage.Size = New System.Drawing.Size(133, 93)
         Me.grpPackage.TabIndex = 4
@@ -104,7 +103,7 @@ Partial Class frmDecisionString
         '
         Me.grpHours.Controls.Add(Me.lblHours)
         Me.grpHours.Controls.Add(Me.numHours)
-        Me.grpHours.Location = New System.Drawing.Point(151, 26)
+        Me.grpHours.Location = New System.Drawing.Point(151, 11)
         Me.grpHours.Name = "grpHours"
         Me.grpHours.Size = New System.Drawing.Size(139, 93)
         Me.grpHours.TabIndex = 5
@@ -124,12 +123,24 @@ Partial Class frmDecisionString
         '
         Me.grpNonProfit.Controls.Add(Me.CheckBox1)
         Me.grpNonProfit.Controls.Add(Me.Label1)
-        Me.grpNonProfit.Location = New System.Drawing.Point(296, 26)
+        Me.grpNonProfit.Location = New System.Drawing.Point(296, 11)
         Me.grpNonProfit.Name = "grpNonProfit"
-        Me.grpNonProfit.Size = New System.Drawing.Size(181, 93)
+        Me.grpNonProfit.Size = New System.Drawing.Size(186, 93)
         Me.grpNonProfit.TabIndex = 6
         Me.grpNonProfit.TabStop = False
         Me.grpNonProfit.Text = "Non-Profit"
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Checked = True
+        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox1.Location = New System.Drawing.Point(137, 43)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(44, 17)
+        Me.CheckBox1.TabIndex = 1
+        Me.CheckBox1.Text = "Yes"
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -140,16 +151,6 @@ Partial Class frmDecisionString
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Non-Profit Organization? "
         '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(137, 43)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(44, 17)
-        Me.CheckBox1.TabIndex = 1
-        Me.CheckBox1.Text = "Yes"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
         'grpInfo
         '
         Me.grpInfo.Controls.Add(Me.TextBox1)
@@ -158,44 +159,20 @@ Partial Class frmDecisionString
         Me.grpInfo.Controls.Add(Me.lblFirstName)
         Me.grpInfo.Controls.Add(Me.txtLastName)
         Me.grpInfo.Controls.Add(Me.txtFirstName)
-        Me.grpInfo.Location = New System.Drawing.Point(12, 134)
+        Me.grpInfo.Location = New System.Drawing.Point(12, 119)
         Me.grpInfo.Name = "grpInfo"
         Me.grpInfo.Size = New System.Drawing.Size(246, 105)
         Me.grpInfo.TabIndex = 7
         Me.grpInfo.TabStop = False
         Me.grpInfo.Text = "Customer Information"
         '
-        'txtFirstName
+        'TextBox1
         '
-        Me.txtFirstName.Location = New System.Drawing.Point(75, 23)
-        Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.Size = New System.Drawing.Size(139, 20)
-        Me.txtFirstName.TabIndex = 0
-        '
-        'txtLastName
-        '
-        Me.txtLastName.Location = New System.Drawing.Point(75, 49)
-        Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.Size = New System.Drawing.Size(139, 20)
-        Me.txtLastName.TabIndex = 1
-        '
-        'lblFirstName
-        '
-        Me.lblFirstName.AutoSize = True
-        Me.lblFirstName.Location = New System.Drawing.Point(6, 26)
-        Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(63, 13)
-        Me.lblFirstName.TabIndex = 2
-        Me.lblFirstName.Text = "First Name: "
-        '
-        'lblLastName
-        '
-        Me.lblLastName.AutoSize = True
-        Me.lblLastName.Location = New System.Drawing.Point(5, 52)
-        Me.lblLastName.Name = "lblLastName"
-        Me.lblLastName.Size = New System.Drawing.Size(64, 13)
-        Me.lblLastName.TabIndex = 3
-        Me.lblLastName.Text = "Last Name: "
+        Me.TextBox1.Location = New System.Drawing.Point(75, 75)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(93, 20)
+        Me.TextBox1.TabIndex = 5
+        Me.TextBox1.Text = "123-456-7890"
         '
         'lblPhone
         '
@@ -206,18 +183,45 @@ Partial Class frmDecisionString
         Me.lblPhone.TabIndex = 4
         Me.lblPhone.Text = "Phone:"
         '
-        'TextBox1
+        'lblLastName
         '
-        Me.TextBox1.Location = New System.Drawing.Point(75, 75)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(93, 20)
-        Me.TextBox1.TabIndex = 5
+        Me.lblLastName.AutoSize = True
+        Me.lblLastName.Location = New System.Drawing.Point(5, 52)
+        Me.lblLastName.Name = "lblLastName"
+        Me.lblLastName.Size = New System.Drawing.Size(64, 13)
+        Me.lblLastName.TabIndex = 3
+        Me.lblLastName.Text = "Last Name: "
+        '
+        'lblFirstName
+        '
+        Me.lblFirstName.AutoSize = True
+        Me.lblFirstName.Location = New System.Drawing.Point(6, 26)
+        Me.lblFirstName.Name = "lblFirstName"
+        Me.lblFirstName.Size = New System.Drawing.Size(63, 13)
+        Me.lblFirstName.TabIndex = 2
+        Me.lblFirstName.Text = "First Name: "
+        '
+        'txtLastName
+        '
+        Me.txtLastName.Location = New System.Drawing.Point(75, 49)
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.Size = New System.Drawing.Size(139, 20)
+        Me.txtLastName.TabIndex = 1
+        Me.txtLastName.Text = "Dole"
+        '
+        'txtFirstName
+        '
+        Me.txtFirstName.Location = New System.Drawing.Point(75, 23)
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.Size = New System.Drawing.Size(139, 20)
+        Me.txtFirstName.TabIndex = 0
+        Me.txtFirstName.Text = "Bob"
         '
         'btnCalculate
         '
-        Me.btnCalculate.Location = New System.Drawing.Point(305, 142)
+        Me.btnCalculate.Location = New System.Drawing.Point(296, 127)
         Me.btnCalculate.Name = "btnCalculate"
-        Me.btnCalculate.Size = New System.Drawing.Size(131, 49)
+        Me.btnCalculate.Size = New System.Drawing.Size(186, 49)
         Me.btnCalculate.TabIndex = 8
         Me.btnCalculate.Text = "Calculate"
         Me.btnCalculate.UseVisualStyleBackColor = True
@@ -226,7 +230,7 @@ Partial Class frmDecisionString
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(488, 253)
+        Me.ClientSize = New System.Drawing.Size(494, 235)
         Me.Controls.Add(Me.btnCalculate)
         Me.Controls.Add(Me.grpInfo)
         Me.Controls.Add(Me.grpNonProfit)
