@@ -18,7 +18,22 @@
     ' Validate the user input. There cannot be more than 744 hours used per month. The value must be numeric.
     '
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    'Package Name	  Price	                         Additional Hours
+    '   Fast	    10 hrs/month at $9.95/month	          $2.00
+    ' Faster	    20 hrs/month at $14.95/month	      $1.00
+    'Fastest	    Unlimited Access at $19.95/month	  no extra charge
+    'Non-Profit Discount	20% off any package	20% off
+
     Dim MAX_HOURS As Integer = 744
+    Dim FAST_HOURS As Integer = 10
+    Dim FAST_MONTHLY As Integer = 9.95
+    Dim FAST_HOURS_CHARGE As Integer = 2.0
+    Dim FASTER_HOURS As Integer = 20
+    Dim FASTER_HOURS_CHARGE As Integer = 1
+    Dim FASTER_MONTHLY As Integer = 14.95
+    Dim FASTEST_MONTHLY As Integer = 19.95
+    Dim NONPROF_DISCOUNT As Decimal = 0.2
+
 
     Private Sub btnCalculate_Click(sender As Object, e As EventArgs) Handles btnCalculate.Click
         '' Start by validating all the information
@@ -27,13 +42,10 @@
         If CInt(numHours.Value) > MAX_HOURS Then
             MsgBox("Error: Hours used cannot be more than 744. Please re-check used hours.")
             Return
-        Else
-            '' Not greater than MAX_HOURS
+        Else '' Not greater than MAX_HOURS
+
+            '' Validation is done, proceed with the calculation
 
         End If
-        '' Validation is done, proceed with the calculation
-        MsgBox("Don't let it get here.")
-
     End Sub
-
 End Class
