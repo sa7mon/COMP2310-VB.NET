@@ -23,6 +23,7 @@
     ' Faster	    20 hrs/month at $14.95/month	      $1.00
     'Fastest	    Unlimited Access at $19.95/month	  no extra charge
     'Non-Profit Discount	20% off any package	20% off
+    ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
     Dim MAX_HOURS As Integer = 744
     Dim FAST_HOURS As Integer = 10
@@ -34,8 +35,8 @@
     Dim FASTEST_MONTHLY As Integer = 19.95
     Dim NONPROF_DISCOUNT As Decimal = 0.2
 
-
     Private Sub btnCalculate_Click(sender As Object, e As EventArgs) Handles btnCalculate.Click
+        Dim package As String = numHours.Value
         '' Start by validating all the information
 
         '' Check if hours entered is greater than 744. If it is, don't even continue. 
@@ -45,6 +46,22 @@
         Else '' Not greater than MAX_HOURS
 
             '' Validation is done, proceed with the calculation
+
+            Select Case package '' Figure out which package was selected
+                Case "Fast"
+                    ''First, see if we've exceeded our hour limit
+                    If numHours.Value > FAST_HOURS Then
+                        '' We've exceeded our hour limit.
+
+                    Else
+                        '' We're under or at our limit
+
+                    End If
+                Case "Faster"
+                Case "Fastest"
+                Case Else
+                    MsgBox("Error: Couldn't determine package.")
+            End Select
 
         End If
     End Sub
