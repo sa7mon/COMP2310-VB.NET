@@ -22,7 +22,6 @@ Partial Class frmDecisionString
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.numHours = New System.Windows.Forms.NumericUpDown()
         Me.radioFast = New System.Windows.Forms.RadioButton()
         Me.radioFaster = New System.Windows.Forms.RadioButton()
         Me.radioFastest = New System.Windows.Forms.RadioButton()
@@ -40,20 +39,13 @@ Partial Class frmDecisionString
         Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.txtFirstName = New System.Windows.Forms.TextBox()
         Me.btnCalculate = New System.Windows.Forms.Button()
-        CType(Me.numHours, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.numHours = New System.Windows.Forms.NumericUpDown()
         Me.grpPackage.SuspendLayout()
         Me.grpHours.SuspendLayout()
         Me.grpNonProfit.SuspendLayout()
         Me.grpInfo.SuspendLayout()
+        CType(Me.numHours, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'numHours
-        '
-        Me.numHours.Location = New System.Drawing.Point(81, 39)
-        Me.numHours.Name = "numHours"
-        Me.numHours.Size = New System.Drawing.Size(50, 20)
-        Me.numHours.TabIndex = 0
-        Me.numHours.Value = New Decimal(New Integer() {25, 0, 0, 0})
         '
         'radioFast
         '
@@ -101,8 +93,8 @@ Partial Class frmDecisionString
         '
         'grpHours
         '
-        Me.grpHours.Controls.Add(Me.lblHours)
         Me.grpHours.Controls.Add(Me.numHours)
+        Me.grpHours.Controls.Add(Me.lblHours)
         Me.grpHours.Location = New System.Drawing.Point(151, 11)
         Me.grpHours.Name = "grpHours"
         Me.grpHours.Size = New System.Drawing.Size(139, 93)
@@ -226,6 +218,14 @@ Partial Class frmDecisionString
         Me.btnCalculate.Text = "Calculate"
         Me.btnCalculate.UseVisualStyleBackColor = True
         '
+        'numHours
+        '
+        Me.numHours.Location = New System.Drawing.Point(70, 39)
+        Me.numHours.Maximum = New Decimal(New Integer() {744, 0, 0, 0})
+        Me.numHours.Name = "numHours"
+        Me.numHours.Size = New System.Drawing.Size(63, 20)
+        Me.numHours.TabIndex = 2
+        '
         'frmDecisionString
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -238,7 +238,6 @@ Partial Class frmDecisionString
         Me.Controls.Add(Me.grpPackage)
         Me.Name = "frmDecisionString"
         Me.Text = "ISP Price Calculator"
-        CType(Me.numHours, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpPackage.ResumeLayout(False)
         Me.grpPackage.PerformLayout()
         Me.grpHours.ResumeLayout(False)
@@ -247,10 +246,10 @@ Partial Class frmDecisionString
         Me.grpNonProfit.PerformLayout()
         Me.grpInfo.ResumeLayout(False)
         Me.grpInfo.PerformLayout()
+        CType(Me.numHours, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents numHours As System.Windows.Forms.NumericUpDown
     Friend WithEvents radioFast As System.Windows.Forms.RadioButton
     Friend WithEvents radioFaster As System.Windows.Forms.RadioButton
     Friend WithEvents radioFastest As System.Windows.Forms.RadioButton
@@ -268,5 +267,6 @@ Partial Class frmDecisionString
     Friend WithEvents txtLastName As System.Windows.Forms.TextBox
     Friend WithEvents txtFirstName As System.Windows.Forms.TextBox
     Friend WithEvents btnCalculate As System.Windows.Forms.Button
+    Friend WithEvents numHours As System.Windows.Forms.NumericUpDown
 
 End Class
