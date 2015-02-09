@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.prjDecisionString.Form1
+            Me.MainForm = Global.prjDecisionString.frmDecisionString
         End Sub
     End Class
 End Namespace
