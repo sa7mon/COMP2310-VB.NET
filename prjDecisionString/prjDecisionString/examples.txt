@@ -1,0 +1,15 @@
+total = ((base monthly price) + (hours over * overage charge)) - non-profit discount
+
+Package			Used hours		Non-Profit?			Total
+Fast			3				Yes					11.94		
+Fast			50				Yes					71.96
+Fast			3				No 					9.95
+Fast			50				No 					89.95
+
+Faster			3				Yes					11.96
+Faster			50				Yes					35.96
+Faster			3				No 					14.95
+Faster			50				No 					54.95
+
+Fastest			40				Yes 				15.96
+Fastest			40				No 					19.95

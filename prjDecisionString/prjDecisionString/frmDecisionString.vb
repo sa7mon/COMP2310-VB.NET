@@ -3,7 +3,7 @@
     ' Project Name: prjDecisionString
     ' Created By:   Dan Salmon (https://danthesalmon.com/)
     ' Created On:   2/9/15
-    ' Updated On:   2/9/15
+    ' Updated On:   2/11/15
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -42,43 +42,48 @@
         Dim hoursOver As Integer = 0
         Dim overageCharge As Integer = 0
         Dim discount As Integer = 0
-
         Dim package As String = ""
+        Dim total As Integer = 0
 
         '' Start by validating all the information
 
         '' Check if hours entered is greater than 744. If it is, don't even continue. 
         If (CInt(numHours.Value) > MAX_HOURS) Then
+            'Give an error and exit out of this subroutine
             MsgBox("Error: Hours used cannot be more than 744. Please re-check used hours.")
             'TODO Set maximum value of numHours to 744
-
-            ''Give an error and exit out of this subroutine
             Return
         End If
 
-        '' Validation is done, proceed with the calculation
-        '' Figure out which package was selected
+        ' Validation is done, proceed with the calculation
+        ' Figure out which package was selected
         If radioFast.Checked = True Then
             package = "Fast"
+            baseMonthlyPrice = FAST_MONTHLY
+            'Calculate how many hours over the limit the customer went.
+            hoursOver = numHours.Value - FAST_HOURS
+            overageCharge = FAST_HOURS_CHARGE
         ElseIf radioFaster.Checked = True Then
             package = "Faster"
+            baseMonthlyPrice = FASTER_MONTHLY
+            hoursOver = numHours.Value - FASTER_HOURS
+            overageCharge = FASTER_HOURS_CHARGE
         ElseIf radioFastest.Checked = True Then
             package = "Fastest"
+            baseMonthlyPrice = FASTEST_MONTHLY
+            'Fastest has no max hours or overage charge
+            hoursOver = 0
+            overageCharge = 0
         End If
 
-        Select Case package
-            Case "Fast"
-                ''First, see if we've exceeded our hour limit
-                If numHours.Value > FAST_HOURS Then
-                    '' We've exceeded our hour limit.
+        'Check if non-profit organizaion. If true, find total discount
+        If cbNonProfit.Checked = True Then
+            'User has selected Non-Profit Organization
+            ' Discount = (base monthly price + overage charges)*discount
+            discount = (baseMonthlyPrice + (hoursOver * overageCharge)) * NONPROF_DISCOUNT
+        End If
 
-                End If
-            Case "Faster"
-            Case "Fastest"
-            Case Else
-                MsgBox("Error: Couldn't determine package.")
-        End Select
-
+        'total = ((base monthly price) + (hours over * overage charge)) - non-profit discount
 
     End Sub
 End Class

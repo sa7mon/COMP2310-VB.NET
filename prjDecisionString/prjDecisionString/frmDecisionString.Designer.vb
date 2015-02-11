@@ -30,7 +30,7 @@ Partial Class frmDecisionString
         Me.numHours = New System.Windows.Forms.NumericUpDown()
         Me.lblHours = New System.Windows.Forms.Label()
         Me.grpNonProfit = New System.Windows.Forms.GroupBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.cbNonProfit = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.grpInfo = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -121,7 +121,7 @@ Partial Class frmDecisionString
         '
         'grpNonProfit
         '
-        Me.grpNonProfit.Controls.Add(Me.CheckBox1)
+        Me.grpNonProfit.Controls.Add(Me.cbNonProfit)
         Me.grpNonProfit.Controls.Add(Me.Label1)
         Me.grpNonProfit.Location = New System.Drawing.Point(296, 11)
         Me.grpNonProfit.Name = "grpNonProfit"
@@ -130,17 +130,17 @@ Partial Class frmDecisionString
         Me.grpNonProfit.TabStop = False
         Me.grpNonProfit.Text = "Non-Profit"
         '
-        'CheckBox1
+        'cbNonProfit
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Checked = True
-        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox1.Location = New System.Drawing.Point(137, 43)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(44, 17)
-        Me.CheckBox1.TabIndex = 1
-        Me.CheckBox1.Text = "Yes"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.cbNonProfit.AutoSize = True
+        Me.cbNonProfit.Checked = True
+        Me.cbNonProfit.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.cbNonProfit.Location = New System.Drawing.Point(137, 43)
+        Me.cbNonProfit.Name = "cbNonProfit"
+        Me.cbNonProfit.Size = New System.Drawing.Size(44, 17)
+        Me.cbNonProfit.TabIndex = 1
+        Me.cbNonProfit.Text = "Yes"
+        Me.cbNonProfit.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -257,7 +257,7 @@ Partial Class frmDecisionString
     Friend WithEvents grpHours As System.Windows.Forms.GroupBox
     Friend WithEvents lblHours As System.Windows.Forms.Label
     Friend WithEvents grpNonProfit As System.Windows.Forms.GroupBox
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents cbNonProfit As System.Windows.Forms.CheckBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents grpInfo As System.Windows.Forms.GroupBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
