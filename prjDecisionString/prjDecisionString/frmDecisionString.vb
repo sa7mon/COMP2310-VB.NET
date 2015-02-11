@@ -36,33 +36,49 @@
     Dim NONPROF_DISCOUNT As Decimal = 0.2
 
     Private Sub btnCalculate_Click(sender As Object, e As EventArgs) Handles btnCalculate.Click
-        Dim package As String = numHours.Value
+        'total = ((base monthly price) + (hours over * overage charge)) - non-profit discount
+        Dim totalPrice As Integer = 0
+        Dim baseMonthlyPrice As Integer = 0
+        Dim hoursOver As Integer = 0
+        Dim overageCharge As Integer = 0
+        Dim discount As Integer = 0
+
+        Dim package As String = ""
+
         '' Start by validating all the information
 
         '' Check if hours entered is greater than 744. If it is, don't even continue. 
-        If CInt(numHours.Value) > MAX_HOURS Then
+        If (CInt(numHours.Value) > MAX_HOURS) Then
             MsgBox("Error: Hours used cannot be more than 744. Please re-check used hours.")
+            'TODO Set maximum value of numHours to 744
+
+            ''Give an error and exit out of this subroutine
             Return
-        Else '' Not greater than MAX_HOURS
-
-            '' Validation is done, proceed with the calculation
-
-            Select Case package '' Figure out which package was selected
-                Case "Fast"
-                    ''First, see if we've exceeded our hour limit
-                    If numHours.Value > FAST_HOURS Then
-                        '' We've exceeded our hour limit.
-
-                    Else
-                        '' We're under or at our limit
-
-                    End If
-                Case "Faster"
-                Case "Fastest"
-                Case Else
-                    MsgBox("Error: Couldn't determine package.")
-            End Select
-
         End If
+
+        '' Validation is done, proceed with the calculation
+        '' Figure out which package was selected
+        If radioFast.Checked = True Then
+            package = "Fast"
+        ElseIf radioFaster.Checked = True Then
+            package = "Faster"
+        ElseIf radioFastest.Checked = True Then
+            package = "Fastest"
+        End If
+
+        Select Case package
+            Case "Fast"
+                ''First, see if we've exceeded our hour limit
+                If numHours.Value > FAST_HOURS Then
+                    '' We've exceeded our hour limit.
+
+                End If
+            Case "Faster"
+            Case "Fastest"
+            Case Else
+                MsgBox("Error: Couldn't determine package.")
+        End Select
+
+
     End Sub
 End Class

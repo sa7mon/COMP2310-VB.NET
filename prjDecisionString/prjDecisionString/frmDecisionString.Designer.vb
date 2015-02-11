@@ -27,6 +27,7 @@ Partial Class frmDecisionString
         Me.radioFastest = New System.Windows.Forms.RadioButton()
         Me.grpPackage = New System.Windows.Forms.GroupBox()
         Me.grpHours = New System.Windows.Forms.GroupBox()
+        Me.numHours = New System.Windows.Forms.NumericUpDown()
         Me.lblHours = New System.Windows.Forms.Label()
         Me.grpNonProfit = New System.Windows.Forms.GroupBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
@@ -39,12 +40,11 @@ Partial Class frmDecisionString
         Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.txtFirstName = New System.Windows.Forms.TextBox()
         Me.btnCalculate = New System.Windows.Forms.Button()
-        Me.numHours = New System.Windows.Forms.NumericUpDown()
         Me.grpPackage.SuspendLayout()
         Me.grpHours.SuspendLayout()
+        CType(Me.numHours, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpNonProfit.SuspendLayout()
         Me.grpInfo.SuspendLayout()
-        CType(Me.numHours, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'radioFast
@@ -101,6 +101,14 @@ Partial Class frmDecisionString
         Me.grpHours.TabIndex = 5
         Me.grpHours.TabStop = False
         Me.grpHours.Text = "Hours"
+        '
+        'numHours
+        '
+        Me.numHours.Location = New System.Drawing.Point(70, 39)
+        Me.numHours.Maximum = New Decimal(New Integer() {900000, 0, 0, 0})
+        Me.numHours.Name = "numHours"
+        Me.numHours.Size = New System.Drawing.Size(63, 20)
+        Me.numHours.TabIndex = 2
         '
         'lblHours
         '
@@ -218,14 +226,6 @@ Partial Class frmDecisionString
         Me.btnCalculate.Text = "Calculate"
         Me.btnCalculate.UseVisualStyleBackColor = True
         '
-        'numHours
-        '
-        Me.numHours.Location = New System.Drawing.Point(70, 39)
-        Me.numHours.Maximum = New Decimal(New Integer() {744, 0, 0, 0})
-        Me.numHours.Name = "numHours"
-        Me.numHours.Size = New System.Drawing.Size(63, 20)
-        Me.numHours.TabIndex = 2
-        '
         'frmDecisionString
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -242,11 +242,11 @@ Partial Class frmDecisionString
         Me.grpPackage.PerformLayout()
         Me.grpHours.ResumeLayout(False)
         Me.grpHours.PerformLayout()
+        CType(Me.numHours, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpNonProfit.ResumeLayout(False)
         Me.grpNonProfit.PerformLayout()
         Me.grpInfo.ResumeLayout(False)
         Me.grpInfo.PerformLayout()
-        CType(Me.numHours, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
