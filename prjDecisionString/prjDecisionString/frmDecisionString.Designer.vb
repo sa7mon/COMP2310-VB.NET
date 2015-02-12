@@ -40,7 +40,12 @@ Partial Class frmDecisionString
         Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.txtFirstName = New System.Windows.Forms.TextBox()
         Me.btnCalculate = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblSubTotal = New System.Windows.Forms.Label()
+        Me.lblSubTotalData = New System.Windows.Forms.Label()
+        Me.lblDiscount = New System.Windows.Forms.Label()
+        Me.lblTotal = New System.Windows.Forms.Label()
+        Me.lblDiscountData = New System.Windows.Forms.Label()
+        Me.lblTotalData = New System.Windows.Forms.Label()
         Me.grpPackage.SuspendLayout()
         Me.grpHours.SuspendLayout()
         CType(Me.numHours, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -227,21 +232,71 @@ Partial Class frmDecisionString
         Me.btnCalculate.Text = "Calculate"
         Me.btnCalculate.UseVisualStyleBackColor = True
         '
-        'Label2
+        'lblSubTotal
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(264, 182)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
-        Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Label2"
+        Me.lblSubTotal.AutoSize = True
+        Me.lblSubTotal.Location = New System.Drawing.Point(267, 182)
+        Me.lblSubTotal.Name = "lblSubTotal"
+        Me.lblSubTotal.Size = New System.Drawing.Size(52, 13)
+        Me.lblSubTotal.TabIndex = 9
+        Me.lblSubTotal.Text = "Subtotal: "
+        '
+        'lblSubTotalData
+        '
+        Me.lblSubTotalData.AutoSize = True
+        Me.lblSubTotalData.Location = New System.Drawing.Point(320, 182)
+        Me.lblSubTotalData.Name = "lblSubTotalData"
+        Me.lblSubTotalData.Size = New System.Drawing.Size(37, 13)
+        Me.lblSubTotalData.TabIndex = 10
+        Me.lblSubTotalData.Text = "          "
+        '
+        'lblDiscount
+        '
+        Me.lblDiscount.AutoSize = True
+        Me.lblDiscount.Location = New System.Drawing.Point(264, 197)
+        Me.lblDiscount.Name = "lblDiscount"
+        Me.lblDiscount.Size = New System.Drawing.Size(55, 13)
+        Me.lblDiscount.TabIndex = 11
+        Me.lblDiscount.Text = "Discount: "
+        '
+        'lblTotal
+        '
+        Me.lblTotal.AutoSize = True
+        Me.lblTotal.Location = New System.Drawing.Point(282, 216)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(37, 13)
+        Me.lblTotal.TabIndex = 12
+        Me.lblTotal.Text = "Total: "
+        '
+        'lblDiscountData
+        '
+        Me.lblDiscountData.AutoSize = True
+        Me.lblDiscountData.Location = New System.Drawing.Point(320, 197)
+        Me.lblDiscountData.Name = "lblDiscountData"
+        Me.lblDiscountData.Size = New System.Drawing.Size(40, 13)
+        Me.lblDiscountData.TabIndex = 13
+        Me.lblDiscountData.Text = "           "
+        '
+        'lblTotalData
+        '
+        Me.lblTotalData.AutoSize = True
+        Me.lblTotalData.Location = New System.Drawing.Point(320, 216)
+        Me.lblTotalData.Name = "lblTotalData"
+        Me.lblTotalData.Size = New System.Drawing.Size(40, 13)
+        Me.lblTotalData.TabIndex = 14
+        Me.lblTotalData.Text = "           "
         '
         'frmDecisionString
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(494, 235)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.lblTotalData)
+        Me.Controls.Add(Me.lblDiscountData)
+        Me.Controls.Add(Me.lblTotal)
+        Me.Controls.Add(Me.lblDiscount)
+        Me.Controls.Add(Me.lblSubTotalData)
+        Me.Controls.Add(Me.lblSubTotal)
         Me.Controls.Add(Me.btnCalculate)
         Me.Controls.Add(Me.grpInfo)
         Me.Controls.Add(Me.grpNonProfit)
@@ -280,6 +335,11 @@ Partial Class frmDecisionString
     Friend WithEvents txtFirstName As System.Windows.Forms.TextBox
     Friend WithEvents btnCalculate As System.Windows.Forms.Button
     Friend WithEvents numHours As System.Windows.Forms.NumericUpDown
-    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents lblSubTotal As System.Windows.Forms.Label
+    Friend WithEvents lblSubTotalData As System.Windows.Forms.Label
+    Friend WithEvents lblDiscount As System.Windows.Forms.Label
+    Friend WithEvents lblTotal As System.Windows.Forms.Label
+    Friend WithEvents lblDiscountData As System.Windows.Forms.Label
+    Friend WithEvents lblTotalData As System.Windows.Forms.Label
 
 End Class
