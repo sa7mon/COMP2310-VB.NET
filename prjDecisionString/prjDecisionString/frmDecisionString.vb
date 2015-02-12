@@ -3,7 +3,7 @@
     ' Project Name: prjDecisionString
     ' Created By:   Dan Salmon (https://danthesalmon.com/)
     ' Created On:   2/9/15
-    ' Updated On:   2/11/15
+    ' Updated On:   2/12/15
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -27,23 +27,23 @@
 
     Dim MAX_HOURS As Integer = 744
     Dim FAST_HOURS As Integer = 10
-    Dim FAST_MONTHLY As Integer = 9.95
+    Dim FAST_MONTHLY As Decimal = 9.95
     Dim FAST_HOURS_CHARGE As Integer = 2.0
     Dim FASTER_HOURS As Integer = 20
     Dim FASTER_HOURS_CHARGE As Integer = 1
-    Dim FASTER_MONTHLY As Integer = 14.95
-    Dim FASTEST_MONTHLY As Integer = 19.95
+    Dim FASTER_MONTHLY As Decimal = 14.95
+    Dim FASTEST_MONTHLY As Decimal = 19.95
     Dim NONPROF_DISCOUNT As Decimal = 0.2
 
     Private Sub btnCalculate_Click(sender As Object, e As EventArgs) Handles btnCalculate.Click
         'total = ((base monthly price) + (hours over * overage charge)) - non-profit discount
-        Dim totalPrice As Integer = 0
-        Dim baseMonthlyPrice As Integer = 0
+        Dim totalPrice As Decimal = 0
+        Dim baseMonthlyPrice As Decimal = 0
         Dim hoursOver As Integer = 0
-        Dim overageCharge As Integer = 0
-        Dim discount As Integer = 0
+        Dim overageCharge As Decimal = 0
+        Dim discount As Decimal = 0
         Dim package As String = ""
-        Dim total As Integer = 0
+        Dim total As Decimal = 0
 
         '' Start by validating all the information
 
@@ -61,12 +61,12 @@
             package = "Fast"
             baseMonthlyPrice = FAST_MONTHLY
             'Calculate how many hours over the limit the customer went.
-            hoursOver = numHours.Value - FAST_HOURS
+            'hoursOver = numHours.Value - FAST_HOURS
             overageCharge = FAST_HOURS_CHARGE
         ElseIf radioFaster.Checked = True Then
             package = "Faster"
             baseMonthlyPrice = FASTER_MONTHLY
-            hoursOver = numHours.Value - FASTER_HOURS
+            'hoursOver = numHours.Value - FASTER_HOURS
             overageCharge = FASTER_HOURS_CHARGE
         ElseIf radioFastest.Checked = True Then
             package = "Fastest"
@@ -74,6 +74,24 @@
             'Fastest has no max hours or overage charge
             hoursOver = 0
             overageCharge = 0
+        End If
+
+        'Calculate our overage hours
+        If package = "Fast" Then
+            'Check for overage hours
+            If numHours.Value > FAST_HOURS Then
+                'We've gone over our limit.
+                hoursOver = numHours.Value - FAST_HOURS
+            Else
+                hoursOver = 0
+            End If
+        ElseIf package = "Faster" Then
+            'Check for overage hours
+            If numHours.Value > FASTER_HOURS Then
+                hoursOver = numHours.Value - FASTER_HOURS
+            Else
+                hoursOver = 0
+            End If
         End If
 
         'Check if non-profit organizaion. If true, find total discount

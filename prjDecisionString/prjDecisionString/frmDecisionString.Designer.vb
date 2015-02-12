@@ -40,6 +40,7 @@ Partial Class frmDecisionString
         Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.txtFirstName = New System.Windows.Forms.TextBox()
         Me.btnCalculate = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.grpPackage.SuspendLayout()
         Me.grpHours.SuspendLayout()
         CType(Me.numHours, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -226,11 +227,21 @@ Partial Class frmDecisionString
         Me.btnCalculate.Text = "Calculate"
         Me.btnCalculate.UseVisualStyleBackColor = True
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(264, 182)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "Label2"
+        '
         'frmDecisionString
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(494, 235)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnCalculate)
         Me.Controls.Add(Me.grpInfo)
         Me.Controls.Add(Me.grpNonProfit)
@@ -248,6 +259,7 @@ Partial Class frmDecisionString
         Me.grpInfo.ResumeLayout(False)
         Me.grpInfo.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents radioFast As System.Windows.Forms.RadioButton
@@ -268,5 +280,6 @@ Partial Class frmDecisionString
     Friend WithEvents txtFirstName As System.Windows.Forms.TextBox
     Friend WithEvents btnCalculate As System.Windows.Forms.Button
     Friend WithEvents numHours As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 
 End Class
