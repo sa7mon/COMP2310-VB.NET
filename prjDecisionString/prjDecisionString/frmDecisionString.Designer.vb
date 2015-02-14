@@ -31,7 +31,7 @@ Partial Class frmDecisionString
         Me.lblHours = New System.Windows.Forms.Label()
         Me.grpNonProfit = New System.Windows.Forms.GroupBox()
         Me.cbNonProfit = New System.Windows.Forms.CheckBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblNonProfit = New System.Windows.Forms.Label()
         Me.grpInfo = New System.Windows.Forms.GroupBox()
         Me.txtPhone = New System.Windows.Forms.TextBox()
         Me.lblPhone = New System.Windows.Forms.Label()
@@ -123,7 +123,7 @@ Partial Class frmDecisionString
         'grpNonProfit
         '
         Me.grpNonProfit.Controls.Add(Me.cbNonProfit)
-        Me.grpNonProfit.Controls.Add(Me.Label1)
+        Me.grpNonProfit.Controls.Add(Me.lblNonProfit)
         Me.grpNonProfit.Location = New System.Drawing.Point(296, 11)
         Me.grpNonProfit.Name = "grpNonProfit"
         Me.grpNonProfit.Size = New System.Drawing.Size(186, 93)
@@ -143,14 +143,14 @@ Partial Class frmDecisionString
         Me.cbNonProfit.Text = "Yes"
         Me.cbNonProfit.UseVisualStyleBackColor = True
         '
-        'Label1
+        'lblNonProfit
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 45)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(125, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Non-Profit Organization? "
+        Me.lblNonProfit.AutoSize = True
+        Me.lblNonProfit.Location = New System.Drawing.Point(6, 45)
+        Me.lblNonProfit.Name = "lblNonProfit"
+        Me.lblNonProfit.Size = New System.Drawing.Size(125, 13)
+        Me.lblNonProfit.TabIndex = 0
+        Me.lblNonProfit.Text = "Non-Profit Organization? "
         '
         'grpInfo
         '
@@ -259,7 +259,7 @@ Partial Class frmDecisionString
     Friend WithEvents lblHours As System.Windows.Forms.Label
     Friend WithEvents grpNonProfit As System.Windows.Forms.GroupBox
     Friend WithEvents cbNonProfit As System.Windows.Forms.CheckBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblNonProfit As System.Windows.Forms.Label
     Friend WithEvents grpInfo As System.Windows.Forms.GroupBox
     Friend WithEvents txtPhone As System.Windows.Forms.TextBox
     Friend WithEvents lblPhone As System.Windows.Forms.Label
