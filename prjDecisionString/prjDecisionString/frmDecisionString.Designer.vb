@@ -115,6 +115,7 @@ Partial Class frmDecisionString
         Me.numHours.Name = "numHours"
         Me.numHours.Size = New System.Drawing.Size(63, 20)
         Me.numHours.TabIndex = 2
+        Me.numHours.Value = New Decimal(New Integer() {50, 0, 0, 0})
         '
         'lblHours
         '
