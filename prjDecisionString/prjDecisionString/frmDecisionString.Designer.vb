@@ -162,7 +162,7 @@ Partial Class frmDecisionString
         Me.grpInfo.Controls.Add(Me.txtFirstName)
         Me.grpInfo.Location = New System.Drawing.Point(12, 119)
         Me.grpInfo.Name = "grpInfo"
-        Me.grpInfo.Size = New System.Drawing.Size(246, 105)
+        Me.grpInfo.Size = New System.Drawing.Size(278, 105)
         Me.grpInfo.TabIndex = 7
         Me.grpInfo.TabStop = False
         Me.grpInfo.Text = "Customer Information"
