@@ -101,7 +101,14 @@
             discount = (baseMonthlyPrice + (hoursOver * overageCharge)) * NONPROF_DISCOUNT
         End If
 
+        'Calculate total price
         totalPrice = ((baseMonthlyPrice) + (hoursOver * overageCharge)) - discount
+
+
+        'Change all the labels on the result form to show our results
+        frmResult.lblTotalData.Text = FormatCurrency(totalPrice, 2)
+        frmResult.lblSubTotalData.Text = FormatCurrency(totalPrice + discount, 2)
+        frmResult.lblDiscountData.Text = FormatCurrency(discount, 2)
 
         frmResult.Show()
         'total = ((base monthly price) + (hours over * overage charge)) - non-profit discount

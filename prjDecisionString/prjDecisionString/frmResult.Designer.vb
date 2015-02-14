@@ -36,7 +36,7 @@ Partial Class frmResult
         '
         Me.lblTotalData.AutoSize = True
         Me.lblTotalData.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalData.Location = New System.Drawing.Point(99, 75)
+        Me.lblTotalData.Location = New System.Drawing.Point(131, 90)
         Me.lblTotalData.Name = "lblTotalData"
         Me.lblTotalData.Size = New System.Drawing.Size(53, 20)
         Me.lblTotalData.TabIndex = 20
@@ -45,9 +45,10 @@ Partial Class frmResult
         'lblDiscountData
         '
         Me.lblDiscountData.AutoSize = True
-        Me.lblDiscountData.Location = New System.Drawing.Point(99, 52)
+        Me.lblDiscountData.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDiscountData.Location = New System.Drawing.Point(131, 67)
         Me.lblDiscountData.Name = "lblDiscountData"
-        Me.lblDiscountData.Size = New System.Drawing.Size(40, 13)
+        Me.lblDiscountData.Size = New System.Drawing.Size(53, 20)
         Me.lblDiscountData.TabIndex = 19
         Me.lblDiscountData.Text = "           "
         '
@@ -55,7 +56,7 @@ Partial Class frmResult
         '
         Me.lblTotal.AutoSize = True
         Me.lblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotal.Location = New System.Drawing.Point(13, 70)
+        Me.lblTotal.Location = New System.Drawing.Point(73, 90)
         Me.lblTotal.Name = "lblTotal"
         Me.lblTotal.Size = New System.Drawing.Size(52, 20)
         Me.lblTotal.TabIndex = 18
@@ -65,7 +66,7 @@ Partial Class frmResult
         '
         Me.lblDiscount.AutoSize = True
         Me.lblDiscount.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDiscount.Location = New System.Drawing.Point(13, 45)
+        Me.lblDiscount.Location = New System.Drawing.Point(45, 67)
         Me.lblDiscount.Name = "lblDiscount"
         Me.lblDiscount.Size = New System.Drawing.Size(80, 20)
         Me.lblDiscount.TabIndex = 17
@@ -75,7 +76,7 @@ Partial Class frmResult
         '
         Me.lblSubTotalData.AutoSize = True
         Me.lblSubTotalData.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSubTotalData.Location = New System.Drawing.Point(98, 21)
+        Me.lblSubTotalData.Location = New System.Drawing.Point(131, 43)
         Me.lblSubTotalData.Name = "lblSubTotalData"
         Me.lblSubTotalData.Size = New System.Drawing.Size(49, 20)
         Me.lblSubTotalData.TabIndex = 16
@@ -85,7 +86,7 @@ Partial Class frmResult
         '
         Me.lblSubTotal.AutoSize = True
         Me.lblSubTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSubTotal.Location = New System.Drawing.Point(12, 21)
+        Me.lblSubTotal.Location = New System.Drawing.Point(48, 43)
         Me.lblSubTotal.Name = "lblSubTotal"
         Me.lblSubTotal.Size = New System.Drawing.Size(77, 20)
         Me.lblSubTotal.TabIndex = 15
@@ -95,7 +96,7 @@ Partial Class frmResult
         '
         Me.lblAccNumber.AutoSize = True
         Me.lblAccNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAccNumber.Location = New System.Drawing.Point(14, 116)
+        Me.lblAccNumber.Location = New System.Drawing.Point(12, 9)
         Me.lblAccNumber.Name = "lblAccNumber"
         Me.lblAccNumber.Size = New System.Drawing.Size(113, 20)
         Me.lblAccNumber.TabIndex = 21
@@ -105,7 +106,7 @@ Partial Class frmResult
         '
         Me.lblAccNumData.AutoSize = True
         Me.lblAccNumData.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAccNumData.Location = New System.Drawing.Point(133, 116)
+        Me.lblAccNumData.Location = New System.Drawing.Point(131, 9)
         Me.lblAccNumData.Name = "lblAccNumData"
         Me.lblAccNumData.Size = New System.Drawing.Size(53, 20)
         Me.lblAccNumData.TabIndex = 22
@@ -115,7 +116,7 @@ Partial Class frmResult
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(458, 257)
+        Me.ClientSize = New System.Drawing.Size(341, 131)
         Me.Controls.Add(Me.lblAccNumData)
         Me.Controls.Add(Me.lblAccNumber)
         Me.Controls.Add(Me.lblTotalData)
