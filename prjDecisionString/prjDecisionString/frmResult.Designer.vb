@@ -35,10 +35,10 @@ Partial Class frmResult
         'lblTotalData
         '
         Me.lblTotalData.AutoSize = True
-        Me.lblTotalData.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalData.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalData.Location = New System.Drawing.Point(131, 90)
         Me.lblTotalData.Name = "lblTotalData"
-        Me.lblTotalData.Size = New System.Drawing.Size(53, 20)
+        Me.lblTotalData.Size = New System.Drawing.Size(64, 20)
         Me.lblTotalData.TabIndex = 20
         Me.lblTotalData.Text = "           "
         '
