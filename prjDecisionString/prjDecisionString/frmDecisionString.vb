@@ -35,6 +35,21 @@
     Dim FASTEST_MONTHLY As Decimal = 19.95
     Dim NONPROF_DISCOUNT As Decimal = 0.2
 
+    Public Function cleanInput(input)
+        Dim cleanedPhone As String = ""
+
+        For Each c As Char In input
+            ' Loop through each characted in the input string
+            ' Check for any character that's not a number and ignore it
+            If (Char.IsNumber(c)) Then
+                'Yep, it's a number alright. Add it to the string we're going to return
+                cleanedPhone += c
+            End If
+        Next
+
+        Return cleanedPhone
+    End Function
+
     Private Sub btnCalculate_Click(sender As Object, e As EventArgs) Handles btnCalculate.Click
         'total = ((base monthly price) + (hours over * overage charge)) - non-profit discount
         Dim totalPrice As Decimal = 0
@@ -102,8 +117,8 @@
         End If
 
         'Calculate total price
+        'total = ((base monthly price) + (hours over * overage charge)) - non-profit discount
         totalPrice = ((baseMonthlyPrice) + (hoursOver * overageCharge)) - discount
-
 
         'Change all the labels on the result form to show our results
         frmResult.lblTotalData.Text = FormatCurrency(totalPrice, 2)
@@ -111,7 +126,6 @@
         frmResult.lblDiscountData.Text = FormatCurrency(discount, 2)
 
         frmResult.Show()
-        'total = ((base monthly price) + (hours over * overage charge)) - non-profit discount
 
     End Sub
 End Class

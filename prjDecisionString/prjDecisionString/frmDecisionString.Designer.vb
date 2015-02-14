@@ -105,7 +105,7 @@ Partial Class frmDecisionString
         'numHours
         '
         Me.numHours.Location = New System.Drawing.Point(70, 39)
-        Me.numHours.Maximum = New Decimal(New Integer() {900000, 0, 0, 0})
+        Me.numHours.Maximum = New Decimal(New Integer() {744, 0, 0, 0})
         Me.numHours.Name = "numHours"
         Me.numHours.Size = New System.Drawing.Size(63, 20)
         Me.numHours.TabIndex = 2
