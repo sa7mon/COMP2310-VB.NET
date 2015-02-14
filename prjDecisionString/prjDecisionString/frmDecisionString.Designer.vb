@@ -33,7 +33,7 @@ Partial Class frmDecisionString
         Me.cbNonProfit = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.grpInfo = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtPhone = New System.Windows.Forms.TextBox()
         Me.lblPhone = New System.Windows.Forms.Label()
         Me.lblLastName = New System.Windows.Forms.Label()
         Me.lblFirstName = New System.Windows.Forms.Label()
@@ -154,7 +154,7 @@ Partial Class frmDecisionString
         '
         'grpInfo
         '
-        Me.grpInfo.Controls.Add(Me.TextBox1)
+        Me.grpInfo.Controls.Add(Me.txtPhone)
         Me.grpInfo.Controls.Add(Me.lblPhone)
         Me.grpInfo.Controls.Add(Me.lblLastName)
         Me.grpInfo.Controls.Add(Me.lblFirstName)
@@ -167,13 +167,13 @@ Partial Class frmDecisionString
         Me.grpInfo.TabStop = False
         Me.grpInfo.Text = "Customer Information"
         '
-        'TextBox1
+        'txtPhone
         '
-        Me.TextBox1.Location = New System.Drawing.Point(75, 75)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(93, 20)
-        Me.TextBox1.TabIndex = 5
-        Me.TextBox1.Text = "123-456-7890"
+        Me.txtPhone.Location = New System.Drawing.Point(75, 75)
+        Me.txtPhone.Name = "txtPhone"
+        Me.txtPhone.Size = New System.Drawing.Size(93, 20)
+        Me.txtPhone.TabIndex = 5
+        Me.txtPhone.Text = "123-456-7890"
         '
         'lblPhone
         '
@@ -261,7 +261,7 @@ Partial Class frmDecisionString
     Friend WithEvents cbNonProfit As System.Windows.Forms.CheckBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents grpInfo As System.Windows.Forms.GroupBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtPhone As System.Windows.Forms.TextBox
     Friend WithEvents lblPhone As System.Windows.Forms.Label
     Friend WithEvents lblLastName As System.Windows.Forms.Label
     Friend WithEvents lblFirstName As System.Windows.Forms.Label

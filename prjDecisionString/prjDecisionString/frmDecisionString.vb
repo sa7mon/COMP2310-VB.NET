@@ -59,6 +59,7 @@
         Dim discount As Decimal = 0
         Dim package As String = ""
         Dim total As Decimal = 0
+        Dim accNumber As String = ""
 
         '' Start by validating all the information
 
@@ -120,10 +121,15 @@
         'total = ((base monthly price) + (hours over * overage charge)) - non-profit discount
         totalPrice = ((baseMonthlyPrice) + (hoursOver * overageCharge)) - discount
 
+        'Create our account number with a one-liner
+        accNumber = txtFirstName.Text.Substring(0, 3).ToLower + "-" + cleanInput(txtPhone.Text).substring(6, 4) + "-" _
+                    + txtLastName.Text.Substring(txtLastName.Text.Length - 3, 3).ToLower
+
         'Change all the labels on the result form to show our results
         frmResult.lblTotalData.Text = FormatCurrency(totalPrice, 2)
         frmResult.lblSubTotalData.Text = FormatCurrency(totalPrice + discount, 2)
         frmResult.lblDiscountData.Text = FormatCurrency(discount, 2)
+        frmResult.lblAccNumData.Text = accNumber
 
         frmResult.Show()
 
