@@ -101,6 +101,9 @@
             discount = (baseMonthlyPrice + (hoursOver * overageCharge)) * NONPROF_DISCOUNT
         End If
 
+        totalPrice = ((baseMonthlyPrice) + (hoursOver * overageCharge)) - discount
+
+        frmResult.Show()
         'total = ((base monthly price) + (hours over * overage charge)) - non-profit discount
 
     End Sub
