@@ -1,0 +1,10 @@
+Z:\Documents\School\VB.NET\prjISBN\prjISBN\bin\Debug\prjISBN.exe.config
+Z:\Documents\School\VB.NET\prjISBN\prjISBN\bin\Debug\prjISBN.exe
+Z:\Documents\School\VB.NET\prjISBN\prjISBN\bin\Debug\prjISBN.pdb
+Z:\Documents\School\VB.NET\prjISBN\prjISBN\bin\Debug\prjISBN.xml
+Z:\Documents\School\VB.NET\prjISBN\prjISBN\obj\Debug\prjISBN.frmShowISBN.resources
+Z:\Documents\School\VB.NET\prjISBN\prjISBN\obj\Debug\prjISBN.Resources.resources
+Z:\Documents\School\VB.NET\prjISBN\prjISBN\obj\Debug\prjISBN.vbproj.GenerateResource.Cache
+Z:\Documents\School\VB.NET\prjISBN\prjISBN\obj\Debug\prjISBN.exe
+Z:\Documents\School\VB.NET\prjISBN\prjISBN\obj\Debug\prjISBN.xml
+Z:\Documents\School\VB.NET\prjISBN\prjISBN\obj\Debug\prjISBN.pdb
