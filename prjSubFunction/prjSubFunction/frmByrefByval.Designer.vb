@@ -23,29 +23,53 @@ Partial Class frmByrefByval
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnRunSub = New System.Windows.Forms.Button()
+        Me.txtLog = New System.Windows.Forms.TextBox()
+        Me.txt = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'btnRunSub
         '
-        Me.btnRunSub.Location = New System.Drawing.Point(114, 12)
+        Me.btnRunSub.Location = New System.Drawing.Point(39, 133)
         Me.btnRunSub.Name = "btnRunSub"
-        Me.btnRunSub.Size = New System.Drawing.Size(107, 32)
+        Me.btnRunSub.Size = New System.Drawing.Size(213, 32)
         Me.btnRunSub.TabIndex = 0
         Me.btnRunSub.Text = "Go!"
         Me.btnRunSub.UseVisualStyleBackColor = True
+        '
+        'txtLog
+        '
+        Me.txtLog.Location = New System.Drawing.Point(12, 12)
+        Me.txtLog.Multiline = True
+        Me.txtLog.Name = "txtLog"
+        Me.txtLog.Size = New System.Drawing.Size(263, 102)
+        Me.txtLog.TabIndex = 1
+        '
+        'txt
+        '
+        Me.txt.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.txt.Location = New System.Drawing.Point(12, 196)
+        Me.txt.Multiline = True
+        Me.txt.Name = "txt"
+        Me.txt.Size = New System.Drawing.Size(263, 96)
+        Me.txt.TabIndex = 2
         '
         'frmByrefByval
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(317, 260)
+        Me.ClientSize = New System.Drawing.Size(287, 304)
+        Me.Controls.Add(Me.txt)
+        Me.Controls.Add(Me.txtLog)
         Me.Controls.Add(Me.btnRunSub)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.Name = "frmByrefByval"
         Me.Text = "ByRef / ByVal"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents btnRunSub As System.Windows.Forms.Button
+    Friend WithEvents txtLog As System.Windows.Forms.TextBox
+    Friend WithEvents txt As System.Windows.Forms.TextBox
 End Class
