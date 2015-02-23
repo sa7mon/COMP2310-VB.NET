@@ -26,4 +26,27 @@ Public Class frmMain
             Next
         Next
     End Sub
+
+    Private Sub btnXPath_Click(sender As Object, e As EventArgs) Handles btnXPath.Click
+        txtParagraph.Text = ""
+
+        Dim filePath As String = "myXML.xml"
+        Dim xpathDoc As XPathDocument
+        Dim xmlNav As XPath.XPathNavigator
+        Dim xmlData As XPathNodeIterator
+
+        Try
+            xpathDoc = New XPathDocument(filePath)
+            xmlNav = xpathDoc.CreateNavigator()
+            xmlData = xmlNav.Select("/story/paragraph")
+
+            While (xmlData.MoveNext())
+                txtParagraph.Text &= vbCrLf & xmlData.Current.Name & ":" & xmlData.Current.Value
+            End While
+        Catch ex As XPathException
+            System.Console.WriteLine("XMLException: " + ex.Message)
+        Catch ex As Exception
+            System.Console.WriteLine("Exception: " + ex.Message)
+        End Try
+    End Sub
 End Class
