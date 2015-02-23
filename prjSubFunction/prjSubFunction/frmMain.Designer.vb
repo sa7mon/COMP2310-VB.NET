@@ -29,6 +29,7 @@ Partial Class frmMain
         '
         'btnXMLFunction
         '
+        Me.btnXMLFunction.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnXMLFunction.Location = New System.Drawing.Point(12, 17)
         Me.btnXMLFunction.Name = "btnXMLFunction"
         Me.btnXMLFunction.Size = New System.Drawing.Size(251, 45)
@@ -38,6 +39,7 @@ Partial Class frmMain
         '
         'btnByvalByref
         '
+        Me.btnByvalByref.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnByvalByref.Location = New System.Drawing.Point(12, 89)
         Me.btnByvalByref.Name = "btnByvalByref"
         Me.btnByvalByref.Size = New System.Drawing.Size(251, 45)
@@ -47,6 +49,7 @@ Partial Class frmMain
         '
         'Button3
         '
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Location = New System.Drawing.Point(12, 162)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(251, 45)

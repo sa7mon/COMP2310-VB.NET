@@ -17,8 +17,4 @@
         'Return the result
         Return strResult
     End Function
-
-    Public Sub demoByRef(ByVal first As String, ByRef second As String)
-
-    End Sub
 End Module

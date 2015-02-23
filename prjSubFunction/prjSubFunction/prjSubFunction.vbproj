@@ -89,6 +89,12 @@
     <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmModule.Designer.vb">
+      <DependentUpon>frmModule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmModule.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="modFunctions.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
