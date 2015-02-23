@@ -102,6 +102,7 @@ Partial Class frm2D
         '
         'cmbRow
         '
+        Me.cmbRow.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbRow.FormattingEnabled = True
         Me.cmbRow.Items.AddRange(New Object() {"1", "2", "3"})
         Me.cmbRow.Location = New System.Drawing.Point(73, 16)
@@ -129,6 +130,7 @@ Partial Class frm2D
         '
         'cmbColumn
         '
+        Me.cmbColumn.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbColumn.FormattingEnabled = True
         Me.cmbColumn.Items.AddRange(New Object() {"A", "B"})
         Me.cmbColumn.Location = New System.Drawing.Point(73, 43)
