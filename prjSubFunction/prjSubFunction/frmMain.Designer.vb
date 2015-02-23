@@ -22,28 +22,28 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnXMLFunction = New System.Windows.Forms.Button()
+        Me.btnByvalByref = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Button1
+        'btnXMLFunction
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 17)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(251, 45)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "XML / Function"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnXMLFunction.Location = New System.Drawing.Point(12, 17)
+        Me.btnXMLFunction.Name = "btnXMLFunction"
+        Me.btnXMLFunction.Size = New System.Drawing.Size(251, 45)
+        Me.btnXMLFunction.TabIndex = 0
+        Me.btnXMLFunction.Text = "Open XML / Function"
+        Me.btnXMLFunction.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnByvalByref
         '
-        Me.Button2.Location = New System.Drawing.Point(12, 89)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(251, 45)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "XML / Function"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnByvalByref.Location = New System.Drawing.Point(12, 89)
+        Me.btnByvalByref.Name = "btnByvalByref"
+        Me.btnByvalByref.Size = New System.Drawing.Size(251, 45)
+        Me.btnByvalByref.TabIndex = 1
+        Me.btnByvalByref.Text = "Open ByRef / ByVal"
+        Me.btnByvalByref.UseVisualStyleBackColor = True
         '
         'Button3
         '
@@ -51,7 +51,7 @@ Partial Class frmMain
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(251, 45)
         Me.Button3.TabIndex = 2
-        Me.Button3.Text = "XML / Function"
+        Me.Button3.Text = "Open Using a Module"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'frmMain
@@ -60,8 +60,8 @@ Partial Class frmMain
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(275, 220)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnByvalByref)
+        Me.Controls.Add(Me.btnXMLFunction)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "frmMain"
@@ -69,7 +69,7 @@ Partial Class frmMain
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents btnXMLFunction As System.Windows.Forms.Button
+    Friend WithEvents btnByvalByref As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class
