@@ -32,9 +32,9 @@ Partial Class Form1
         '
         'btnGo
         '
-        Me.btnGo.Location = New System.Drawing.Point(99, 114)
+        Me.btnGo.Location = New System.Drawing.Point(100, 12)
         Me.btnGo.Name = "btnGo"
-        Me.btnGo.Size = New System.Drawing.Size(191, 46)
+        Me.btnGo.Size = New System.Drawing.Size(140, 56)
         Me.btnGo.TabIndex = 1
         Me.btnGo.Text = "Go!"
         Me.btnGo.UseVisualStyleBackColor = True
@@ -42,45 +42,50 @@ Partial Class Form1
         'lblFirst
         '
         Me.lblFirst.AutoSize = True
+        Me.lblFirst.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFirst.Location = New System.Drawing.Point(12, 12)
         Me.lblFirst.Name = "lblFirst"
-        Me.lblFirst.Size = New System.Drawing.Size(39, 13)
+        Me.lblFirst.Size = New System.Drawing.Size(57, 20)
         Me.lblFirst.TabIndex = 2
         Me.lblFirst.Text = "Label1"
         '
         'lblSecond
         '
         Me.lblSecond.AutoSize = True
-        Me.lblSecond.Location = New System.Drawing.Point(84, 12)
+        Me.lblSecond.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSecond.Location = New System.Drawing.Point(12, 46)
         Me.lblSecond.Name = "lblSecond"
-        Me.lblSecond.Size = New System.Drawing.Size(39, 13)
+        Me.lblSecond.Size = New System.Drawing.Size(57, 20)
         Me.lblSecond.TabIndex = 3
         Me.lblSecond.Text = "Label2"
         '
         'lblThird
         '
         Me.lblThird.AutoSize = True
-        Me.lblThird.Location = New System.Drawing.Point(165, 12)
+        Me.lblThird.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblThird.Location = New System.Drawing.Point(12, 81)
         Me.lblThird.Name = "lblThird"
-        Me.lblThird.Size = New System.Drawing.Size(39, 13)
+        Me.lblThird.Size = New System.Drawing.Size(57, 20)
         Me.lblThird.TabIndex = 4
         Me.lblThird.Text = "Label3"
         '
         'lblFourth
         '
         Me.lblFourth.AutoSize = True
-        Me.lblFourth.Location = New System.Drawing.Point(251, 12)
+        Me.lblFourth.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFourth.Location = New System.Drawing.Point(12, 114)
         Me.lblFourth.Name = "lblFourth"
-        Me.lblFourth.Size = New System.Drawing.Size(39, 13)
+        Me.lblFourth.Size = New System.Drawing.Size(57, 20)
         Me.lblFourth.TabIndex = 5
         Me.lblFourth.Text = "Label4"
         '
         'lblFifth
         '
         Me.lblFifth.AutoSize = True
-        Me.lblFifth.Location = New System.Drawing.Point(336, 12)
+        Me.lblFifth.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFifth.Location = New System.Drawing.Point(12, 147)
         Me.lblFifth.Name = "lblFifth"
-        Me.lblFifth.Size = New System.Drawing.Size(39, 13)
+        Me.lblFifth.Size = New System.Drawing.Size(57, 20)
         Me.lblFifth.TabIndex = 6
         Me.lblFifth.Text = "Label5"
         '
@@ -88,7 +93,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(411, 201)
+        Me.ClientSize = New System.Drawing.Size(280, 187)
         Me.Controls.Add(Me.lblFifth)
         Me.Controls.Add(Me.lblFourth)
         Me.Controls.Add(Me.lblThird)
