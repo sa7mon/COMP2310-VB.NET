@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<collection>
+<records_table>
 	<record>
 		<releaseName>Wildlife</releaseName>
 		<artist>La Dispute</artist>
@@ -70,4 +70,4 @@
 		<format>LP</format>
 		<label>Run For Cover Records</label>
 	</record>
-</collection>
+</records_table>

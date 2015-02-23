@@ -23,28 +23,15 @@ Partial Class frmCollection
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dsRecords = New System.Data.DataSet()
-        Me.DataTable1 = New System.Data.DataTable()
-        Me.DataColumn1 = New System.Data.DataColumn()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.gridRecords = New System.Windows.Forms.DataGridView()
         CType(Me.dsRecords, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gridRecords, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dsRecords
         '
         Me.dsRecords.DataSetName = "NewDataSet"
-        Me.dsRecords.Tables.AddRange(New System.Data.DataTable() {Me.DataTable1})
-        '
-        'DataTable1
-        '
-        Me.DataTable1.Columns.AddRange(New System.Data.DataColumn() {Me.DataColumn1})
-        Me.DataTable1.TableName = "Table1"
-        '
-        'DataColumn1
-        '
-        Me.DataColumn1.ColumnName = "Column1"
         '
         'Button1
         '
@@ -74,14 +61,11 @@ Partial Class frmCollection
         Me.Name = "frmCollection"
         Me.Text = "Collection"
         CType(Me.dsRecords, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataTable1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gridRecords, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents dsRecords As System.Data.DataSet
-    Friend WithEvents DataTable1 As System.Data.DataTable
-    Friend WithEvents DataColumn1 As System.Data.DataColumn
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents gridRecords As System.Windows.Forms.DataGridView
 
