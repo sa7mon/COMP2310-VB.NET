@@ -33,67 +33,69 @@ Partial Class frm2D
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.cmbColumn = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(56, 124)
+        Me.Label1.Location = New System.Drawing.Point(74, 91)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.Size = New System.Drawing.Size(20, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Label1"
+        Me.Label1.Text = "A1"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(129, 124)
+        Me.Label2.Location = New System.Drawing.Point(114, 91)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.Size = New System.Drawing.Size(20, 13)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Label2"
+        Me.Label2.Text = "B1"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(56, 159)
+        Me.Label3.Location = New System.Drawing.Point(74, 126)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.Size = New System.Drawing.Size(20, 13)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Label3"
+        Me.Label3.Text = "A2"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(129, 159)
+        Me.Label4.Location = New System.Drawing.Point(114, 126)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 13)
+        Me.Label4.Size = New System.Drawing.Size(20, 13)
         Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Label4"
+        Me.Label4.Text = "B2"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(56, 200)
+        Me.Label5.Location = New System.Drawing.Point(74, 167)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(39, 13)
+        Me.Label5.Size = New System.Drawing.Size(20, 13)
         Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Label5"
+        Me.Label5.Text = "A3"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(129, 200)
+        Me.Label6.Location = New System.Drawing.Point(114, 167)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(39, 13)
+        Me.Label6.Size = New System.Drawing.Size(20, 13)
         Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Label6"
+        Me.Label6.Text = "B3"
         '
         'btnCalc
         '
-        Me.btnCalc.Location = New System.Drawing.Point(70, 268)
+        Me.btnCalc.Location = New System.Drawing.Point(41, 194)
         Me.btnCalc.Name = "btnCalc"
-        Me.btnCalc.Size = New System.Drawing.Size(75, 23)
+        Me.btnCalc.Size = New System.Drawing.Size(113, 23)
         Me.btnCalc.TabIndex = 6
         Me.btnCalc.Text = "Calculdate"
         Me.btnCalc.UseVisualStyleBackColor = True
@@ -101,7 +103,8 @@ Partial Class frm2D
         'cmbRow
         '
         Me.cmbRow.FormattingEnabled = True
-        Me.cmbRow.Location = New System.Drawing.Point(49, 22)
+        Me.cmbRow.Items.AddRange(New Object() {"1", "2", "3"})
+        Me.cmbRow.Location = New System.Drawing.Point(73, 16)
         Me.cmbRow.Name = "cmbRow"
         Me.cmbRow.Size = New System.Drawing.Size(61, 21)
         Me.cmbRow.TabIndex = 7
@@ -109,7 +112,7 @@ Partial Class frm2D
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(14, 25)
+        Me.Label7.Location = New System.Drawing.Point(38, 19)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(29, 13)
         Me.Label7.TabIndex = 8
@@ -118,7 +121,7 @@ Partial Class frm2D
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(4, 49)
+        Me.Label8.Location = New System.Drawing.Point(28, 43)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(42, 13)
         Me.Label8.TabIndex = 9
@@ -127,16 +130,38 @@ Partial Class frm2D
         'cmbColumn
         '
         Me.cmbColumn.FormattingEnabled = True
-        Me.cmbColumn.Location = New System.Drawing.Point(49, 49)
+        Me.cmbColumn.Items.AddRange(New Object() {"A", "B"})
+        Me.cmbColumn.Location = New System.Drawing.Point(73, 43)
         Me.cmbColumn.Name = "cmbColumn"
         Me.cmbColumn.Size = New System.Drawing.Size(61, 21)
         Me.cmbColumn.TabIndex = 10
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(28, 238)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(31, 13)
+        Me.Label9.TabIndex = 11
+        Me.Label9.Text = "Price"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(90, 233)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(64, 20)
+        Me.Label10.TabIndex = 12
+        Me.Label10.Text = "           "
         '
         'frm2D
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(280, 303)
+        Me.ClientSize = New System.Drawing.Size(188, 264)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.cmbColumn)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -165,4 +190,6 @@ Partial Class frm2D
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents cmbColumn As System.Windows.Forms.ComboBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
 End Class
