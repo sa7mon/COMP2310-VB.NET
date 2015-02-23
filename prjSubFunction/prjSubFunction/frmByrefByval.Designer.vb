@@ -38,6 +38,7 @@ Partial Class frmByrefByval
         '
         'txtLog
         '
+        Me.txtLog.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLog.Location = New System.Drawing.Point(12, 12)
         Me.txtLog.Multiline = True
         Me.txtLog.Name = "txtLog"
