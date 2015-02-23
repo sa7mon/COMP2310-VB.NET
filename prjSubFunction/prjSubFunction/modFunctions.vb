@@ -10,11 +10,15 @@
         grid.DataMember = member
     End Sub
 
-    Public Function dashConCat(one As String, two As String, three As String) As String
+    Public Function dashConcat(one As String, two As String, three As String) As String
         'Concatenate the 3 strings
         Dim strResult = one + " - " + two + " - " + three
 
         'Return the result
         Return strResult
     End Function
+
+    Public Sub demoByRef(ByVal first As String, ByRef second As String)
+
+    End Sub
 End Module

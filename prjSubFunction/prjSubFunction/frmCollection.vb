@@ -10,4 +10,8 @@ Public Class frmCollection
         readXML("..\..\myCollection.xml", dsRecords, gridRecords, "record")
 
     End Sub
+
+    Private Sub btnDashConcat_Click(sender As Object, e As EventArgs) Handles btnDashConcat.Click
+        MsgBox(dashConcat("Manchester Orchestra", "2014", "Simple Math"))
+    End Sub
 End Class
