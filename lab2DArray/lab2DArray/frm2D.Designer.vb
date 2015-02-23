@@ -34,13 +34,13 @@ Partial Class frm2D
         Me.Label8 = New System.Windows.Forms.Label()
         Me.cmbColumn = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.lblPrice = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(74, 91)
+        Me.Label1.Location = New System.Drawing.Point(62, 91)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(20, 13)
         Me.Label1.TabIndex = 0
@@ -49,7 +49,7 @@ Partial Class frm2D
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(114, 91)
+        Me.Label2.Location = New System.Drawing.Point(102, 91)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(20, 13)
         Me.Label2.TabIndex = 1
@@ -58,7 +58,7 @@ Partial Class frm2D
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(74, 126)
+        Me.Label3.Location = New System.Drawing.Point(62, 126)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(20, 13)
         Me.Label3.TabIndex = 2
@@ -67,7 +67,7 @@ Partial Class frm2D
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(114, 126)
+        Me.Label4.Location = New System.Drawing.Point(102, 126)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(20, 13)
         Me.Label4.TabIndex = 3
@@ -76,7 +76,7 @@ Partial Class frm2D
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(74, 167)
+        Me.Label5.Location = New System.Drawing.Point(62, 167)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(20, 13)
         Me.Label5.TabIndex = 4
@@ -85,7 +85,7 @@ Partial Class frm2D
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(114, 167)
+        Me.Label6.Location = New System.Drawing.Point(102, 167)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(20, 13)
         Me.Label6.TabIndex = 5
@@ -145,22 +145,22 @@ Partial Class frm2D
         Me.Label9.TabIndex = 11
         Me.Label9.Text = "Price"
         '
-        'Label10
+        'lblPrice
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(90, 233)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(64, 20)
-        Me.Label10.TabIndex = 12
-        Me.Label10.Text = "           "
+        Me.lblPrice.AutoSize = True
+        Me.lblPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrice.Location = New System.Drawing.Point(90, 233)
+        Me.lblPrice.Name = "lblPrice"
+        Me.lblPrice.Size = New System.Drawing.Size(64, 20)
+        Me.lblPrice.TabIndex = 12
+        Me.lblPrice.Text = "           "
         '
         'frm2D
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(188, 264)
-        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.lblPrice)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.cmbColumn)
         Me.Controls.Add(Me.Label8)
@@ -191,5 +191,5 @@ Partial Class frm2D
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents cmbColumn As System.Windows.Forms.ComboBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents lblPrice As System.Windows.Forms.Label
 End Class
