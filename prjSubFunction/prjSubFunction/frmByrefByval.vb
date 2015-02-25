@@ -19,5 +19,8 @@
 
         txtLog.Text += "strFirst = " + strFirst + Environment.NewLine
         txtLog.Text += "strSecond = " + strSecond + Environment.NewLine
+        txtPara.Text = "The variable that was passed ByVal is only changed in the sub. To the program outside of the function, the variable is unchanged."
+        txtPara.Text &= "The ByRef variable, on the other hand, is changed inside and ouside of the sub from the sub." + vbCrLf
+        txtPara.Text &= "If the two variables were global, they could be changed by anything and the changes would be reflected in anything referencing them."
     End Sub
 End Class

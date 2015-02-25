@@ -24,7 +24,7 @@ Partial Class frmByrefByval
     Private Sub InitializeComponent()
         Me.btnRunSub = New System.Windows.Forms.Button()
         Me.txtLog = New System.Windows.Forms.TextBox()
-        Me.txt = New System.Windows.Forms.TextBox()
+        Me.txtPara = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'btnRunSub
@@ -46,21 +46,22 @@ Partial Class frmByrefByval
         Me.txtLog.Size = New System.Drawing.Size(263, 102)
         Me.txtLog.TabIndex = 1
         '
-        'txt
+        'txtPara
         '
-        Me.txt.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.txt.Location = New System.Drawing.Point(12, 196)
-        Me.txt.Multiline = True
-        Me.txt.Name = "txt"
-        Me.txt.Size = New System.Drawing.Size(263, 96)
-        Me.txt.TabIndex = 2
+        Me.txtPara.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.txtPara.Location = New System.Drawing.Point(12, 196)
+        Me.txtPara.Multiline = True
+        Me.txtPara.Name = "txtPara"
+        Me.txtPara.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtPara.Size = New System.Drawing.Size(263, 96)
+        Me.txtPara.TabIndex = 2
         '
         'frmByrefByval
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(287, 304)
-        Me.Controls.Add(Me.txt)
+        Me.Controls.Add(Me.txtPara)
         Me.Controls.Add(Me.txtLog)
         Me.Controls.Add(Me.btnRunSub)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -73,5 +74,5 @@ Partial Class frmByrefByval
     End Sub
     Friend WithEvents btnRunSub As System.Windows.Forms.Button
     Friend WithEvents txtLog As System.Windows.Forms.TextBox
-    Friend WithEvents txt As System.Windows.Forms.TextBox
+    Friend WithEvents txtPara As System.Windows.Forms.TextBox
 End Class
