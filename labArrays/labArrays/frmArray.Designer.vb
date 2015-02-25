@@ -49,11 +49,11 @@ Partial Class frmArray
         'chkSort
         '
         Me.chkSort.AutoSize = True
-        Me.chkSort.Location = New System.Drawing.Point(94, 115)
+        Me.chkSort.Location = New System.Drawing.Point(34, 115)
         Me.chkSort.Name = "chkSort"
-        Me.chkSort.Size = New System.Drawing.Size(81, 17)
+        Me.chkSort.Size = New System.Drawing.Size(82, 17)
         Me.chkSort.TabIndex = 2
-        Me.chkSort.Text = "CheckBox1"
+        Me.chkSort.Text = "Sort the List"
         Me.chkSort.UseVisualStyleBackColor = True
         '
         'txtResult

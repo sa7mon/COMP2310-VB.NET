@@ -8,13 +8,6 @@
     Dim tempArray(MAX_INDEX) As Double
     Dim mileageGrid(3, MAX_INDEX) As Integer
     Private Sub frmArray_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        priceArray(0) = 0.99
-        priceArray(1) = 5.99
-        priceArray(2) = 2.99
-        priceArray(3) = 3.99
-        priceArray(4) = 4.99
-        priceArray(5) = 1.99
-
         mileageGrid(0, 0) = 15
         mileageGrid(0, 1) = 35
         mileageGrid(0, 2) = 46
@@ -50,5 +43,24 @@
         For Each item In thisArray
             txtResult.Text &= item & vbCrLf
         Next
+    End Sub
+
+    Public Sub makeArray()
+        priceArray(0) = 0.99
+        priceArray(1) = 5.99
+        priceArray(2) = 2.99
+        priceArray(3) = 3.99
+        priceArray(4) = 4.99
+        priceArray(5) = 1.99
+    End Sub
+
+    Private Sub btnShowSingle_Click(sender As Object, e As EventArgs) Handles btnShowSingle.Click
+        makeArray()
+
+        If chkSort.Checked Then
+            Array.Sort(priceArray)
+        End If
+
+        showArray(priceArray)
     End Sub
 End Class
