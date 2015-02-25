@@ -73,5 +73,6 @@
             Next
             txtResult.Text &= vbCrLf
         Next
+
     End Sub
 End Class
