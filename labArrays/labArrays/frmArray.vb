@@ -63,4 +63,15 @@
 
         showArray(priceArray)
     End Sub
+
+    Private Sub btnShow2D_Click(sender As Object, e As EventArgs) Handles btnShow2D.Click
+        txtResult.Clear()
+
+        For intRow = 0 To MAX_ROW
+            For intCol = 0 To MAX_COL
+                txtResult.Text &= mileageGrid(intRow, intCol) & vbTab
+            Next
+            txtResult.Text &= vbCrLf
+        Next
+    End Sub
 End Class
