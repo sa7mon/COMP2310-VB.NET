@@ -44,4 +44,11 @@
         mileageGrid(3, 5) = 2
 
     End Sub
+
+    Sub showArray(ByRef thisArray() As Double)
+        txtResult.Clear()
+        For Each item In thisArray
+            txtResult.Text &= item & vbCrLf
+        Next
+    End Sub
 End Class
