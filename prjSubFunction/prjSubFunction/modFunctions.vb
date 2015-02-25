@@ -6,4 +6,9 @@
         'Return the result
         Return strResult
     End Function
+
+    Public Function isHighScore(num As Integer)
+        Dim isHigher As Boolean = False
+
+    End Function
 End Module
