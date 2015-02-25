@@ -10,5 +10,8 @@
     Public Function isHighScore(num As Integer)
         Dim isHigher As Boolean = False
 
+        'Compare parameter to current highscore
+
+        'If higher
     End Function
 End Module
