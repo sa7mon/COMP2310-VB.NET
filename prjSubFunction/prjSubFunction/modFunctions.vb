@@ -7,7 +7,6 @@
         Return strResult
     End Function
 
-
     Public Function isHighScore(num As Integer)
         Dim isHigher As Boolean = False
         'Compare parameter to current highscore

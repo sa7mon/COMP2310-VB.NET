@@ -42,6 +42,7 @@ Partial Class frmByrefByval
         Me.txtLog.Location = New System.Drawing.Point(12, 12)
         Me.txtLog.Multiline = True
         Me.txtLog.Name = "txtLog"
+        Me.txtLog.ReadOnly = True
         Me.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.txtLog.Size = New System.Drawing.Size(263, 102)
         Me.txtLog.TabIndex = 1
@@ -52,6 +53,7 @@ Partial Class frmByrefByval
         Me.txtPara.Location = New System.Drawing.Point(12, 196)
         Me.txtPara.Multiline = True
         Me.txtPara.Name = "txtPara"
+        Me.txtPara.ReadOnly = True
         Me.txtPara.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.txtPara.Size = New System.Drawing.Size(263, 96)
         Me.txtPara.TabIndex = 2
