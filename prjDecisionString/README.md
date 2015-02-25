@@ -29,3 +29,21 @@ Include a checkbox for non-profit organizations.
 * All rates, limits, and discount values must be declared as symbolic constants using the proper keyword and capitalization that you learned in the Learning Activities. Include these near the top of your code so they can be easily modified.
 * Validate the user input. There cannot be more than 744 hours used per month. The value must be numeric.
 * In a text document write out test data for various combinations. Use "smart" data and show regular prices, extended prices (more than base hours used), as well as the discount price. Do this for each of the three pricing tiers.
+
+Use the following chart as a starting guide, setting up three test cases for each pricing tier:
+
+| Package Name | Price | Expected Results |
+---------------|-------|------------------|
+| Fast | 10 hours | $9.95 |
+| Fast, non-profit | 10 hours, non-profit | $7.96 (20% discount) |
+| Fast | 12 hours | $13.95|
+
+Using your test data, type in the hours and see if you get the expected results from your program.
+
+Use the String Functions to create and display the user's account number using the following pattern: first three characters of first name (all lower case) - last four digits of the phone number - last three characters of last name (all lower case). 
+For example:    Peter Johnson 507-389-7337 would be: pet-7337-son
+
+As soon as the user types in the phone number text box (use the Leave event) reformat the input to a format that looks like this: 999-999-9999. Think through the problem before you start coding. Some possible input the user might give you is:
+1234567890  (123) 456-7890  123.456.7890    123-456-7890 (the correct format)
+
+In the Leave event add comments describing what you are going to do in English before you type the code.
