@@ -35,6 +35,7 @@ Partial Class frmMain
         Me.lblAlbum = New System.Windows.Forms.Label()
         Me.btnSaveItem = New System.Windows.Forms.Button()
         Me.txtCollection = New System.Windows.Forms.TextBox()
+        Me.ReadListFromFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.msMenu.SuspendLayout()
         Me.gbVinylInfo.SuspendLayout()
         Me.SuspendLayout()
@@ -72,7 +73,7 @@ Partial Class frmMain
         '
         'msItemFile
         '
-        Me.msItemFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.msItemSave, Me.msItemExit})
+        Me.msItemFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.msItemSave, Me.ReadListFromFileToolStripMenuItem, Me.msItemExit})
         Me.msItemFile.Name = "msItemFile"
         Me.msItemFile.Size = New System.Drawing.Size(37, 20)
         Me.msItemFile.Text = "File"
@@ -80,8 +81,8 @@ Partial Class frmMain
         'msItemSave
         '
         Me.msItemSave.Name = "msItemSave"
-        Me.msItemSave.Size = New System.Drawing.Size(98, 22)
-        Me.msItemSave.Text = "Save"
+        Me.msItemSave.Size = New System.Drawing.Size(171, 22)
+        Me.msItemSave.Text = "Save List to File"
         '
         'msItemExit
         '
@@ -148,6 +149,12 @@ Partial Class frmMain
         Me.txtCollection.Size = New System.Drawing.Size(608, 201)
         Me.txtCollection.TabIndex = 6
         '
+        'ReadListFromFileToolStripMenuItem
+        '
+        Me.ReadListFromFileToolStripMenuItem.Name = "ReadListFromFileToolStripMenuItem"
+        Me.ReadListFromFileToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.ReadListFromFileToolStripMenuItem.Text = "Read List from File"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -181,5 +188,6 @@ Partial Class frmMain
     Friend WithEvents lblAlbum As System.Windows.Forms.Label
     Friend WithEvents btnSaveItem As System.Windows.Forms.Button
     Friend WithEvents txtCollection As System.Windows.Forms.TextBox
+    Friend WithEvents ReadListFromFileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

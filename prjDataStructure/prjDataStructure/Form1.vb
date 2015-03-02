@@ -31,6 +31,7 @@
 
         ' For each vinyl in collection, do the following
         For Each collectionItem As vinyl In vinylList
+            ' Add a line in the text box in this format: Artist - Album (Year) and add a new line character
             txtCollection.Text &= collectionItem.artist _
                                   + " - " + collectionItem.album + " (" + collectionItem.yearString + ")" + vbCrLf
         Next
@@ -39,5 +40,9 @@
         txtAlbum.Clear()
         txtArtist.Clear()
         txtYear.Clear()
+    End Sub
+
+    Private Sub msItemSave_Click(sender As Object, e As EventArgs) Handles msItemSave.Click
+
     End Sub
 End Class
