@@ -31,7 +31,13 @@
 
         ' For each vinyl in collection, do the following
         For Each collectionItem As vinyl In vinylList
-
+            txtCollection.Text &= collectionItem.artist _
+                                  + " - " + collectionItem.album + " (" + collectionItem.yearString + ")" + vbCrLf
         Next
+
+        'Clear the textboxes to prepare for a new item being entered
+        txtAlbum.Clear()
+        txtArtist.Clear()
+        txtYear.Clear()
     End Sub
 End Class
