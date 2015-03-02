@@ -46,8 +46,9 @@ Public Class frmMain
     End Sub
 
     Private Sub msItemSave_Click(sender As Object, e As EventArgs) Handles msItemSave.Click
-        fileWriter.WriteLine(txtCollection.Text)
-        fileWriter.Close()
-        MsgBox("Collection saved to file successfully!")
+        sdSaveCollection.ShowDialog()
+        'fileWriter.WriteLine(txtCollection.Text)
+        'fileWriter.Close()
+        'MsgBox("Collection saved to file successfully!")
     End Sub
 End Class

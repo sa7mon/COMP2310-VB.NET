@@ -36,6 +36,7 @@ Partial Class frmMain
         Me.btnSaveItem = New System.Windows.Forms.Button()
         Me.txtCollection = New System.Windows.Forms.TextBox()
         Me.ReadListFromFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.sdSaveCollection = New System.Windows.Forms.SaveFileDialog()
         Me.msMenu.SuspendLayout()
         Me.gbVinylInfo.SuspendLayout()
         Me.SuspendLayout()
@@ -87,7 +88,7 @@ Partial Class frmMain
         'msItemExit
         '
         Me.msItemExit.Name = "msItemExit"
-        Me.msItemExit.Size = New System.Drawing.Size(98, 22)
+        Me.msItemExit.Size = New System.Drawing.Size(171, 22)
         Me.msItemExit.Text = "Exit"
         '
         'gbVinylInfo
@@ -155,6 +156,10 @@ Partial Class frmMain
         Me.ReadListFromFileToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.ReadListFromFileToolStripMenuItem.Text = "Read List from File"
         '
+        'sdSaveCollection
+        '
+        Me.sdSaveCollection.Filter = """Text Files|*.txt"""
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -189,5 +194,6 @@ Partial Class frmMain
     Friend WithEvents btnSaveItem As System.Windows.Forms.Button
     Friend WithEvents txtCollection As System.Windows.Forms.TextBox
     Friend WithEvents ReadListFromFileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents sdSaveCollection As System.Windows.Forms.SaveFileDialog
 
 End Class
