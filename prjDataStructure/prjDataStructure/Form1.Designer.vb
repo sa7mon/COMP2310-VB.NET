@@ -30,11 +30,11 @@ Partial Class frmMain
         Me.msItemSave = New System.Windows.Forms.ToolStripMenuItem()
         Me.msItemExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.gbVinylInfo = New System.Windows.Forms.GroupBox()
-        Me.lblAlbum = New System.Windows.Forms.Label()
-        Me.lblArtist = New System.Windows.Forms.Label()
         Me.lblYear = New System.Windows.Forms.Label()
+        Me.lblArtist = New System.Windows.Forms.Label()
+        Me.lblAlbum = New System.Windows.Forms.Label()
         Me.btnSaveItem = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtCollection = New System.Windows.Forms.TextBox()
         Me.msMenu.SuspendLayout()
         Me.gbVinylInfo.SuspendLayout()
         Me.SuspendLayout()
@@ -104,14 +104,14 @@ Partial Class frmMain
         Me.gbVinylInfo.TabStop = False
         Me.gbVinylInfo.Text = "Vinyl"
         '
-        'lblAlbum
+        'lblYear
         '
-        Me.lblAlbum.AutoSize = True
-        Me.lblAlbum.Location = New System.Drawing.Point(8, 28)
-        Me.lblAlbum.Name = "lblAlbum"
-        Me.lblAlbum.Size = New System.Drawing.Size(39, 13)
-        Me.lblAlbum.TabIndex = 3
-        Me.lblAlbum.Text = "Album:"
+        Me.lblYear.AutoSize = True
+        Me.lblYear.Location = New System.Drawing.Point(318, 28)
+        Me.lblYear.Name = "lblYear"
+        Me.lblYear.Size = New System.Drawing.Size(32, 13)
+        Me.lblYear.TabIndex = 5
+        Me.lblYear.Text = "Year:"
         '
         'lblArtist
         '
@@ -122,14 +122,14 @@ Partial Class frmMain
         Me.lblArtist.TabIndex = 4
         Me.lblArtist.Text = "Artist:"
         '
-        'lblYear
+        'lblAlbum
         '
-        Me.lblYear.AutoSize = True
-        Me.lblYear.Location = New System.Drawing.Point(318, 28)
-        Me.lblYear.Name = "lblYear"
-        Me.lblYear.Size = New System.Drawing.Size(32, 13)
-        Me.lblYear.TabIndex = 5
-        Me.lblYear.Text = "Year:"
+        Me.lblAlbum.AutoSize = True
+        Me.lblAlbum.Location = New System.Drawing.Point(8, 28)
+        Me.lblAlbum.Name = "lblAlbum"
+        Me.lblAlbum.Size = New System.Drawing.Size(39, 13)
+        Me.lblAlbum.TabIndex = 3
+        Me.lblAlbum.Text = "Album:"
         '
         'btnSaveItem
         '
@@ -140,20 +140,20 @@ Partial Class frmMain
         Me.btnSaveItem.Text = "Save Vinyl to List"
         Me.btnSaveItem.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'txtCollection
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 106)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(608, 201)
-        Me.TextBox1.TabIndex = 6
+        Me.txtCollection.Location = New System.Drawing.Point(12, 106)
+        Me.txtCollection.Multiline = True
+        Me.txtCollection.Name = "txtCollection"
+        Me.txtCollection.Size = New System.Drawing.Size(608, 201)
+        Me.txtCollection.TabIndex = 6
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(632, 319)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtCollection)
         Me.Controls.Add(Me.btnSaveItem)
         Me.Controls.Add(Me.gbVinylInfo)
         Me.Controls.Add(Me.msMenu)
@@ -180,6 +180,6 @@ Partial Class frmMain
     Friend WithEvents lblArtist As System.Windows.Forms.Label
     Friend WithEvents lblAlbum As System.Windows.Forms.Label
     Friend WithEvents btnSaveItem As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtCollection As System.Windows.Forms.TextBox
 
 End Class
