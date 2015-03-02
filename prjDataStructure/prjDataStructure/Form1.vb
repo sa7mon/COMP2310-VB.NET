@@ -1,10 +1,12 @@
-﻿Public Class frmMain
+﻿Imports System.IO
+
+Public Class frmMain
     Public Structure vinyl
         Public album As String
         Public artist As String
         Public year As Integer
-
         Public ReadOnly Property yearString() As String
+            ' Returns the year variable as a String
             Get
                 Return year.ToString()
             End Get
@@ -13,6 +15,7 @@
     End Structure
 
     Dim vinylList As New ArrayList
+    Private fileWriter As New StreamWriter("myCollection.txt")
 
     Private Sub btnSaveItem_Click(sender As Object, e As EventArgs) Handles btnSaveItem.Click
         ' Create new object from vinyl structure.
@@ -43,6 +46,8 @@
     End Sub
 
     Private Sub msItemSave_Click(sender As Object, e As EventArgs) Handles msItemSave.Click
-
+        fileWriter.WriteLine(txtCollection.Text)
+        fileWriter.Close()
+        MsgBox("Collection saved to file successfully!")
     End Sub
 End Class
