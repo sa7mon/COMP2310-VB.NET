@@ -18,3 +18,9 @@ and what it will be named.
 * Read the file and populate the list display
 * Use a try/catch to catch a file not found exception, as well as any other general
 errors.
+
+### 4. Create a splash screen form named frmSplash.
+* Change the application code so this form displays while your VB app is initializing.
+* The splash screen should include the name of your program, your name, and the
+date of the program.
+* Use the picture frame object to add a graphic to the splash screen.
