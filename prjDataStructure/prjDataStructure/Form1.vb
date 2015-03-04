@@ -103,4 +103,8 @@ Public Class frmMain
         sdSaveCollection.Filter = "Text Files|*.txt|All Files|*.*"
         odOpenCollection.Filter = "Text Files|*.txt|All Files|*.*"
     End Sub
+
+    Private Sub msItemExit_Click(sender As Object, e As EventArgs) Handles msItemExit.Click
+        Me.Close()
+    End Sub
 End Class
