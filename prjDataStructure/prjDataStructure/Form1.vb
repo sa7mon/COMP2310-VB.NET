@@ -1,5 +1,4 @@
 ﻿Imports System.IO
-
 Public Class frmMain
     Public Structure vinyl
         Public album As String
@@ -14,7 +13,6 @@ Public Class frmMain
 
     End Structure
 
-    Dim saveFile As String = "myCollection.txt"
     Dim vinylList As New ArrayList
 
     Private Sub btnSaveItem_Click(sender As Object, e As EventArgs) Handles btnSaveItem.Click
@@ -64,11 +62,22 @@ Public Class frmMain
             MsgBox("IO Error Occured: " + ex.ToString)
         Catch generalEx As Exception
             ' Catch general error and report to the user
-            MsgBox("Uknown Error Occured: " + generalEx.ToString)
+            MsgBox("Unknown Error Occured: " + generalEx.ToString)
         Finally
             ' Close the streamWriter to save on resources regardless of if there was an error
             fileWriter.Close()
         End Try
         
+    End Sub
+
+    Private Sub msItemOpen_Click() Handles msItemOpen.Click
+        ' Show open file dialog
+        odOpenCollection.ShowDialog()
+    End Sub
+
+    Private Sub readListFromFile() Handles odOpenCollection.FileOk
+        ' Sub launched when "Ok" clicked in Open File Dialog
+
+
     End Sub
 End Class

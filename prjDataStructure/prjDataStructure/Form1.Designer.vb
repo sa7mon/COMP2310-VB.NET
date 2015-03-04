@@ -28,7 +28,7 @@ Partial Class frmMain
         Me.msMenu = New System.Windows.Forms.MenuStrip()
         Me.msItemFile = New System.Windows.Forms.ToolStripMenuItem()
         Me.msItemSave = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReadListFromFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.msItemOpen = New System.Windows.Forms.ToolStripMenuItem()
         Me.msItemExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.gbVinylInfo = New System.Windows.Forms.GroupBox()
         Me.lblYear = New System.Windows.Forms.Label()
@@ -37,6 +37,7 @@ Partial Class frmMain
         Me.btnSaveItem = New System.Windows.Forms.Button()
         Me.txtCollection = New System.Windows.Forms.TextBox()
         Me.sdSaveCollection = New System.Windows.Forms.SaveFileDialog()
+        Me.odOpenCollection = New System.Windows.Forms.OpenFileDialog()
         Me.msMenu.SuspendLayout()
         Me.gbVinylInfo.SuspendLayout()
         Me.SuspendLayout()
@@ -74,7 +75,7 @@ Partial Class frmMain
         '
         'msItemFile
         '
-        Me.msItemFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.msItemSave, Me.ReadListFromFileToolStripMenuItem, Me.msItemExit})
+        Me.msItemFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.msItemSave, Me.msItemOpen, Me.msItemExit})
         Me.msItemFile.Name = "msItemFile"
         Me.msItemFile.Size = New System.Drawing.Size(37, 20)
         Me.msItemFile.Text = "File"
@@ -82,19 +83,21 @@ Partial Class frmMain
         'msItemSave
         '
         Me.msItemSave.Name = "msItemSave"
-        Me.msItemSave.Size = New System.Drawing.Size(171, 22)
+        Me.msItemSave.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
+        Me.msItemSave.Size = New System.Drawing.Size(217, 22)
         Me.msItemSave.Text = "Save List to File"
         '
-        'ReadListFromFileToolStripMenuItem
+        'msItemOpen
         '
-        Me.ReadListFromFileToolStripMenuItem.Name = "ReadListFromFileToolStripMenuItem"
-        Me.ReadListFromFileToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
-        Me.ReadListFromFileToolStripMenuItem.Text = "Read List from File"
+        Me.msItemOpen.Name = "msItemOpen"
+        Me.msItemOpen.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
+        Me.msItemOpen.Size = New System.Drawing.Size(217, 22)
+        Me.msItemOpen.Text = "Open List from File"
         '
         'msItemExit
         '
         Me.msItemExit.Name = "msItemExit"
-        Me.msItemExit.Size = New System.Drawing.Size(171, 22)
+        Me.msItemExit.Size = New System.Drawing.Size(217, 22)
         Me.msItemExit.Text = "Exit"
         '
         'gbVinylInfo
@@ -160,6 +163,10 @@ Partial Class frmMain
         '
         Me.sdSaveCollection.Filter = """Text Files|*.txt"""
         '
+        'odOpenCollection
+        '
+        Me.odOpenCollection.Filter = "Text Files | *.txt"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -193,7 +200,8 @@ Partial Class frmMain
     Friend WithEvents lblAlbum As System.Windows.Forms.Label
     Friend WithEvents btnSaveItem As System.Windows.Forms.Button
     Friend WithEvents txtCollection As System.Windows.Forms.TextBox
-    Friend WithEvents ReadListFromFileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents msItemOpen As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents sdSaveCollection As System.Windows.Forms.SaveFileDialog
+    Friend WithEvents odOpenCollection As System.Windows.Forms.OpenFileDialog
 
 End Class
