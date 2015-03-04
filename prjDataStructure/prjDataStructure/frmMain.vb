@@ -1,5 +1,8 @@
 ﻿Imports System.IO
 Public Class frmMain
+    ' Form: frmMain - Contains all the code except the splash screen stuff.
+    ' Project: Data Structure
+    ' Created: 3/2/15
     Public Structure vinyl
         Public album As String
         Public artist As String
@@ -71,7 +74,6 @@ Public Class frmMain
             ' Close the streamWriter to save on resources regardless of if there was an error
             fileWriter.Close()
         End Try
-        
     End Sub
 
     Private Sub msItemOpen_Click() Handles msItemOpen.Click
@@ -95,7 +97,6 @@ Public Class frmMain
             ' Catch all other general errors
             MsgBox("Error: Unknown error.")
         End Try
-
     End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -105,6 +106,7 @@ Public Class frmMain
     End Sub
 
     Private Sub msItemExit_Click(sender As Object, e As EventArgs) Handles msItemExit.Click
+        ' Close the application when the "Exit" menuitem is clicked.
         Me.Close()
     End Sub
 End Class
