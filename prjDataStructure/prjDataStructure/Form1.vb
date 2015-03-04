@@ -52,16 +52,23 @@ Public Class frmMain
 
     Private Sub saveListToFile() Handles sdSaveCollection.FileOk
         'Instantiate a new StreamWriter because the path can't be changed once it's created.
-
         Dim fileWriter As New StreamWriter(sdSaveCollection.FileName)
 
-        ' Change the streamwriter save location to the location chosen by the user
-        'saveFile = sdSaveCollection.FileName
-        ' Write the contents of the textbox to the file
-        fileWriter.WriteLine(txtCollection.Text)
-        ' Close the streamWriter to save on resources
-        fileWriter.Close()
-        ' Give success message to user
-        MsgBox("Collection saved to file successfully!")
+        Try
+            ' Write the contents of the textbox to the file
+            fileWriter.WriteLine(txtCollection.Text)
+            ' Give success message to user
+            MsgBox("Collection saved to file successfully!")
+        Catch ex As IOException
+            ' Catch IO error and report to the user
+            MsgBox("IO Error Occured: " + ex.ToString)
+        Catch generalEx As Exception
+            ' Catch general error and report to the user
+            MsgBox("Uknown Error Occured: " + generalEx.ToString)
+        Finally
+            ' Close the streamWriter to save on resources regardless of if there was an error
+            fileWriter.Close()
+        End Try
+        
     End Sub
 End Class
