@@ -14,8 +14,8 @@ Public Class frmMain
 
     End Structure
 
+    Dim saveFile As String = "myCollection.txt"
     Dim vinylList As New ArrayList
-    Private fileWriter As New StreamWriter("myCollection.txt")
 
     Private Sub btnSaveItem_Click(sender As Object, e As EventArgs) Handles btnSaveItem.Click
         ' Create new object from vinyl structure.
@@ -46,9 +46,22 @@ Public Class frmMain
     End Sub
 
     Private Sub msItemSave_Click(sender As Object, e As EventArgs) Handles msItemSave.Click
+        ' Show the Save File Dialog
         sdSaveCollection.ShowDialog()
-        'fileWriter.WriteLine(txtCollection.Text)
-        'fileWriter.Close()
-        'MsgBox("Collection saved to file successfully!")
+    End Sub
+
+    Private Sub saveListToFile() Handles sdSaveCollection.FileOk
+        'Instantiate a new StreamWriter because the path can't be changed once it's created.
+
+        Dim fileWriter As New StreamWriter(sdSaveCollection.FileName)
+
+        ' Change the streamwriter save location to the location chosen by the user
+        'saveFile = sdSaveCollection.FileName
+        ' Write the contents of the textbox to the file
+        fileWriter.WriteLine(txtCollection.Text)
+        ' Close the streamWriter to save on resources
+        fileWriter.Close()
+        ' Give success message to user
+        MsgBox("Collection saved to file successfully!")
     End Sub
 End Class

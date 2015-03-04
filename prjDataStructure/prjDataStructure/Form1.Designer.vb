@@ -28,6 +28,7 @@ Partial Class frmMain
         Me.msMenu = New System.Windows.Forms.MenuStrip()
         Me.msItemFile = New System.Windows.Forms.ToolStripMenuItem()
         Me.msItemSave = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReadListFromFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.msItemExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.gbVinylInfo = New System.Windows.Forms.GroupBox()
         Me.lblYear = New System.Windows.Forms.Label()
@@ -35,7 +36,6 @@ Partial Class frmMain
         Me.lblAlbum = New System.Windows.Forms.Label()
         Me.btnSaveItem = New System.Windows.Forms.Button()
         Me.txtCollection = New System.Windows.Forms.TextBox()
-        Me.ReadListFromFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.sdSaveCollection = New System.Windows.Forms.SaveFileDialog()
         Me.msMenu.SuspendLayout()
         Me.gbVinylInfo.SuspendLayout()
@@ -84,6 +84,12 @@ Partial Class frmMain
         Me.msItemSave.Name = "msItemSave"
         Me.msItemSave.Size = New System.Drawing.Size(171, 22)
         Me.msItemSave.Text = "Save List to File"
+        '
+        'ReadListFromFileToolStripMenuItem
+        '
+        Me.ReadListFromFileToolStripMenuItem.Name = "ReadListFromFileToolStripMenuItem"
+        Me.ReadListFromFileToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.ReadListFromFileToolStripMenuItem.Text = "Read List from File"
         '
         'msItemExit
         '
@@ -149,12 +155,6 @@ Partial Class frmMain
         Me.txtCollection.Name = "txtCollection"
         Me.txtCollection.Size = New System.Drawing.Size(608, 201)
         Me.txtCollection.TabIndex = 6
-        '
-        'ReadListFromFileToolStripMenuItem
-        '
-        Me.ReadListFromFileToolStripMenuItem.Name = "ReadListFromFileToolStripMenuItem"
-        Me.ReadListFromFileToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
-        Me.ReadListFromFileToolStripMenuItem.Text = "Read List from File"
         '
         'sdSaveCollection
         '
