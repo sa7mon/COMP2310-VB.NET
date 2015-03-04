@@ -78,6 +78,19 @@ Public Class frmMain
     Private Sub readListFromFile() Handles odOpenCollection.FileOk
         ' Sub launched when "Ok" clicked in Open File Dialog
 
+        ' Create new StreamReader object and point it at the location the user selected in the File Open Dialog
+        Dim collectionFile As New StreamReader(odOpenCollection.FileName)
+
+        Try
+            ' Try to read the entire file into the textbox
+            txtCollection.Text = collectionFile.ReadToEnd()
+        Catch noFileEx As FileNotFoundException
+            ' Catch File Not Found errors
+            MsgBox("Error: Unable to open selected file. Please try again.")
+        Catch ex As Exception
+            ' Catch all other general errors
+            MsgBox("Error: Unknown error.")
+        End Try
 
     End Sub
 End Class
