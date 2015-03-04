@@ -93,4 +93,9 @@ Public Class frmMain
         End Try
 
     End Sub
+
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        sdSaveCollection.Filter = "Text Files|*.txt|All Files|*.*"
+        odOpenCollection.Filter = "Text Files|*.txt|All Files|*.*"
+    End Sub
 End Class

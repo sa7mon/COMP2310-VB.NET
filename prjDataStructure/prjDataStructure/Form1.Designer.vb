@@ -161,7 +161,6 @@ Partial Class frmMain
         '
         'sdSaveCollection
         '
-        Me.sdSaveCollection.Filter = """Text Files|*.txt"""
         '
         'odOpenCollection
         '
