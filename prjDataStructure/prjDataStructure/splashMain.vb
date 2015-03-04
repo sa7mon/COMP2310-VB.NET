@@ -1,4 +1,5 @@
-﻿Public NotInheritable Class splashMain
+﻿
+Public NotInheritable Class splashMain
 
 
 End Class
