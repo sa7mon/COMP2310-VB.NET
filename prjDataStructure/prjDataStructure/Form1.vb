@@ -16,31 +16,35 @@ Public Class frmMain
     Dim vinylList As New ArrayList
 
     Private Sub btnSaveItem_Click(sender As Object, e As EventArgs) Handles btnSaveItem.Click
-        ' Create new object from vinyl structure.
-        Dim newVinyl As vinyl
+        If txtAlbum.Text = Nothing Or txtArtist.Text = Nothing Or txtYear.Text = Nothing Then
+            MsgBox("Error: Please fill in all fields.")
+        Else
+            ' Create new object from vinyl structure.
+            Dim newVinyl As vinyl
 
-        ' Assign values to object variables.
-        newVinyl.album = txtAlbum.Text
-        newVinyl.artist = txtArtist.Text
-        newVinyl.year = CInt(txtYear.Text)
+            ' Assign values to object variables.
+            newVinyl.album = txtAlbum.Text
+            newVinyl.artist = txtArtist.Text
+            newVinyl.year = CInt(txtYear.Text)
 
-        'Add the object to the arraylist
-        vinylList.Add(newVinyl)
+            'Add the object to the arraylist
+            vinylList.Add(newVinyl)
 
-        ' Clear textbox
-        txtCollection.Clear()
+            ' Clear textbox
+            txtCollection.Clear()
 
-        ' For each vinyl in collection, do the following
-        For Each collectionItem As vinyl In vinylList
-            ' Add a line in the text box in this format: Artist - Album (Year) and add a new line character
-            txtCollection.Text &= collectionItem.artist _
-                                  + " - " + collectionItem.album + " (" + collectionItem.yearString + ")" + vbCrLf
-        Next
+            ' For each vinyl in collection, do the following
+            For Each collectionItem As vinyl In vinylList
+                ' Add a line in the text box in this format: Artist - Album (Year) and add a new line character
+                txtCollection.Text &= collectionItem.artist _
+                                      + " - " + collectionItem.album + " (" + collectionItem.yearString + ")" + vbCrLf
+            Next
 
-        'Clear the textboxes to prepare for a new item being entered
-        txtAlbum.Clear()
-        txtArtist.Clear()
-        txtYear.Clear()
+            'Clear the textboxes to prepare for a new item being entered
+            txtAlbum.Clear()
+            txtArtist.Clear()
+            txtYear.Clear()
+        End If
     End Sub
 
     Private Sub msItemSave_Click(sender As Object, e As EventArgs) Handles msItemSave.Click
