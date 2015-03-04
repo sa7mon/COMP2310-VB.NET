@@ -153,9 +153,13 @@ Partial Class frmMain
         '
         'txtCollection
         '
+        Me.txtCollection.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtCollection.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtCollection.Location = New System.Drawing.Point(12, 106)
         Me.txtCollection.Multiline = True
         Me.txtCollection.Name = "txtCollection"
+        Me.txtCollection.ReadOnly = True
+        Me.txtCollection.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.txtCollection.Size = New System.Drawing.Size(608, 201)
         Me.txtCollection.TabIndex = 6
         '

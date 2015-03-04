@@ -95,6 +95,7 @@ Public Class frmMain
     End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Set the file filters for the two file dialogs
         sdSaveCollection.Filter = "Text Files|*.txt|All Files|*.*"
         odOpenCollection.Filter = "Text Files|*.txt|All Files|*.*"
     End Sub
