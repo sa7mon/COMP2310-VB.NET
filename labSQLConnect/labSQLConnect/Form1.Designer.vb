@@ -22,20 +22,20 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgResult = New System.Windows.Forms.DataGridView()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.lblQuery = New System.Windows.Forms.Label()
         Me.btnSubmit = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgResult, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'dgResult
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(2, 88)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(631, 248)
-        Me.DataGridView1.TabIndex = 0
+        Me.dgResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgResult.Location = New System.Drawing.Point(2, 88)
+        Me.dgResult.Name = "dgResult"
+        Me.dgResult.Size = New System.Drawing.Size(631, 248)
+        Me.dgResult.TabIndex = 0
         '
         'TextBox1
         '
@@ -71,15 +71,15 @@ Partial Class frmMain
         Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.lblQuery)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgResult)
         Me.Name = "frmMain"
         Me.Text = "Database Code Demo"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgResult, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents dgResult As System.Windows.Forms.DataGridView
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents lblQuery As System.Windows.Forms.Label
     Friend WithEvents btnSubmit As System.Windows.Forms.Button
