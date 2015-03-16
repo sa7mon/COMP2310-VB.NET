@@ -23,9 +23,10 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dgResult = New System.Windows.Forms.DataGridView()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtQuery = New System.Windows.Forms.TextBox()
         Me.lblQuery = New System.Windows.Forms.Label()
         Me.btnSubmit = New System.Windows.Forms.Button()
+        Me.lstUser = New System.Windows.Forms.ComboBox()
         CType(Me.dgResult, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -37,13 +38,13 @@ Partial Class frmMain
         Me.dgResult.Size = New System.Drawing.Size(631, 248)
         Me.dgResult.TabIndex = 0
         '
-        'TextBox1
+        'txtQuery
         '
-        Me.TextBox1.Location = New System.Drawing.Point(82, 5)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(540, 37)
-        Me.TextBox1.TabIndex = 1
+        Me.txtQuery.Location = New System.Drawing.Point(82, 5)
+        Me.txtQuery.Multiline = True
+        Me.txtQuery.Name = "txtQuery"
+        Me.txtQuery.Size = New System.Drawing.Size(540, 37)
+        Me.txtQuery.TabIndex = 1
         '
         'lblQuery
         '
@@ -56,21 +57,30 @@ Partial Class frmMain
         '
         'btnSubmit
         '
-        Me.btnSubmit.Location = New System.Drawing.Point(265, 48)
+        Me.btnSubmit.Location = New System.Drawing.Point(207, 48)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(102, 34)
         Me.btnSubmit.TabIndex = 3
         Me.btnSubmit.Text = "Submit Query"
         Me.btnSubmit.UseVisualStyleBackColor = True
         '
+        'lstUser
+        '
+        Me.lstUser.FormattingEnabled = True
+        Me.lstUser.Location = New System.Drawing.Point(315, 56)
+        Me.lstUser.Name = "lstUser"
+        Me.lstUser.Size = New System.Drawing.Size(121, 21)
+        Me.lstUser.TabIndex = 4
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(634, 337)
+        Me.Controls.Add(Me.lstUser)
         Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.lblQuery)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtQuery)
         Me.Controls.Add(Me.dgResult)
         Me.Name = "frmMain"
         Me.Text = "Database Code Demo"
@@ -80,8 +90,9 @@ Partial Class frmMain
 
     End Sub
     Friend WithEvents dgResult As System.Windows.Forms.DataGridView
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtQuery As System.Windows.Forms.TextBox
     Friend WithEvents lblQuery As System.Windows.Forms.Label
     Friend WithEvents btnSubmit As System.Windows.Forms.Button
+    Friend WithEvents lstUser As System.Windows.Forms.ComboBox
 
 End Class
