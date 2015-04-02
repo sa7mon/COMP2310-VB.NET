@@ -7,8 +7,10 @@
 PRINT 'Project: SQL by Dan Salmon';
 
 -- 1. Choose a database
+SELECT db_name() as Name;
 
 -- 2. Count employees
+SELECT COUNT(DISTINCT rowguid) as EmployeeCount FROM Person.Person;
 
 -- 3. List Person Types
 
