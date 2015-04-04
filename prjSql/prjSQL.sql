@@ -96,9 +96,18 @@ WHERE name = N'personalDay' AND type = 'U')
 	END
 
 -- 8. Populate Table with Data
+/* 
 
+*/
 -- 9. Display Personal Days Information
-
+SELECT  pers.BusinessEntityID, 
+		pers.FirstName, 
+		pers.LastName,
+		leave.type,
+		leave.NumberTaken
+FROM Person.Person as pers
+JOIN personalDay as leave
+ON pers.BusinessEntityID=leave.BusinessEntityID;
 -- 10. Create own Personal SQL 
 
 -- 11. Most Important Technique
