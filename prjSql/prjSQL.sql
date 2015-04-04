@@ -67,6 +67,33 @@ ORDER BY sub.Name;
 -- 6. Display Inventory using Grid
 
 -- 7. Add a new table
+/*
+ HR has found out that due to federal regulations they have to specifically track personal days taken for every employee. There are three categories to
+track, professional days, personal days, and sick days.
+
+Use the IF EXISTS( ) function Using IF EXISTS( ) with T­SQL (look at posting by
+veljasije) around any CREATE TABLE statements so an error is not triggered if the script
+runs a second time.
+
+Build a new table named personalDay containing the following information:
+-id ­ integer, not null, auto­incrementing
+-BusinessEntityID, integer, not null (based on the Person.BusinessEntityID and Person.person
+-type, string with 25 characters
+-NumberTaken, integer
+-id should be the primary key
+*/
+IF  NOT EXISTS (SELECT * FROM sys.tables
+WHERE name = N'personalDay' AND type = 'U')
+
+	BEGIN
+		CREATE TABLE personalDay
+			(
+				id				 INT		IDENTITY(1,1) PRIMARY KEY,
+				type			 CHAR(25),
+				NumberTaken		 INT,
+				BusinessEntityID INT		FOREIGN KEY REFERENCES Person.Person(BusinessEntityID),
+			)
+	END
 
 -- 8. Populate Table with Data
 
