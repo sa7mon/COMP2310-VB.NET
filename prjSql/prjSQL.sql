@@ -99,6 +99,16 @@ WHERE name = N'personalDay' AND type = 'U')
 /* 
 
 */
+INSERT INTO PersonalDay (type, NumberTaken, BusinessEntityID)
+VALUES ('professional', 3, 1);
+INSERT INTO PersonalDay (type, NumberTaken, BusinessEntityID)
+VALUES ('personal', 2, 1);
+INSERT INTO PersonalDay (type, NumberTaken, BusinessEntityID)
+VALUES ('sick', 1, 1);
+INSERT INTO PersonalDay (type, NumberTaken, BusinessEntityID)
+VALUES ('personal', 14, 19970);
+INSERT INTO PersonalDay (type, NumberTaken, BusinessEntityID)
+VALUES ('sick', 0, 19970);
 -- 9. Display Personal Days Information
 SELECT  pers.BusinessEntityID, 
 		pers.FirstName, 
