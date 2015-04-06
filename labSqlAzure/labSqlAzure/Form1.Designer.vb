@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class frmAzureDBFDemo
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -261,7 +261,7 @@ Partial Class Form1
         Me.btnAdd.Text = "Add Record"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
-        'Form1
+        'frmAzureDBFDemo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -271,8 +271,8 @@ Partial Class Form1
         Me.Controls.Add(Me.dg)
         Me.Controls.Add(Me.grpNewData)
         Me.Controls.Add(Me.grpCurrent)
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Name = "frmAzureDBFDemo"
+        Me.Text = "Azure Database Demo"
         Me.grpCurrent.ResumeLayout(False)
         Me.grpCurrent.PerformLayout()
         Me.grpNewData.ResumeLayout(False)
