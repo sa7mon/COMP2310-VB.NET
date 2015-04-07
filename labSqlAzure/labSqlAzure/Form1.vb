@@ -72,4 +72,28 @@ Public Class frmAzureDBFDemo
             lblEmail.Text = ""
         End If
     End Sub
+
+    Private Sub dg_CellValidating(sender As Object, e As DataGridViewCellValidatingEventArgs) Handles dg.CellValidating
+        '=========================
+        ' VALIDATE USER INPUT
+        '=========================
+        'Any user input that is fixed is reset by CellEndEdit( )
+        ' === userID Field ===
+        If e.ColumnIndex = 1 Then
+            If IsNumeric(e.FormattedValue) Then
+                dg.Rows(e.RowIndex).ErrorText = "The User ID must be contain text."
+                e.Cancel = True
+            Else ' error was fixed by user, so reset
+                dg.Rows(e.RowIndex).ErrorText = ""
+            End If
+        End If
+    End Sub
+
+    Private Sub dg_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dg.CellEndEdit
+        '=========================
+        ' CLEAR ERROR MESSAGES
+        ' that may have been set by CellEnter( )
+        '=========================
+        dg.Rows(e.RowIndex).ErrorText = String.Empty
+    End Sub
 End Class
