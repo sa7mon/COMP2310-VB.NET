@@ -113,21 +113,17 @@ Public Class frmAzureDBFDemo
         ' Extract the new information from the datagrid
         ' The cell is the column index base on the table schema
         Dim currentRow As Integer = dg.CurrentRow.Index
-        Dim thisID As Integer =
-        dg.Rows(currentRow).Cells(USERTABLE_ID).Value
-        Dim thisUserID As String =
-        dg.Rows(currentRow).Cells(USERTABLE_USERID).Value
-        Dim thisPassword As String =
-        dg.Rows(currentRow).Cells(USERTABLE_PASSWORD).Value
-        Dim thisEmail As String =
-        dg.Rows(currentRow).Cells(USERTABLE_EMAIL).Value
+        Dim thisID As Integer = dg.Rows(currentRow).Cells(USERTABLE_ID).Value
+        Dim thisUserID As String = dg.Rows(currentRow).Cells(USERTABLE_USERID).Value
+        Dim thisPassword As String = dg.Rows(currentRow).Cells(USERTABLE_PASSWORD).Value
+        Dim thisEmail As String = dg.Rows(currentRow).Cells(USERTABLE_EMAIL).Value
         ' Write the SQL statement. Don't forget to put single quotes around each VARCHAR field Tutorial: VB.NET SQL Using Azure / 14
         ' BE SMART! Hard-code in the values first before adding the variables
         ' "UPDATE userTable SET userID = 'ginny99' WHERE id = 3"
         '***********************************************************************
         '**** EDIT THE SQL TO UPDATE all of the fields for the selected row ****
         '***********************************************************************
-        Dim strSQL As String = "UPDATE [" & TABLE_NAME & "] SET userID = '" & thisUserID & "' WHERE id = " & thisID
+        Dim strSQL As String = "UPDATE [" & TABLE_NAME & "] SET userID = '" & thisUserID & "',email = '" & thisEmail & "' WHERE id = " & thisID
         sendQuery(strSQL)
     End Sub
 
