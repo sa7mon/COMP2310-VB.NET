@@ -130,4 +130,25 @@ Public Class frmAzureDBFDemo
         Dim strSQL As String = "UPDATE [" & TABLE_NAME & "] SET userID = '" & thisUserID & "' WHERE id = " & thisID
         sendQuery(strSQL)
     End Sub
+
+    Private Sub sendQuery(strSQL As String)
+        '=========================
+        ' RUN SQL STATEMENT - REFRESH GRID
+        '=========================
+        con.Open()
+        ' Create the command with the SQL, connection, and transaction objects
+        Dim cmd As New SqlCommand(strSQL, con)
+        ' Execute the query getting the number of records affected (should be 1)
+        Dim recordCount As Integer = cmd.ExecuteNonQuery()
+        If recordCount = 1 Then
+            Console.WriteLine("Update was successful.")
+        Else
+            Console.WriteLine("Update was NOT successful.")
+        End If
+        con.Close()
+        'Redisplay the grid to show updated records
+        Dim newSQLString As String = "SELECT * FROM [" &
+        TABLE_NAME & "]"
+        populateGrid(DBF_NAME, TABLE_NAME, newSQLString)
+    End Sub
 End Class
