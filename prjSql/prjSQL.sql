@@ -39,26 +39,6 @@ ORDER BY sub.Name;
 
 
 -- 6. Display Inventory using Grid
-/*
-The warehouse manager has sent in a request asking for a page that shows the current inventory as including quantity when to
-reorder. You decide to do this using the Database Gridview.
-
-Using Production.ProductInventory and Production.Product include the following
-information in the grid:
-
-Columns should be ProductID, Name, ProductNumber, Quantity, LocationID, Shelf,
-Bin, ReorderPoint, Items Before Reorder
-
-Items Before Reorder is an alias and uses the formula reorderPoint - quantity
-
-ProductInventory should use the alias inven
-
-Product should use the alias prod
-
-The Database Gridview control will automatically sort data by clicking on the column
-headings so you don't have to worry about sorting the data (unless the Warehouse
-person comes back later and wants it to initially show up in a specific order.)
-*/
 SELECT 
 	inven.ProductID,
 	prod.name,
@@ -118,6 +98,42 @@ ON pers.BusinessEntityID=leave.BusinessEntityID;
 
 
 -- 10. Create own Personal SQL 
+/*
+ Scenario:  The marketing department needs some information about the current special offers to do 
+			an email blast to the customer email mailing list. They will need product information,
+			sale percentages, and pictures of the products to include in the email.
+*/
+SELECT TOP(100)
+	offer.Description AS 'SpecialOfferName',
+	offer.DiscountPct,
+	offer.type as 'OfferType',
+	offer.StartDate,
+	offer.EndDate,
+	offer.MinQty,
+	offer.MaxQty,
+	OfferProduct.ProductID,
+	product.Name,
+	product.StandardCost,
+	product.ProductNumber,
+	Photo.ThumbnailPhotoFileName
+FROM Sales.SpecialOffer AS offer
+-- Add the columns from the Sales.SpecialOfferProduct table using the OfferProduct alias.
+JOIN Sales.SpecialOfferProduct As OfferProduct
+	ON offer.SpecialOfferID=offerProduct.SpecialOfferID
+-- Add the columns from the Production.Product table using the product alias.
+JOIN Production.Product As product
+	ON product.ProductID=OfferProduct.ProductID
+-- Use the Production.ProductProductPhoto table as a connection to the ProductPhoto table.
+-- We don't actually need to select any columns from this table.
+JOIN Production.ProductProductPhoto
+	ON Production.ProductProductPhoto.ProductID=product.ProductID
+-- Add the columns from the Production.ProductPhoto table using the Photo alias.
+JOIN Production.ProductPhoto As Photo
+	ON Production.ProductProductPhoto.ProductPhotoID = Photo.ProductPhotoID
+-- Skip the "No special offer" entry
+WHERE offer.SpecialOfferID >1
+-- Order by the highest discout.
+ORDER BY DiscountPct DESC
 
 
 -- 11. Most Important Technique
