@@ -34,13 +34,16 @@ HR wants a phone directory showing first name, last name, email. Due to the
 Using Person.Person and any other tables you need show the SQL statement 
 displaying the first name, last name, and email for all the people who's 
 last name starts with "L". The list should be in alphabetical order by last name.
-
-SELECT Person.Person.FirstName, Person.Person.LastName, Person.EmailAddress.EmailAddress
-FROM Person.Person
-FULL OUTER JOIN Person.EmailAddress
-ON Person.Person.BusinessEntityID=Person.Person.BusinessEntityID
-WHERE Person.Person.LastName LIKE 'L%'; 
 */
+
+SELECT 
+	Person.Person.FirstName, 
+	Person.Person.LastName, 
+	Person.EmailAddress.EmailAddress
+FROM Person.Person
+JOIN Person.EmailAddress
+ON Person.Person.BusinessEntityID=Person.EmailAddress.BusinessEntityID
+WHERE Person.Person.LastName LIKE 'L%'; 
 
 -- 5. List Products 
 /*
@@ -99,18 +102,23 @@ WHERE name = N'personalDay' AND type = 'U')
 /* 
 
 */
-INSERT INTO PersonalDay (type, NumberTaken, BusinessEntityID)
-VALUES ('professional', 3, 1);
-INSERT INTO PersonalDay (type, NumberTaken, BusinessEntityID)
-VALUES ('personal', 2, 1);
-INSERT INTO PersonalDay (type, NumberTaken, BusinessEntityID)
-VALUES ('sick', 1, 1);
-INSERT INTO PersonalDay (type, NumberTaken, BusinessEntityID)
-VALUES ('personal', 14, 19970);
-INSERT INTO PersonalDay (type, NumberTaken, BusinessEntityID)
-VALUES ('sick', 0, 19970);
+IF  NOT EXISTS (SELECT * FROM sys.tables
+WHERE name = N'personalDay' AND type = 'U')
+	BEGIN
+		INSERT INTO PersonalDay (type, NumberTaken, BusinessEntityID)
+		VALUES ('professional', 3, 1);
+		INSERT INTO PersonalDay (type, NumberTaken, BusinessEntityID)
+		VALUES ('personal', 2, 1);
+		INSERT INTO PersonalDay (type, NumberTaken, BusinessEntityID)
+		VALUES ('sick', 1, 1);
+		INSERT INTO PersonalDay (type, NumberTaken, BusinessEntityID)
+		VALUES ('personal', 14, 19970);
+		INSERT INTO PersonalDay (type, NumberTaken, BusinessEntityID)
+		VALUES ('sick', 0, 19970);
+	END
+
 -- 9. Display Personal Days Information
-SELECT  pers.BusinessEntityID, 
+SELECT TOP(10)
 		pers.FirstName, 
 		pers.LastName,
 		leave.type,
