@@ -20,16 +20,11 @@ Using Visual Studio (or SQL Server Management Studio) and the AdventureWorks2012
    
    ---
 3. **List Person Types** - As part of the HR input screen you want to create a dynamic drop-down list showing a list of each PersonType. If new PersonTypes are added to the database in the future this dropdown list will automatically include the new types.
-
-   Using the Person.Person table what SQL statement will give you a distinct list (each item
-being unique) of PersonType?
+Using the Person.Person table what SQL statement will give you a distinct list (each item being unique) of PersonType?
    ---
 4. **Email Listing by Last Name** - HR wants a phone directory showing first name, last
 name, email. Due to the huge number of employees you decide to display the information
-based on the last name initial.
-
-   Using Person.Person and any other tables you need show the SQL statement displaying
-the first name, last name, and email for all the people who's last name starts with "L". The list should be in alphabetical order by last name.
+based on the last name initial. Using Person.Person and any other tables you need show the SQL statement displaying the first name, last name, and email for all the people who's last name starts with "L". The list should be in alphabetical order by last name.
    ---
 5. **Product Listing**- You are building a mobile app for the sales department that will allow them to quickly look up the different models that are available based on categories. You plan to do a quick demo by putting this information in a grid. Later you will refine the interface using drop-downs and other niceties.
 
