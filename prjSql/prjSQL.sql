@@ -4,7 +4,18 @@
 -- Contact: dan.salmon@my.southcentral.edu
 -- Created on: 4/2/15
 -----------------------------
+/*
+11. Most Important Technique
 
+ The most important SQL technique, in my opinion, is to work on big problems in small chunks.
+ This is applicable in virtually every scenario where your query is more than one line. It's
+ so important to take just a little bit of the query, run it, fix it, then add to that small part.
+ Visual Studio makes this very easy by allowing you to highlight sections and run that portion.
+
+*/
+
+-- 0. Print the name of the project
+--
 PRINT 'Project: SQL by Dan Salmon';
 
 -- 1. Choose a database
@@ -81,8 +92,7 @@ ON prod.ProductID=inven.ProductID;
 -- creates on with 4 columns.
 --
 IF  NOT EXISTS (SELECT * FROM sys.tables
-WHERE name = N'personalDay' AND type = 'U')
-
+WHERE name = 'personalDay' AND type = 'U')
 	BEGIN
 		CREATE TABLE personalDay
 			(
@@ -100,8 +110,8 @@ WHERE name = N'personalDay' AND type = 'U')
 -- If it does, creates 5 rows but doesn't specify id because
 -- the db engine will auto-increment to the next one.
 --
-IF  NOT EXISTS (SELECT * FROM sys.tables
-WHERE name = N'personalDay' AND type = 'U')
+IF EXISTS (SELECT * FROM sys.tables
+WHERE name = 'personalDay' AND type = 'U')
 	BEGIN
 		INSERT INTO PersonalDay (type, NumberTaken, BusinessEntityID)
 		VALUES ('professional', 3, 1);
@@ -167,5 +177,3 @@ JOIN Production.ProductPhoto As Photo
 WHERE offer.SpecialOfferID >1
 -- Order by the highest discout.
 ORDER BY DiscountPct DESC
-
--- 11. Most Important Technique
