@@ -8,18 +8,33 @@
 PRINT 'Project: SQL by Dan Salmon';
 
 -- 1. Choose a database
-SELECT db_name() as Name;
+-- 
+-- Outputs the name of the database currently connected to.
+--
+SELECT db_name() AS Name;
 
 
 -- 2. Count employees
-SELECT COUNT(DISTINCT rowguid) as EmployeeCount FROM Person.Person;
+--
+-- Simply returns the number of employees listen in Person.Person and 
+-- gives the column an alias.
+--
+SELECT COUNT(DISTINCT rowguid) AS EmployeeCount FROM Person.Person;
 
 
 -- 3. List Person Types
+--
+-- Returns all of the unique values for PersonType in Person.Person.
+--
 SELECT DISTINCT PersonType FROM Person.Person;
 
 
 -- 4. List Emails by Last Name
+--
+-- Returns First Name, Last Name, and Email address for people with last
+-- names that start with L. Gets the data from 2 different tables with the
+-- column name BusinessEntityID in common.
+--
 SELECT 
 	Person.Person.FirstName, 
 	Person.Person.LastName, 
@@ -30,7 +45,10 @@ ON Person.Person.BusinessEntityID=Person.EmailAddress.BusinessEntityID
 WHERE Person.Person.LastName LIKE 'L%'; 
 
 
--- 5. List Products 
+-- 5. Product Listing 
+--
+-- Returns product and sub category name joined on sub category ID and ordered by sub-category name.
+--
 SELECT prod.Name AS ProductName,sub.Name AS SubCategoryName
 FROM Production.Product AS prod
 JOIN Production.ProductSubCategory AS sub
@@ -39,6 +57,9 @@ ORDER BY sub.Name;
 
 
 -- 6. Display Inventory using Grid
+--
+-- Returns many columns from 2 joined tables and gives them aliases.
+--
 SELECT 
 	inven.ProductID,
 	prod.name,
@@ -55,6 +76,10 @@ ON prod.ProductID=inven.ProductID;
 
 
 -- 7. Add a new table
+--
+-- Checks for the existance of a table with a certain name. If it doesn't exist,
+-- creates on with 4 columns.
+--
 IF  NOT EXISTS (SELECT * FROM sys.tables
 WHERE name = N'personalDay' AND type = 'U')
 
@@ -70,6 +95,11 @@ WHERE name = N'personalDay' AND type = 'U')
 
 
 -- 8. Populate Table with Data
+--
+-- First, checks to see if table of certain name exist.
+-- If it does, creates 5 rows but doesn't specify id because
+-- the db engine will auto-increment to the next one.
+--
 IF  NOT EXISTS (SELECT * FROM sys.tables
 WHERE name = N'personalDay' AND type = 'U')
 	BEGIN
@@ -87,13 +117,16 @@ WHERE name = N'personalDay' AND type = 'U')
 
 
 -- 9. Display Personal Days Information
+--
+-- Returns leave stats for the first 10 employees from the table we just created.
+--
 SELECT TOP(10)
 		pers.FirstName, 
 		pers.LastName,
 		leave.type,
 		leave.NumberTaken
-FROM Person.Person as pers
-JOIN personalDay as leave
+FROM Person.Person AS pers
+JOIN personalDay AS leave
 ON pers.BusinessEntityID=leave.BusinessEntityID;
 
 
@@ -106,7 +139,7 @@ ON pers.BusinessEntityID=leave.BusinessEntityID;
 SELECT TOP(100)
 	offer.Description AS 'SpecialOfferName',
 	offer.DiscountPct,
-	offer.type as 'OfferType',
+	offer.type AS 'OfferType',
 	offer.StartDate,
 	offer.EndDate,
 	offer.MinQty,
@@ -134,6 +167,5 @@ JOIN Production.ProductPhoto As Photo
 WHERE offer.SpecialOfferID >1
 -- Order by the highest discout.
 ORDER BY DiscountPct DESC
-
 
 -- 11. Most Important Technique
