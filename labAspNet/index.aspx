@@ -19,6 +19,23 @@
         </asp:DropDownList>
     
     </div>
+        <p>
+            <asp:Button ID="btnChoice" runat="server" Text="Choice" />
+        </p>
+        <asp:Label ID="lblChoice" runat="server"></asp:Label>
+
+        <div>
+            <asp:RadioButton ID="radSassaphrass" runat="server" GroupName="flavors" Text="Sassaphrass" />
+            <asp:RadioButton ID="radGoldNugget" runat="server" GroupName="flavors" Text="Gold Nugget" />
+            <asp:RadioButton ID="radMooseDroppings" runat="server" GroupName="flavors" Text="Moose Droppings" />
+        </div>
+        
+        <asp:Button ID="btnChoice2" runat="server" Text="Choice 2" />
+        <asp:Label ID="lblChoice2" runat="server"></asp:Label>
+        <p>
+            <asp:CheckBox ID="CheckBox1" runat="server" />
+        </p>
+        
     </form>
 </body>
 </html>
