@@ -37,7 +37,9 @@
         <tr>
             <td>SSN: </td>
             <td><asp:TextBox ID="txtSSN" runat="server"></asp:TextBox></td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtSSN" ErrorMessage="Format like this: 111-11-1111" ForeColor="Red" ValidationExpression="\d{3}-\d{2}-\d{4}"></asp:RegularExpressionValidator>
+            </td>
         </tr>
           <tr>
             <td># of children: </td>
