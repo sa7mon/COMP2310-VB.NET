@@ -30,7 +30,9 @@
         <tr>
             <td class="auto-style1">Age</td>
             <td class="auto-style1"><asp:TextBox ID="txtAge" runat="server"></asp:TextBox></td>
-            <td class="auto-style1">&nbsp;</td>
+            <td class="auto-style1">
+                <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txtAge" ErrorMessage="Age must be between 1 and 110" ForeColor="Red" MaximumValue="110" MinimumValue="1" Type="Integer"></asp:RangeValidator>
+            </td>
         </tr>
         <tr>
             <td>SSN: </td>
