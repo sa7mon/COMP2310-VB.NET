@@ -9,7 +9,17 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:GridView ID="gv" runat="server"></asp:GridView>
+        <asp:GridView ID="gv" runat="server" AutoGenerateColumns="False">
+            <Columns>
+                <asp:BoundField HeaderText="ID" />
+                <asp:BoundField HeaderText="User Name" />
+                <asp:BoundField HeaderText="Email" />
+                <asp:BoundField HeaderText="Password" />
+                <asp:BoundField HeaderText="Phone" />
+                <asp:CommandField ShowEditButton="True" />
+                <asp:CommandField ShowDeleteButton="True" />
+            </Columns>
+        </asp:GridView>
     </div>
     <br />
     <div>
