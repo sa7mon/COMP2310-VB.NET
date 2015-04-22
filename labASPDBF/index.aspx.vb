@@ -70,8 +70,13 @@ Partial Class index
     Protected Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Dim newUserID As String = txtUserID.Text
         Dim newUserName As String = txtUserName.Text
+        Dim newEmail As String = txtEmail.Text
+        Dim newPassword As String = txtPassword.Text
+        Dim newPhone As String = txtPhone.Text
 
-        Dim strSQL As String = "INSERT INTO [" & TABLE_NAME & "] (userID, userName) VALUES ('" & newUserID & "', '" & newUserName & "')"
+
+        Dim strSQL As String = "INSERT INTO [" & TABLE_NAME & "] (userID, userName, password, email, phone) VALUES ('" & newUserID & "', '" & newUserName & "', '" & newPassword & "', '" & newEmail & "', '" & newPhone & "')"
+        'MsgBox(strSQL)
         runNonSelect(strSQL)
         refreshGrid()
     End Sub

@@ -5,6 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 126px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -28,17 +33,59 @@
         </asp:DropDownList>
 
     </div>
-        
-        <asp:Label ID="Label1" runat="server" Text="UserID"></asp:Label>
-        <asp:Label ID="Label2" runat="server" Text="User Name"></asp:Label>
-        <br />
-            <asp:TextBox ID="txtUserID" runat="server"></asp:TextBox>
-            <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
+    <br />
+    <table>
+        <tr>
+            <td>
+                <asp:Label ID="Label1" runat="server" Text="UserID"></asp:Label>
+            </td>
+            <td class="auto-style1">
+                <asp:Label ID="Label2" runat="server" Text="User Name"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:TextBox ID="txtUserID" runat="server"></asp:TextBox>
+            </td>
+            <td class="auto-style1">
+                <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Label ID="Label3" runat="server" Text="Email"></asp:Label>
+            </td>
+            <td>
+                <asp:Label ID="Label4" runat="server" Text="Password"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+            </td>
+            <td>
+                <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Label ID="Label5" runat="server" Text="Phone"></asp:Label>
+            </td>
+            <td>
 
-        
-        <asp:Button ID="btnSave" runat="server" Text="Save to Database" />
-
-        
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:TextBox ID="txtPhone" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <asp:Button ID="btnSave" runat="server" Text="Save to Database" />
+            </td>
+        </tr>
+    </table>
     </form>
 </body>
 </html>
