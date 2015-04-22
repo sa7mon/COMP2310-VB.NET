@@ -10,7 +10,6 @@ Partial Class index
     Dim ds As New DataSet()
 
 
-
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
         If Not IsPostBack Then
             refreshGrid()
@@ -73,7 +72,6 @@ Partial Class index
         Dim newEmail As String = txtEmail.Text
         Dim newPassword As String = txtPassword.Text
         Dim newPhone As String = txtPhone.Text
-
 
         Dim strSQL As String = "INSERT INTO [" & TABLE_NAME & "] (userID, userName, password, email, phone) VALUES ('" & newUserID & "', '" & newUserName & "', '" & newPassword & "', '" & newEmail & "', '" & newPhone & "')"
         'MsgBox(strSQL)
