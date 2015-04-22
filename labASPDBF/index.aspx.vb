@@ -10,6 +10,7 @@ Partial Class index
     Dim ds As New DataSet()
 
 
+
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
         If Not IsPostBack Then
             refreshGrid()
@@ -67,7 +68,10 @@ Partial Class index
     End Sub
 
     Protected Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim strSQL As String = "INSERT INTO [" & TABLE_NAME & "] (userID) VALUES ('testValue99')"
+        Dim newUserID As String = txtUserID.Text
+        Dim newUserName As String = txtUserName.Text
+
+        Dim strSQL As String = "INSERT INTO [" & TABLE_NAME & "] (userID, userName) VALUES ('" & newUserID & "', '" & newUserName & "')"
         runNonSelect(strSQL)
         refreshGrid()
     End Sub
