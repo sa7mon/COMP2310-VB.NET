@@ -11,11 +11,12 @@
     <div>
         <asp:GridView ID="gv" runat="server" AutoGenerateColumns="False">
             <Columns>
-                <asp:BoundField HeaderText="ID" />
-                <asp:BoundField HeaderText="User Name" />
-                <asp:BoundField HeaderText="Email" />
-                <asp:BoundField HeaderText="Password" />
-                <asp:BoundField HeaderText="Phone" />
+                <asp:BoundField HeaderText="ID" ReadOnly="True" DataField="ID" />
+                <asp:BoundField HeaderText="User ID" DataField="userID" />
+                <asp:BoundField HeaderText="User Name" DataField="userName" />
+                <asp:BoundField HeaderText="Email" DataField="email" />
+                <asp:BoundField HeaderText="Password" DataField="password" />
+                <asp:BoundField HeaderText="Phone" DataField="phone" />
                 <asp:CommandField ShowEditButton="True" />
                 <asp:CommandField ShowDeleteButton="True" />
             </Columns>
@@ -28,7 +29,7 @@
 
     </div>
         
-        <asp:Label ID="Label1" runat="server" for="Textbox1" Text="UserID"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text="UserID"></asp:Label>
         <asp:Label ID="Label2" runat="server" Text="User Name"></asp:Label>
         <br />
             <asp:TextBox ID="txtUserID" runat="server"></asp:TextBox>
