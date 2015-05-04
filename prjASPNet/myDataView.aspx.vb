@@ -68,16 +68,10 @@ Partial Class collection
         refreshGrid()
     End Sub
     Protected Sub gv_RowUpdating(sender As Object, e As GridViewUpdateEventArgs) Handles gv.RowUpdating
-        ' Use type hyperlink if you are embedding a hyperlink in the column
-        ' instead of a textbox
-        'Dim name as Hyperlink
-
         Dim thisISBN As String
         Dim thisTitle As TextBox
         Dim thisAuthor As TextBox
         Dim thisCover As TextBox
-        Dim thisType As TextBox
-
         Dim strSQL As String
 
         ' Col 0 is id field
@@ -87,7 +81,6 @@ Partial Class collection
         thisTitle = CType(gv.Rows(e.RowIndex).Cells(1).Controls(0), TextBox)
         thisAuthor = CType(gv.Rows(e.RowIndex).Cells(2).Controls(0), TextBox)
         thisCover = CType(gv.Rows(e.RowIndex).Cells(3).Controls(0), TextBox)
-        'thisType = CType(gv.Rows(e.RowIndex).Cells(4).Controls(0), TextBox)
 
         strSQL = "UPDATE tbl_book SET bookName='" & thisTitle.Text & "', author='" & thisAuthor.Text & "', cover='" & thisCover.Text & "' WHERE isbn = '" & thisISBN & "'"
         'MsgBox(strSQL)
@@ -107,13 +100,6 @@ Partial Class collection
         strSQL = "DELETE FROM " & TABLE_NAME & " WHERE ISBN = '" & thisISBN & "'"
         runNonSelect(strSQL)
         refreshGrid()
-    End Sub
-
-    Protected Sub gv_RowSelected(sender As Object, e As GridViewSelectEventArgs) Handles gv.SelectedIndexChanging
-        'Is fired after a row's select button is clicked.
-
-        Dim rowTitle As String = gv.Rows(e.NewSelectedIndex).Cells(1).Text
-        MsgBox(rowTitle)
     End Sub
 
     Protected Sub addBook(sender As Object, e As EventArgs) Handles btnAdd.Click

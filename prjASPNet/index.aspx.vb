@@ -24,7 +24,7 @@ Partial Class index
             con.ConnectionString = globals.AzureConnection
             Dim cmd As New SqlCommand("SELECT COUNT(*) AS count, userID FROM tbl_users WHERE userName = '" & txtUserName.Text.Trim().ToString() & "' AND password='" & txtPwd.Text.Trim().ToString() & "' GROUP BY userID;", con)
             con.Open()
-            ' Execute Query    '
+            ' Execute Query
             reader = cmd.ExecuteReader()
 
             While reader.Read()
@@ -37,8 +37,10 @@ Partial Class index
                 End If
             End While
 
+            'Close the connection
             con.Close()
 
+            ' We do the handling outside of the reader so we can close the connection faster
             If (success) Then
                 redirect(userID)
             Else
@@ -52,7 +54,10 @@ Partial Class index
     End Sub
 
     Public Sub redirect(user As Integer)
+        ' Set the session variable so we can look the user's name up on the collection page.
         Session("userID") = user
+
+        ' Redirect to the collection page
         Response.Redirect("myDataView.aspx", False) 'http://stackoverflow.com/a/4874947
     End Sub
 End Class
