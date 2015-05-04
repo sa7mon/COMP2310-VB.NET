@@ -1,0 +1,12 @@
+﻿<%--
+    MyTheme.skin - Contains the skins that should be applied to server-side controls.
+    Name: Dan Salmon (https://danthesalmon.com)
+    Created: 5/2/15
+--%>
+<asp:GridView runat="server">
+    <AlternatingRowStyle BackColor="#EBEBEB" />
+</asp:GridView>
+
+<asp:Button runat="server" CssClass="btn btn-primary" />
+
+<asp:Label runat="server" Font-Bold="True" />

@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<!--
+			documentation.html - Documentation page for prjAspNet
+			by: Dan Salmon (dan.sa7mon[at]gmail.com)
+			Created: 5/3/15
+			Last Updated: 5/3/15
+		-->
+		<title>PrjAspNet</title>
+		<style type="text/css">
+			body {
+				background: gray;
+				font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+			}
+			section {
+				width: 75%;
+				margin: auto;
+				background-color: white;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				padding-left: 5px;
+				margin-top: 20px;
+				border-radius: 10px;
+			}
+			h3,h1 {
+				text-align: center;
+			}
+			#video {
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.center {
+				display: block;
+			    margin-left: auto;
+			    margin-right: auto;
+			    text-align: center;
+			}
+			h3 {
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<section id="title">
+			<h1>prjAspNet by Dan Salmon</h1>
+		</section>	
+		<section id="siteDesign">
+			<h3>Site Design</h3>
+			<img src="documentation_masterPage.png" class="center" />
+		</section>
+
+		<section id="dbdesign">
+			<h3>Database Structure</h3>
+			<img src="documentation_dbDesign.png" class="center" />
+		</section>
+
+		<section id="pageDesign">
+			<h3>Page Design</h3>
+			<hr />
+			<span class="center">
+				<strong>index.aspx</strong>
+			</span>
+			<br />
+			<img src="documentation_login.png" class="center" />
+			<hr />
+			<br />
+			<span class="center">
+				<strong>myDataView.aspx</strong>
+			</span>
+			<br />
+			<img src="documentation_collection.png" class="center" />
+		</section>
+
+		<section id="reflection">
+			<h3>Reflection</h3>
+			<p>While creating the VB.NET code for index.aspx.vb, I ran into a problem. In creating the logic to redirect the user after a successful login attempt, I kept getting an error. It would warn "Thread is being aborted" but you could just click "OK" and the program would proceed. After some research, I found that the problem was that the Response.Redirect() was raising a ThreadAbortException. I could have just wrapped that in a Try/Catch and done nothing with that exception, but it turns out that Response.Redirect() has a boolean propery named "EndResponse". If you make it false, the thread is not aborted. This is dangerous to do in some situations, but I don't have any code after the Response.Redirect() call so it's perfectly fine.</p>
+			<p>The second major issue I ran into was a UX problem. After creating my sidebar and page-content sections, I could get them side-by-side, but I couldn't make them equal heights. After a lot of trial-and-error, I found a solution. If I wrapped them in a &lt;div&gt; that an "overflow: hidden" property, I could set the padding-bottom crazy high and the margin-bottom the exact opposite. This gave me the eqaul height I was looking for.</p>
+		</section>
+
+		<section id="video">
+			<h3>Video</h3>
+			<div id="video">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/sb2rLUp9iIg" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</section>
+	</body>
+</html>

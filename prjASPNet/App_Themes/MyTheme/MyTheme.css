@@ -1,0 +1,96 @@
+﻿/*
+* MyTheme.css - Contains the main CSS for this theme. Applied to individual pages.
+* Name: Dan Salmon (https://danthesalmon.com)
+* Date Created: 4/27/15
+*/
+body {
+	background-image: url(books.png);
+	font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+    width: 80%;
+    margin: auto;
+}
+
+div#header {
+    /*width:100%;*/
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: white;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+div#page-wrapper {
+    height: 75%;
+    overflow: hidden;
+}
+div#body {
+    overflow: auto;
+}
+div#sidebar {
+    float:left; 
+    background-color: lightgray; 
+    /*padding-top: 10px;
+    padding-left: 10px; */
+    width: 25%;
+    padding-bottom: 500em;
+    margin-bottom: -500em;
+}
+div#page-content {
+    padding: 10px;
+    /*width:74%; */
+    background-color: white;
+    margin-left: 26%;
+    padding-bottom: 500em;
+    margin-bottom: -500em;
+}
+div#footer {
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+span.lbl_error {
+    color: red;
+}
+div#header h1 {
+    text-align: center;
+}
+.gvtable td {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.gvControl {
+    background-color: white;
+}
+.gv_header th {
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8C8C8C), color-stop(1, #7D7D7D));
+    background: -moz-linear-gradient( center top, #8C8C8C 5%, #7D7D7D 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#8C8C8C', endColorstr='#7D7D7D');
+    background-color: #8C8C8C;
+    color: #FFFFFF;
+    font-weight: bold;
+    border-left: 2px solid #A3A3A3;
+}
+div#form_container {
+    width:20%;
+    float: left;
+}
+.form-group {
+    margin-bottom: 0px;
+}
+#tbl_addBook td {
+    padding: 1px;
+}
+#tbl_addBook td.tablelbl {
+    text-align: right;
+}
+#mainContent_rblistCover label {
+    font-weight: 300;
+}

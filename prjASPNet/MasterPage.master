@@ -1,0 +1,55 @@
+﻿<%--
+    masterPage.master - Contains all the html and ASP that should be repeated on 
+                        all pages that reference this page.
+    Name: Dan Salmon (https://danthesalmon.com)
+    Date Created: 4/27/15
+--%>
+<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>This title shows up somewhere.....</title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" /> 
+    <link type="text/css" rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="page-wrapper">
+        <div id="header" class="page-header">
+            <h1>Project: ASP.NET <small>A Book Collection System</small></h1>
+        </div>
+        <div id="sidebar">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <asp:Label ID="lblGreeting" runat="server" Text="Label"></asp:Label>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="index.aspx">Login</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="myDataView.aspx">Collection</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="page-content">
+            <form id="form1" runat="server">
+                <div>
+                    <!-- Do NOT put anything inside of mainContent that shouldn't be repeated. -->
+                    <asp:ContentPlaceHolder id="mainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+        </form>
+        </div>
+    </div> <!-- End page-wrapper -->
+    <div id="footer">
+        <p>&copy; 2015 Dan Salmon - <a href="https://danthesalmon.com/">danthesalmon.com</a></p>
+    </div>
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
