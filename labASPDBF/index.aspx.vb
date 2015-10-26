@@ -8,7 +8,7 @@ Partial Class index
     Dim da As New SqlDataAdapter()
     Dim cmd As New SqlCommand()
     Dim ds As New DataSet()
-
+    Dim con = New SqlConnection("Server=tcp:is9ofoay2e.database.windows.net,1433;Database=userDatabase;User ID=deletemedbadmin@is9ofoay2e;Password=P@ssw0rd;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;")
 
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
         If Not IsPostBack Then
